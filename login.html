@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>KodangLogin</title>
+<style type="text/css">
+body {
+    font-family:Tahoma;
+    background-color: #EBE5D7;
+}
+
+#logo{
+    width: 10%;
+    margin-top:6%;
+    margin-bottom:6%;
+}
+
+
+
+.center{
+    position:absolute;
+   
+    left:50%;
+    transform: translate(-50%,-20%);
+    width: 45%;
+    background:#335E27;
+    border-radius: 71px;
+}
+
+.center h1{
+    text-align: center;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.center form{
+    box-sizing:border-box;
+}
+
+form .info{
+    position:relative;    
+}
+
+.info input{
+    width: 50%;
+      padding: 12px 15px;
+    margin:10px;
+      box-sizing: border-box;
+}
+
+.forgot{
+    margin-bottom: 5px;
+    margin-left:170px;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.forgot a{
+    color:#d4d4d4;
+    text-decoration:none;
+}
+
+.forgot a:hover{
+    text-decoration:underline;
+}
+
+input[type=submit] {
+      width: 20%;
+      padding: 8px 15px;
+      margin-top:2px;
+    margin-bottom:5px;
+      box-sizing: border-box;
+      border-radius:15px;
+      background-color: #7CBA4B;
+    font-family: Itim;
+    font-size:18px;
+    font-style: normal;
+    font-weight: normal;
+    color:#FFFFFF;
+    cursor:pointer;
+}
+
+.sign{
+    margin-bottom: 20px;
+    font-size:18px;
+    color:#d4d4d4;
+    cursor:default;
+}
+
+.sign a{
+    color:#FFFFFF;
+    margin-left:10px;
+    font-weight:bold;
+    font-size:18px;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.sign a:hover{
+    text-decoration:underline;
+}
+</style>
+</head>
+
+<body>
+    
+    <div align="center">
+        <img id="logo" src="pic/logogr.png"/>
+            <div class="center">
+                <h1>Login</h1>
+                <form method="post">
+                    <div class="info">
+                      <input type="email" placeholder="Email" required autofocus="autofocus" >
+                    <br>
+                      <input type="password" placeholder="Password" required  >
+                    </div>
+                    <div class="forgot">
+                    <a href="#1">Forgot Password?</a>
+                    </div>
+                    <input type="submit" value="Login">
+                    <div class="sign">
+                    Don't have an account?
+                    <a href="register.html">Create an account</a>
+                </div>
+            </form>
+        </div>
+    </div>        
+    
+</body>
+</html>
