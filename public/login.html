@@ -5,28 +5,50 @@
 <title>KodangNungsue</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="login.css">
-
+<link href="bootstrap/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body {
+    background-color: #EBE5D7;
+  }
+  .link{color: white;}
+  .link:hover { 
+    color: #60ff75; }
+</style>
 </head>
 
 <body>
   <div align="center">
    <img id="logo" src="pic/logogr.png"/>
    <div class="center">
-       <h1>Login</h1>
+    <h1 class="h3 mb-3 fw-normal" style="color: #EBE5D7; margin-top: 2rem;">Login</h1>
           <form method="post">
-           <div class="info">
+           <!-- <div class="info">
        <input type="email" placeholder="Email" autofocus="autofocus" required  >
               </div>
               <div class="info">
        <input type="password" placeholder="Password" required  >
+              </div> -->
+              <div class="form-floating" style="width: 60%; ">
+                <input type="email" class="form-control" id="floatingInput"  placeholder="kodangnungsue@example.com" required >
+                <label for="floatingInput">Email address</label>
               </div>
-              <div class="forgot">
-              <a href="#1">ลืมรหัสผ่าน</a>
+              <div class="form-floating" style="width: 60%; ">
+                <input type="password" class="form-control" id="floatingPassword"  placeholder="Password" required >
+                <label for="floatingPassword">Password</label>
               </div>
-              <input type="submit" value="Login">
-              <div class="sign">
+              <div class="forgot" style="width: 60%;" align="right">
+              <a  href="#1">ลืมรหัสผ่าน?</a>
+              </div>
+              
+          
+              <div class="confirmButton" style="margin: 2%; ">
+                <a href="index.html">
+                <input type="submit" value="Login">
+            </a>
+        </div>
+              <div class="sign" >
               ยังไม่มีบัญชีใช่หรือไม่?
-                 <a href="register.html">ลงทะเบียน</a>
+                 <a class="link" href="register.html">ลงทะเบียน</a>
               </div>
           </form>
       </div>
