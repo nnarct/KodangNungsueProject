@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html>
-
     <head>
+        <link rel="stylesheet" href="index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <style>
-            body{
-                margin-top: 15%;
-                background-color: #EBE5D7;;
-            }
-            #button{
-                width: 10%;
-                height: 5%;
-                background-color: darkgreen;
-                margin: 3% 0px;
+            nav{
+                order: 1;
             }
         </style>
     </head>
+
     <body>
-        <div align="center" style="top: 50%;">
-            <h2>There is no home page yet</h2>
-            <br>
-            please try
-            <br>
-            <button type="submit" id="button"><a href="login.html" style="color: white;">login</a></button>
-            <button type="submit" id="button"><a href="register.html" style="color: white;">register</a></button>
-            
+             
+    
+        <div class="header-container" >
+                <img src="src/logo_navi.png" id="nav-logo">
+                <a href="login/login.html" target="_blank" class="item"><div id="word">หน้าหลัก</div></a>
+                <a href="login/login.html" target="_blank" class="item"><div id="word">ติดต่อเรา</div></a>
+                <a href="login/login.html" target="_blank" class="item"><div id="word">แจ้งชำระเงิน</div></a>
+                <div class="push"></div>
+                <div class="button"><a href="login/login.html" class="btn1" ><div id="text1">Login</div></a></div>
+                <div class="button"><a href="register/register.html" class="btn2" ><div id="text2">Register</div></a></div>
         </div>
+        
+           
+            
     </body>
+
+
 </html>

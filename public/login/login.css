@@ -1,0 +1,136 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: #EBE5D7;
+}
+a.link{   color: white;}
+a.link:hover {     color: #60ff75;}
+
+.container{
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+   
+   
+    width: 616px;
+    
+}
+
+.content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #EBE5D7;
+}
+
+#logo{
+    width: 40%;
+}
+
+.info{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #335E27;
+}
+
+
+.forgot{
+    
+    text-decoration: none;
+    color: white;
+    cursor:pointer;
+   }
+
+   #forgot{
+       text-decoration: none;
+       color: white;
+   }
+   #forgot:hover{
+       color: yellowgreen;
+   }
+
+   input[type=submit] {
+    width: 30%;
+    padding: 8px 15px;
+    margin-top:2px;
+  margin-bottom:5px;
+    box-sizing: border-box;
+    border-radius:15px;
+    background-color: #7CBA4B;
+    font-family: Itim;
+    font-size:18px;
+  font-style: normal;
+  font-weight: normal;
+  color:#FFFFFF;
+  cursor:pointer;
+ }
+
+.linkReg{
+    width: 100%;
+}
+
+ .sign{
+    margin:5%;
+    font-size:1rem;
+    color: white;
+    cursor:default;
+   }
+
+   .sign a{
+    color:#FFFFFF;
+    margin-left:10px;
+    font-weight:bold;
+    font-size:18px;
+    cursor:pointer;
+    text-decoration:none;
+   }
+
+   
+   @media only screen and (orientation: portrait) {
+    .container{
+        position: fixed;
+        top: 48%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 80%;
+        
+    }
+}
+    @media only screen and (max-width: 770px) {
+        .container{
+            position: fixed;
+            top: 48%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 80%;
+            
+        }
+  }
+  
+  @media only screen (min-width: 770px) {
+    .container{
+        position: fixed;
+        top: 48%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 616px;
+        
+    }
+}
+
+   
