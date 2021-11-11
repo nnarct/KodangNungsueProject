@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,44 +9,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="../bootstrap/assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="login.css">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 </head>
-    <body>
-       
-            
-       <div class="container">
-           <div class="content">
-               <div style="height: 20%; background-color: #EBE5D7; margin: 5px 0px;" align="center"><img src="../src/logogr.png" id="logo" align="center"></div>
-               
-                <div class="info" >
-                    <h1  style="color: #ffffff; margin: 5%;">Login</h1>
-                    <form style="width: 70%;">
-                        <div  class="form-floating"  >
-                            <input type="email" class="form-control" id="floatingInput"  placeholder="kodangnungsue@example.com" required >
-                            <label for="floatingInput">Email address</label>
-                          </div>
-                          <div class="form-floating" >
-                            <input type="password" class="form-control" id="floatingPassword"  placeholder="Password" required >
-                            <label for="floatingPassword">Password</label>
-                          </div>
-                          <div class="forgot" align="right">
-                            <a href="#1" align="right" id="forgot">ลืมรหัสผ่าน?</a>
-                            </div>
-                            <div class="confirmButton" style="margin: 2%; " align="center">
-                                <a href="../index.html">
-                                <input type="submit" value="Login">
-                            </a>
-                            </div>
-                    </form>
-                    <div class="linkReg" align="center">
-                        <div class="sign" >
-                            ยังไม่มีบัญชีใช่หรือไม่?
-                               <a class="link" href="../register/register.html">ลงทะเบียน</a>
-                            </div>
+
+<body>
+
+
+    <div class="container">
+        <div class="content">
+            <div style="height: 20%; background-color: #EBE5D7; margin: 5px 0px;" align="center"><img
+                    src="../src/logogr.png" id="logo" align="center"></div>
+
+            <div class="info">
+                <h1 style="color: #ffffff; margin: 5%;">Login</h1>
+                <form style="width: 70%;">
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingInput"
+                            placeholder="kodangnungsue@example.com" required>
+                        <label for="floatingInput">Email address</label>
                     </div>
-                
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                            required>
+                        <label for="floatingPassword">Password</label>
+                    </div>
+                    <div class="forgot" align="right">
+                        <a href="#1" align="right" id="forgot">ลืมรหัสผ่าน?</a>
+                    </div>
+                    <div class="confirmButton" style="margin: 2%; " align="center">
+                        <form action="www.google.com" method="post">
+                            <input id="button-send" type="submit" value="Login">
+                        </form>
+                            
+                    </div>
+                </form>
+                <div class="linkReg" align="center">
+                    <div class="sign">
+                        ยังไม่มีบัญชีใช่หรือไม่?
+                        <a class="link" href="../register/register.html">ลงทะเบียน</a>
+                    </div>
                 </div>
-           </div>
-       </div>
-        
-    </body>
+
+            </div>
+        </div>
+    </div>
+    <script src="login-server.js"></script>
+
+</body>
+
 </html>
