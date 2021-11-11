@@ -62,7 +62,22 @@ a.link:hover {     color: #60ff75;}
        color: yellowgreen;
    }
 
-   input[type=submit] {
+   .confirmButton{
+    width: 30%;
+    padding: 8px 15px;
+    margin-top:2px;
+    margin-bottom:5px;
+    box-sizing: border-box;
+    border-radius:15px;
+    background-color: #65993c;
+
+    font-size:18px;
+    font-style: normal;
+    font-weight: normal;
+    color:#FFFFFF;
+    cursor:pointer;
+   }   
+   input[type=button] {
     width: 30%;
     padding: 8px 15px;
     margin-top:2px;

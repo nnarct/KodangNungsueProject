@@ -72,7 +72,7 @@ function login() {
         if (strcmp(document.getElementById("floatingInput").value, $readEmail[i]) === 0
             && strcmp(document.getElementById("floatingPassword").value, $readPassword[i]) === 0) {
             alert("Login Success");
-            location.href = "https://www.youtube.com/";
+            location.href = "https://kodangnungsue.web.app/";
             return;
         }
     }
