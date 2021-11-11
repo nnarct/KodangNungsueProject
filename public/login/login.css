@@ -3,6 +3,7 @@
     padding: 0px;
 }
 body {
+    font-family: Roboto;
     background-color: #EBE5D7;
 }
 a.link{   color: white;}
@@ -68,8 +69,8 @@ a.link:hover {     color: #60ff75;}
   margin-bottom:5px;
     box-sizing: border-box;
     border-radius:15px;
-    background-color: #7CBA4B;
-    font-family: Itim;
+    background-color: #65993c;
+   
     font-size:18px;
   font-style: normal;
   font-weight: normal;
@@ -83,6 +84,7 @@ a.link:hover {     color: #60ff75;}
 
  .sign{
     margin:5%;
+    margin-top: 1%;
     font-size:1rem;
     color: white;
     cursor:default;

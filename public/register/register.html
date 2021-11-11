@@ -4,28 +4,7 @@
     <title>KodangRegister</title>
 
     <link rel="stylesheet" href="register.css">
-
-
-
-<script referrerpolicy="text/javascript">
-        var password = document.getElementById("password")
-  , confirm_password = document.getElementById("confirm_password");
-
-    function validatePassword(){
-        if(password.value != confirm_password.value) {
-        confirm_password.setCustomValidity("Passwords Don't Match");
-        } 
-        else {
-            confirm_password.setCustomValidity('');
-        }
-    }
-
-    password.onchange = validatePassword;
-    confirm_password.onkeyup = validatePassword;
-
-
-
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
 </head>
 
@@ -42,7 +21,7 @@
             </div>
              
             <form method="post">
-            <div class="input">
+            <div class="input" >
                 <div style="display: flex; flex-direction: row; width: 100%; font-size: 125%; ">
                     
                     <div style="width: 50%; margin: 2%; " >
@@ -86,9 +65,24 @@
                 </div>
                </div> -->
 
-
-               
+            
+                <div style="display: flex; flex-direction: column; width: 100%; font-size: 125%; height: auto;">
+                    
+                    <a href="../login/login.html" id="regbutton" align="center">
+                                <input type="submit" value="Register"/>
+                    </a>
+                    
+                    
+                    <div id="question">
+                        มีบัญชีอยู่แล้ว?
+                        <a href="../login/login.html" id="linklogin">
+                        Login
+                        </a>
+                    </div>
+                    
+                </div>
             </form>  
+    
     </div>
             
         
