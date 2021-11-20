@@ -29,37 +29,8 @@ db.collection('users').get().then((querySnapshot) => {
     $readPhone.splice(0, 1);
     $readName.splice(0, 1);
     $readSurname.splice(0, 1);
-    console.log($readAddress);
-    console.log($readEmail);
-    console.log($readPassword);
-    console.log($readPhone);
-    console.log($readName);
-    console.log($readSurname);
 });
 
-function addData() {
-    $address = document.getElementById("inputAddress").value;
-    $email = document.getElementById("inputEmail").value;
-    $password = document.getElementById("inputPassword").value;
-    $phone = document.getElementById("inputPhone").value;
-    $name = document.getElementById("inputName").value;
-    $surname = document.getElementById("inputSurname").value;
-    document.getElementById("inputAddress").innerHTML = "";
-    document.getElementById("inputEmail").innerHTML = "";
-
-    var docData = {
-        address: $address,
-        email: $email,
-        password: $password,
-        phone: $phone,
-        name: $name,
-        surname: $surname
-    };
-    db.collection("users").add(docData).then(() => {
-        alert("Document successfully written!")
-    });
-
-}
 
 function strcmp(a, b) {
     if (a.toString() < b.toString()) return -1;
@@ -71,12 +42,20 @@ function login() {
     for (let i = 0; i < $readAddress.length; i++) {
         if (strcmp(document.getElementById("floatingInput").value, $readEmail[i]) === 0
             && strcmp(document.getElementById("floatingPassword").value, $readPassword[i]) === 0) {
-            alert("Login Success");
-            location.href = "https://kodangnungsue.web.app/";
+            Swal.fire(
+                'Login Success',
+                'Welcome to my homepage',
+                'success'
+            )
+            location.href = "https://kodangnungsue.web.app/index2.html";
             return;
         }
     }
-    alert("Wrong Email or Password!!");
+    Swal.fire(
+        'Login Failed',
+        'Invalid Email or Password!!',
+        'error'
+    )
     return;
 }
 let buttonSend = document.getElementById('button-send');

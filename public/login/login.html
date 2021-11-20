@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="login.css">
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -18,8 +19,8 @@
 
     <div class="container">
         <div class="content">
-            <div style="height: 20%; background-color: #EBE5D7; margin: 5px 0px;" align="center"><img
-                    src="../src/logogr.png" id="logo" align="center"></div>
+            <a href="../index.html" style="height: 20%; background-color: #EBE5D7; margin: 5px 0px;" align="center">
+                <img src="../src/logogr.png" id="logo" align="center"></a>
 
             <div class="info">
                 <h1 style="color: #ffffff; margin: 5%;">Login</h1>
@@ -35,7 +36,7 @@
                         <label for="floatingPassword">Password</label>
                     </div>
                     <div class="forgot" align="right">
-                        <a href="#1" align="right" id="forgot">ลืมรหัสผ่าน?</a>
+                        <a href="../forgot_password/emailConfirm.html" align="right" id="forgot">ลืมรหัสผ่าน?</a>
                     </div>
                     <div   style="margin: 2%; " align="center">
                             <input class="confirmButton" id="button-send" type="button" value="Login">

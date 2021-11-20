@@ -3,9 +3,12 @@ body {
     background-color: #EBE5D7;
     
 }
+
+
+
 #logo{
     width: 20%;
-    margin-top: 3%;
+    margin-top: 5%;
     margin-bottom: 2%;
 }
 .info_area{
@@ -78,10 +81,10 @@ input[type=button]:hover{
     height: fit-content;
 }
 
-#question{
+.question{
     width: 100%;
-    margin: 2% 0px;
-    margin-top: 0px;
+    margin: 1% 0px 2% 0px;
+    
     display: flex;
     align-items: center;
     justify-content: center;

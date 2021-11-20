@@ -1,0 +1,110 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Roboto;
+    background-color: #EBE5D7;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+.container{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+    width: 48%; 
+    height: auto; 
+}
+/*#EBE5D7*/
+.img{
+    height: 150px;
+}
+.content{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    border-radius: 20px;
+  
+}
+
+
+.info{
+    position: absolute;
+width:auto;
+
+background: #FFFFFF;
+border-radius: 20px;
+}
+
+input{
+    width: 95%;
+    height:auto;
+    font-size: 1.2rem;
+    padding: 10px 10px;
+    border-color: #000;
+    border-radius: 25px;
+}
+
+.topic{
+    height: auto; 
+    margin: 2% 0px;
+    margin-top: 2%;
+    margin-right: auto; margin-left: 5%; font-size: 1.7rem; 
+    
+}
+
+.separateline{
+   background-color:#a5a5a5;
+   height: 0.1px;
+   width: 100%;
+}
+
+.navigationline{
+
+    height: auto;margin: 2% 0px; font-size: 1.2rem;
+}
+
+.navigationline2{
+    width: 80%;
+    height: auto;margin: 0.5% 0px; font-size: 1.1rem;
+}
+
+.usersInput{
+    align-items: center;
+    height: auto; 
+    width: 80%;
+    margin: 1.5%;
+}
+
+.buttonContainer{
+    height: 20%; margin-top: 2%; margin-bottom: 4%;display: flex; flex-direction: row; align-items: center; justify-content: center; width: 100%;
+}
+
+.buttonBox{
+    width: 20%;
+    cursor: pointer; 
+}
+.CancleButtonStyle{
+    width: 90%; padding: 3% 6%; background-color: white; border-color: #7CBA4B;
+    border-radius: 100px; color: #7CBA4B; font-size: 1.2rem;
+}
+
+.ConfirmButtonStyle{
+     width: 90%; padding: 3% 6%; background-color: #7CBA4B; border-color: #7CBA4B;
+                    border-radius: 100px; font-display: #fff; font-size: 1.2rem;
+}
+
+button{
+    cursor: pointer;
+}

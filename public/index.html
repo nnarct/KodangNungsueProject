@@ -1,238 +1,216 @@
-<!--<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="index.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="src/logo/logonobgn.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <title>KodangNungsue</title>
+</head>
+<body>
+    <!----------------------------------------ส่วนบนตั้งแต่ login-เขียว------------------------------->
+    <div id="main">
+        <!----------------------------------------เมนูบน------------------------------------------->
+        <nav>
+            <div class="right">
+                <a href="login/login.html">Login</a>
+               <a href="register/register.html">Register</a>
+            </div>
+        </nav>
+        <!----------------------------------------เมนูบน------------------------------------------->
+        <div class="top">
+            <div class="navi">
+                <span><button class="openbtn" onclick="openNav()">☰</button>
+                <a href="#"><img id="logo" src="src/logo/logona.png"/></a></span>
+                <ul class="menu">
+                    <li><a href="#">หน้าหลัก</a></li>
+                    <li><a href="#">วิธีการสั่งซื้อสินค้า</a></li>
+                    <li><a href="#">ติดต่อเรา</a></li>
+                    <li><a href="#">แจ้งชำระเงิน</a></li>
+                </ul>
+                <div class="rmenu" align="right">
+                    <a href="#"><img src="src/icon/cart.png" id="iconcn">
+                    <span class="numn">0</span></a>
+                </div>
+            </div>
+        </div>
+        <br>
         
-    </head>
-
-    <body>
-             
-          <div class="header-container" >
-                <img src="src/logo_navi.png" id="nav-logo">
-                <a href="login/login.html" target="_blank" class="item"><div id="word">หน้าหลัก</div></a>
-                <a href="login/login.html" target="_blank" class="item"><div id="word">ติดต่อเรา</div></a>
-                <a href="login/login.html" target="_blank" class="item"><div id="word">แจ้งชำระเงิน</div></a>
-                <div class="push"></div>
-                <div class="button"><a href="login/login.html" class="btn1" ><div id="text1">Login</div></a></div>
-                <div class="button"><a href="register/register.html" class="btn2" ><div id="text2">Register</div></a></div>
-        </div>  -->
+              
+                
+              
+            <!----------------------------------------รูปสไลด์------------------------------------------->
+                            
+            <div class="slideshow-container">
         
-
-        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-        <html xmlns="http://www.w3.org/1999/xhtml">
-        <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>KodangNungsue</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="logo/logonobgn.png"/>
-        <link rel="stylesheet" href="index.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Itim&family=Roboto&display=swap" rel="stylesheet">
-        </head>
-        
-        <body>
-            <!----------------------------------------เมนูบน------------------------------------------->
-                <div class="top">
-                    <div class="nav">
-                        <a href="#"><img id="logo" src="logo/logona.png"/></a>
-                        <ul class="menu">
-                            <li><a href="#">หน้าหลัก</a></li>
-                            <li><a href="#">วิธีการสั่งซื้อสินค้า</a></li>
-                            <li><a href="#">ติดต่อเรา</a></li>
-                            <li><a href="#">แจ้งชำระเงิน</a></li>
-                        </ul>
-                        <div class="rmenu" align="right">
-                            <a href="login/login.html" >
-                            <button type="submit" id="button1">login</button>
-                            </a>
-                            <a href="register/register.html" >
-                            <button type="submit" id="button2">Register</button>
-                            </a>
-                        </div>
+                <div class="mySlides fade">
+                <img src="src/logo/pic1.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                <img src="src/logo/pic2.png" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                <img src="src/logo/pic3.png" style="width:100%">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+            </div>
+            <!-----------------------------------3keed------------------------------------------------>
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <div class="search">
+                    <h3>SEARCH BOX<img src="src/icon/find.png" id="find"></h3>
+                    <hr color="#1D3D14" style="width: 80%; margin-bottom: 6%;">
+                    <div class="input">
+                        <input type="search" name="bsearch" placeholder="ค้นหาชื่อหนังสือ">
                     </div>
                 </div>
-                <br><br><br>
-            <!----------------------------------------ตาราง------------------------------------------->
-                <table style="width:100%">
-                    <tr>
-            <!----------------------------------------ตารางซ้าย------------------------------------------->
-                        <th rowspan="2" style="width:20%;" valign="top" align="left" >
-                                <div class="search">
-                                    <h2>SEARCH BOX<img src="icon/find.png" id="find"></h2>
-                                    <hr color="#1D3D14" style="width: 80%; margin-bottom: 6%;">
-                                    <div class="input">
-                                        <input type="search" name="bsearch" placeholder="ค้นหาชื่อหนังสือ">
-                                    </div>
-                                </div>
-                                <div class="cat">
-                                    <h2>CATEGORY</h2>
-                                    <hr color="#1D3D14" style="width: 80%; margin-bottom: 6%;" size="5">
-                                    <div class="cate">
-                                    <ul style="list-style-type:none">
-                                        <h2><a href="#">หนังสือเรียน</a></h2>
-                                        <li><a href="#">ประถมศึกษา</a></li>
-                                        <li><a href="#">มัธยมศึกษาตอนต้น</a></li>
-                                        <li><a href="#">มัธยมศึกษาตอนปลาย</a></li>
-                                        <h2><a href="#">หนังสือเตรียมสอบ</a></h2>
-                                        <li><a href="#">สอบเข้า ม.ต้น</a></li>
-                                        <li><a href="#">สอบเข้า ม.ปลาย</a></li>
-                                        <li><a href="#">สอบเข้า มหาวิทยาลัย</a></li>
-                                        <h2><a href="#">หนังสือการ์ตูน</a></h2>
-                                    </ul>
-                                    </div>
-                                </div>
-                        </th>
-                        <th class="contents">
-            <!----------------------------------------รูปสไลด์------------------------------------------->				
-                            <div class="slideshow-container">
-        
-                            <div class="mySlides fade">
-                            <img src="logo/pic1.png" style="width:100%">
-                            </div>
-                            
-                            <div class="mySlides fade">
-                            <img src="logo/pic2.png" style="width:100%">
-                            </div>
-                            
-                            <div class="mySlides fade">
-                            <img src="logo/pic3.png" style="width:100%">
-                            </div>
-                            
-                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                            
+                <div class="cat">
+                    <h3>CATEGORY</h3>
+                    <hr color="#1D3D14" style="width: 80%; margin-bottom: 6%;" size="5">
+                    <ul style="list-style-type:none">
+                        <h5><a href="#">หนังสือเรียน</a></h5>
+                        <li><a href="#">ประถมศึกษา</a></li>
+                        <li><a href="#">มัธยมศึกษาตอนต้น</a></li>
+                        <li><a href="#">มัธยมศึกษาตอนปลาย</a></li>
+                        <h5><a href="#">หนังสือเตรียมสอบ</a></h5>
+                        <li><a href="#">สอบเข้า ม.ต้น</a></li>
+                        <li><a href="#">สอบเข้า ม.ปลาย</a></li>
+                        <li><a href="#">สอบเข้า มหาวิทยาลัย</a></li>
+                        <h5><a href="#">หนังสือการ์ตูน</a></h5>
+                    </ul>
+                </div>
+            </div>
+              <!---------------------------------------prod---------------------------------------->
+              <div class="bg">
+                <h2>หนังสือแนะนำ</h2>
+                <hr color="#1D3D14" style="width: 80%; margin-bottom: 2%;" size="5">
+                <div class="product">
+                    
+                    <br>
+                    <!-------------------p1----------------------->
+                    <div class="pbox">
+                        
+                        <div class="pimg">
+                            <a href="#" class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                            </a>
+                            <img src="src/testprod/p1.jpg"/>
                         </div>
-                        <br>
-                        </th>
-                    </tr>
-                    <tr>
-                        
-                        <th class="content">
-            <!----------------------------------------หนังสือ------------------------------------------->
-                            <div class="bg">
-                                <h2>หนังสือแนะนำ</h2>
-                                <hr color="#1D3D14" style="width: 80%; margin-bottom: 2%;" size="5">
-                                <div class="product">
-                                    
-                                    <br>
-                                    <!-------------------p1----------------------->
-                                    <div class="pbox">
-                                        
-                                        <div class="pimg">
-                                            <a href="#" class="cart">
-                                                <img src="icon/addcart.png" id="basket">
-                                            </a>
-                                            <img src="testprod/p1.jpg"/>
-                                        </div>
-                                        <div class="pde">
-                                            <a href="#" class="pname">ONE PIECE 500 QUIZ BOOK</a>
-                                            <span class="pprice">฿200</span>
-                                        </div>
-                                    </div>
-                                    <!-------------------p2----------------------->
-                                    <div class="pbox">
-                                        <div class="pimg">
-                                            <a href="#" class="cart">
-                                                <img src="icon/addcart.png" id="basket">
-                                            </a>
-                                            <img src="testprod/p2.jpg"/>
-                                        </div>
-                                        <div class="pde">
-                                            <a href="#" class="pname">มานะ มานี ป.6</a>
-                                            <span class="pprice">฿300</span>
-                                        </div>
-                                    </div>
-                                    <!-------------------p3----------------------->
-                                    <div class="pbox">
-                                        <div class="pimg">
-                                            <a href="#" class="cart">
-                                                <img src="icon/addcart.png" id="basket">
-                                            </a>
-                                            <img src="testprod/p3.jpg"/>
-                                        </div>
-                                        <div class="pde">
-                                            <a href="#" class="pname">ติวเข้มสอบเข้า ม.1 ฉบับสมบูรณ์</a>
-                                            <span class="pprice">฿300</span>
-                                        </div>
-                                    </div>
-                                    <!-------------------p4----------------------->
-                                    <div class="pbox">
-                                        <div class="pimg">
-                                            <a href="#" class="cart">
-                                                <img src="icon/addcart.png" id="basket">
-                                            </a>
-                                            <img src="testprod/p4.jpg"/>
-                                        </div>
-                                        <div class="pde">
-                                            <a href="#" class="pname">ฟิสิกส์ ขนมหวาน เล่มที่ 2</a>
-                                            <span class="pprice">฿350</span>
-                                        </div>
-                                    </div>
-                                    <!-------------------p5----------------------->
-                                    <div class="pbox">
-                                        <div class="pimg">
-                                            <a href="#" class="cart">
-                                                <img src="icon/addcart.png" id="basket">
-                                            </a>
-                                            <img src="testprod/p5.jpg"/>
-                                        </div>
-                                        <div class="pde">
-                                            <a href="#" class="pname">มงคลชีวิต หลักปฏิบัติมงคล 38 ประการของคนดี</a>
-                                            <span class="pprice">฿65</span>
-                                        </div>
-                                    </div>
-                                    <!-------------------p6----------------------->
-                                    <div class="pbox">
-                                        <div class="pimg">
-                                            <a href="#" class="cart">
-                                                <img src="icon/addcart.png" id="basket">
-                                            </a>
-                                            <img src="testprod/p6.jpg"/>
-                                        </div>
-                                        <div class="pde">
-                                            <a href="#" class="pname">สรุปเข้ม Vocab พร้อมแนวข้อสอบ</a>
-                                            <span class="pprice">฿141</span>
-                                        </div>
-                                    </div>
-                                    <!-------------------p7----------------------->
-                                    <div class="pbox">
-                                        <div class="pimg">
-                                            <a href="#" class="cart">
-                                                <img src="icon/addcart.png" id="basket">
-                                            </a>
-                                            <img src="testprod/p7.jpg"/>
-                                        </div>
-                                        <div class="pde">
-                                            <a href="#" class="pname">ชิ้นส่วนเครื่องกล</a>
-                                            <span class="pprice">฿148</span>
-                                        </div>
-                                    </div>
-                                    <!-------------------p8----------------------->
-                                    <div class="pbox">
-                                        <div class="pimg">
-                                            <a href="#" class="cart">
-                                                <img src="icon/addcart.png" id="basket">
-                                            </a>
-                                            <img src="testprod/p8.jpg"/>
-                                        </div>
-                                        <div class="pde">
-                                            <a href="#" class="pname">ทฤษฎีดนตรี +DVD</a>
-                                            <span class="pprice">฿189</span>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </th>
-                        
-                    </tr>
-                
-                </table>
-                
-            <script src="js/jquery.js"></script>
-            <!--------------------------slide--------------------------------------------------------------->
+                        <div class="pde">
+                            <a href="#" class="pname">ONE PIECE 500 QUIZ BOOK</a>
+                            <span class="pprice">฿200</span>
+                        </div>
+                    </div>
+                    <!-------------------p2----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="#" class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                            </a>
+                            <img src="src/testprod/p2.jpg"/>
+                        </div>
+                        <div class="pde">
+                            <a href="#" class="pname">มานะ มานี ป.6</a>
+                            <span class="pprice">฿300</span>
+                        </div>
+                    </div>
+                    <!-------------------p3----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="#" class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                            </a>
+                            <img src="src/testprod/p3.jpg"/>
+                        </div>
+                        <div class="pde">
+                            <a href="#" class="pname">ติวเข้มสอบเข้า ม.1 ฉบับสมบูรณ์</a>
+                            <span class="pprice">฿300</span>
+                        </div>
+                    </div>
+                    <!-------------------p4----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="#" class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                            </a>
+                            <img src="src/testprod/p4.jpg"/>
+                        </div>
+                        <div class="pde">
+                            <a href="#" class="pname">ฟิสิกส์ ขนมหวาน เล่มที่ 2</a>
+                            <span class="pprice">฿350</span>
+                        </div>
+                    </div>
+                    <!-------------------p5----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="#" class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                            </a>
+                            <img src="src/testprod/p5.jpg"/>
+                        </div>
+                        <div class="pde">
+                            <a href="#" class="pname">มงคลชีวิต หลักปฏิบัติมงคล 38 ประการของคนดี</a>
+                            <span class="pprice">฿65</span>
+                        </div>
+                    </div>
+                    <!-------------------p6----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="#" class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                            </a>
+                            <img src="src/testprod/p6.jpg"/>
+                        </div>
+                        <div class="pde">
+                            <a href="#" class="pname">สรุปเข้ม Vocab พร้อมแนวข้อสอบ</a>
+                            <span class="pprice">฿141</span>
+                        </div>
+                    </div>
+                    <!-------------------p7----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="#" class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                            </a>
+                            <img src="src/testprod/p7.jpg"/>
+                        </div>
+                        <div class="pde">
+                            <a href="#" class="pname">ชิ้นส่วนเครื่องกล</a>
+                            <span class="pprice">฿148</span>
+                        </div>
+                    </div>
+                    <!-------------------p8----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="#" class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                            </a>
+                            <img src="src/testprod/p8.jpg"/>
+                        </div>
+                        <div class="pde">
+                            <a href="#" class="pname">ทฤษฎีดนตรี +DVD</a>
+                            <span class="pprice">฿189</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            
+        
+        
+            </div>
+        
+        
+        
+            <!--------------------------slideshow--------------------------------------------------------------->
             <script >
                 var slideIndex = 1;
                 showSlides(slideIndex);
@@ -271,22 +249,18 @@
                 setTimeout(carousel, 3500); // Change image every 2 seconds
                 }
             </script>
-        </body>
-        </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-           
+            <!--------------------------slidebar--------------------------------------------------------------->
+            <script>
+            function openNav() {
+              document.getElementById("mySidebar").style.width = "250px";
+              document.getElementById("main").style.marginLeft = "250px";
+            }
             
-    
+            function closeNav() {
+              document.getElementById("mySidebar").style.width = "0";
+              document.getElementById("main").style.marginLeft= "0";
+            }
+            </script>
+                  
+</body>
+</html>
