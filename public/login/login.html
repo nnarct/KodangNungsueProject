@@ -5,13 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
+
     <title>Kodang Login</title>
+
+    <!-- CSS style Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="../bootstrap/assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <!-- Firebase Initialize -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
@@ -38,8 +45,8 @@
                     <div class="forgot" align="right">
                         <a href="../forgot_password/emailConfirm.html" align="right" id="forgot">ลืมรหัสผ่าน?</a>
                     </div>
-                    <div   style="margin: 2%; " align="center">
-                            <input class="confirmButton" id="button-send" type="button" value="Login">
+                    <div style="margin: 2%; " align="center">
+                        <input class="confirmButton" id="button-send" type="button" value="Login">
                     </div>
                 </form>
                 <div class="linkReg" align="center">
@@ -52,6 +59,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Functional code-->
     <script src="login.js"></script>
 
 </body>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KodangRegister</title>
+
+    <link rel="stylesheet" href="register-ver1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+    <div align="center">
+    <a href="../index.html">
+        <img id="logo" src="../src/regis_logo.png" alt="Home Page">
+    </a></div>
+
+    <div class="info_area">
+
+        <div align="center">
+            <img id="header" src="../src/Register.png">
+        </div>
+
+        <form method="post">
+            <div class="input">
+                <div style="display: flex; flex-direction: row; width: 100%; font-size: 125%; ">
+
+                    <div style="width: 50%; margin: 2%; ">
+                        ชื่อ<br>
+                        <input type="text" class="inputBox" id="inputName" autofocus name="fname" required>
+                        <br>
+                        อีเมล <br>
+                        <input type="email" class="inputBox" id="inputEmail" name="email"
+                            placeholder="kodangnungsue@gmail.com" required>
+                        <br>
+
+                        Password<br>
+                        <input type="password" class="inputBox" id="inputPassword" name="password" required>
+                        <br>
+                        Confirm Password<br>
+                        <input type="password" class="inputBox" id="inputConfirmPassword" name="confirm_password"
+                            required>
+
+                    </div>
+                    <div style="width: 50%; margin: 2%; ">
+                        นามสกุล<br>
+                        <input type="text" class="inputBox" id="inputSurname" name="surname" required>
+                        <br>
+                        เบอร์โทร<br>
+                        <input type="tel" class="inputBox" id="inputPhone" maxlength="10" name="tel" pattern="[0][1-9][0-9]-[0-9]{3}-[0-9]{4}" required>
+                        <br>ที่อยู่<br>
+                        <textarea type="text" class="inputAddressBox" id="inputAddress" name="address" resize="none"
+                            placeholder="บ้านเลขที่ ซอย ถนน แขวง/ตำบล เขต/อำเภอ จังหวัด รหัสไปรษณีย์" value=""
+                            required></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div  style="display: flex; flex-direction: row; width: 100%;  ">
+                
+                <div  style="margin: 2%; width: 50%; padding: 10px" align="center">มีบัญชีอยู่แล้ว?
+                    <a href="login.html" style="color: white; font-weight: bold;">
+                    Login
+                </a>git add 
+                </div>  
+                <div class="confirmButton"   style="width: 40%; margin: 2%;margin-right: 15%; " align="right">
+                        <a href="login.html">
+                        <input type="submit" value="Register">
+                    </a>
+                </div>
+               </div> -->
+
+
+            <div style="display: flex; flex-direction: column; width: 100%; font-size: 125%; height: auto;">
+
+                <div align="center">
+                    <input class="regbutton" id="regbutton" type="button" value="Register" />
+                </div>
+
+
+                <div class="question">
+                    มีบัญชีอยู่แล้ว?
+                    <a href="../login/login.html" id="linklogin">
+                        Login
+                    </a>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+
+    <script src="register.js"></script>
+
+</body>
+
+</html>

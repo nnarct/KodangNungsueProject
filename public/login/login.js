@@ -1,62 +1,119 @@
-var config = {
+var firebaseConfig = {
     apiKey: "AIzaSyADVCDx2u4eyXan_CTvJ2N-zRJ6zT5eBPw",
     authDomain: "kodangnungsue.firebaseapp.com",
-    projectId: "kodangnungsue"
+    databaseURL: "https://kodangnungsue-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "kodangnungsue",
+    storageBucket: "kodangnungsue.appspot.com",
+    messagingSenderId: "210511003247",
+    appId: "1:210511003247:web:597d153c1b27be3536979a",
+    measurementId: "G-QY54X5370W"
 };
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
+const auth = firebase.auth()
+const database = firebase.firestore()
 
-let db = firebase.firestore();
+let buttonSend = document.getElementById('button-send')
+buttonSend.addEventListener('click', login);
+let passwordFeild = document.getElementById('floatingPassword')
+passwordFeild.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter') {
+        login();
+    }
+})
 
-db.collection('users').get().then((querySnapshot) => {
-    $readAddress = ['0'];
-    $readEmail = ['0'];
-    $readPassword = ['0'];
-    $readPhone = ['0'];
-    $readName = ['0'];
-    $readSurname = ['0'];
-    querySnapshot.forEach((doc) => {
-
-        $readAddress.push(doc.data().address);
-        $readEmail.push(doc.data().email);
-        $readPassword.push(doc.data().password);
-        $readPhone.push(doc.data().phone);
-        $readName.push(doc.data().name);
-        $readSurname.push(doc.data().surname);
-    });
-    $readAddress.splice(0, 1);
-    $readEmail.splice(0, 1);
-    $readPassword.splice(0, 1);
-    $readPhone.splice(0, 1);
-    $readName.splice(0, 1);
-    $readSurname.splice(0, 1);
-});
-
-
-function strcmp(a, b) {
-    if (a.toString() < b.toString()) return -1;
-    if (a.toString() > b.toString()) return 1;
-    return 0;
-}
 
 function login() {
-    for (let i = 0; i < $readAddress.length; i++) {
-        if (strcmp(document.getElementById("floatingInput").value, $readEmail[i]) === 0
-            && strcmp(document.getElementById("floatingPassword").value, $readPassword[i]) === 0) {
+    let email = document.getElementById('floatingInput').value
+    let password = document.getElementById('floatingPassword').value
+
+    if (validate_field(email) == false || validate_field(password) == false) {
+        Swal.fire(
+            'Error',
+            'Please fill out all text fields',
+            'error'
+        )
+        return
+    }
+    if (validate_email(email) == false) {
+        Swal.fire(
+            'Error',
+            'Invalid email format',
+            'error'
+        )
+        return
+    }
+    if (validate_password(password) == false) {
+        Swal.fire(
+            'Error',
+            'Enter a password of 8-16 characters',
+            'error'
+        )
+        return
+    }
+
+    auth.signInWithEmailAndPassword(email, password)
+        .then(function () {
+            var user = auth.currentUser
+            var database_ref = database.collection('users').doc(user.uid)
+
+            var user_data = {
+                last_login: Date.now()
+            }
+            database_ref.update(user_data)
+
             Swal.fire(
                 'Login Success',
-                'Welcome to my homepage',
+                'Welcome to homepage',
                 'success'
             )
-            location.href = "https://kodangnungsue.web.app/index2.html";
-            return;
-        }
-    }
-    Swal.fire(
-        'Login Failed',
-        'Invalid Email or Password!!',
-        'error'
-    )
-    return;
+
+            sessionStorage.setItem('userID', user.uid);
+            localStorage.setItem('localUserID', user.uid);
+            email = ''
+            password = ''
+            setTimeout(() => {
+                location.href = "../member/member-index.html";
+            }, 1500)
+
+        })
+        .catch(function (error) {
+            var error_code = error.code
+            var error_message = error.message
+
+            Swal.fire(
+                'Error',
+                error_message,
+                'error'
+            )
+        })
 }
-let buttonSend = document.getElementById('button-send');
-buttonSend.addEventListener('click', login);
+
+function validate_email(email) {
+    expression = /^[^@]+@\w+(\.\w+)+\w$/
+    if (expression.test(email) == true) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+function validate_password(password) {
+    if (password.toString().length < 8 || password.toString().length > 16) {
+        return false
+    } else {
+        return true
+    }
+}
+
+function validate_field(field) {
+    if (field == null) {
+        return false
+    }
+
+    if (field.length <= 0) {
+        return false
+    } else {
+        return true
+    }
+}

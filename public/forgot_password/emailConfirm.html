@@ -2,40 +2,62 @@
 <html>
 <head>
     
+    <!-- Style CSS & font -->
     <link rel="stylesheet" href="emailConfirm.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <!-- Materials for firebase script-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <!-- Sweet Alert script-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
     <div class="container">
-
         <!---------------- LOGO ------------------>
         <div class="logo" style="height: 30%; margin:2%;" align="center">
             <img src="../src/logogr.png" class="img">
         </div>
-        <!------------content box--------------->
+        <!------------content box in the MIDDLE of the screen--------------->
         <div class="content">
+
+            <!-- TOPIC and guide-line informaiton for user -->
             <div class="topic" >
                 ค้นหาบัญชีของคุณ
             </div>
-            <div class="separateline">
-            </div>
+            <div class="separateline"></div>
             <div class="navigationline">
-                โปรดป้อนอีเมลของคุณเพื่อค้นหาบัญชีของคุณ</div>
+                โปรดป้อนอีเมลของคุณเพื่อค้นหาบัญชีของคุณ
+            </div>
+<!-- Email Input -->
+<!-- Email Field for Password Reset Email --> 
             <div class="usersInput" align="center">
-                <input type="email" placeholder="Email" autofocus required></div>
+                <input type="email" placeholder="Email" id="email" autofocus required>
+            </div>
+
             <div class="buttonContainer">
                 <div  class="buttonBox" align="center">
                     <a href="../login/login.html" style="color: #7CBA4B;">
-                        <button type="button" class="CancleButtonStyle">ยกเลิก</a>
+                        <button type="button" class="CancleButtonStyle" >ยกเลิก</a> 
                 </div>
-                <div class="buttonBox" align="center">
-                    <a href="getotp.html" style="color: white;">
-                        <button type="button" class="ConfirmButtonStyle">ยืนยัน</a>
+                <div class="buttonBox"  align="center">
+<!-- Confirm Button -->
+<!-- Button to confirm email to send reset password to the provided email -->
+                   <button type="button" style="color: white;" class="ConfirmButtonStyle" id="btn-confirm">ยืนยัน</a>
                 </div>
             </div>
+
+ <!-- Link to external website -->
+            <div>
+                
+            </div>           
         </div>
     </div>
-</body>
 
+    <script src="forgetPassword.js"></script>
+
+</body>
 </html>

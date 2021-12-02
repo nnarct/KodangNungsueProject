@@ -2,7 +2,7 @@
 <html>
 <title>KodangNungsue</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="../index.css">
 <link rel="shortcut icon" href="src/logo/logonobgn.png" />
 <!------------------------------------------------พวกสัญลักษณ์----------------------------->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,28 +14,26 @@
         <div class="top">
             <div class="navi">
                 <span><button class="openbtn" onclick="openNav()">☰</button>
-                    <img id="logo" src="src/logo/logona.png" alt="homepage" />  </span>
+                    <a href="#"><img id="logo" src="src/logo/logona.png" /></a></span>
                 <ul class="menu">
-                    <li><a href="#" style="width: 75px;">หน้าหลัก</a></li>
-                    <li><a href="#" style="width: 145px;">วิธีการสั่งซื้อสินค้า</a></li>
-                    <li><a href="#" style="width: 90px;">ติดต่อเรา</a></li>
-                    <li><a href="#" style="width: 105px;">แจ้งชำระเงิน</a></li>
+                    <li><a href="#">หน้าหลัก</a></li>
+                    <li><a href="#">วิธีการสั่งซื้อสินค้า</a></li>
+                    <li><a href="#">ติดต่อเรา</a></li>
+                    <li><a href="#">แจ้งชำระเงิน</a></li>
                 </ul>
-                
-                    <div class=" button">
-                        <a href="login/login.html" class="btn login" >
-                            <div id="text1" >Login</div>
-                        </a>
-                        <a href="register/register.html" class="btn register" >
-                            <div id="text2">Register</div>
-                        </a>
-                    </div>
-                
+                <div class="rmenu" align="right">
+                    <a href="#"><img src="src/icon/cart.png" id="iconc">
+                        <span class="num">0</span></a>
+                    <a href="#"><img src="src/icon/peo.png" id="iconp"></a>
+                </div>
             </div>
         </div>
         <br>
-        <!----------------------------------------รูปสไลด์------------------------------------------->
 
+
+
+
+        <!----------------------------------------รูปสไลด์------------------------------------------->
         <div class="slideshow-container">
 
             <div class="mySlides fade">
@@ -57,7 +55,7 @@
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <div class="search">
-                <h3>SEARCH BOX<img src="src/icon/find.png" class="find"></h3>
+                <h3>SEARCH BOX<img src="src/icon/find.png" id="find"></h3>
                 <hr color="#1D3D14" style="width: 80%; margin-bottom: 6%;">
                 <div class="input">
                     <input type="search" name="bsearch" placeholder="ค้นหาชื่อหนังสือ">
@@ -108,15 +106,11 @@
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
                         </div>
-                        <span class="cart">
-                            <img src="src/icon/addcart.png" id="basket">
-                            หยิบใส่ตะกร้า
-
-                            <div class="overlay">
-                                <a href="login/login.html" class="text">Please Login before...</a>
-                            </div>
-                        </span>
-
+                        <a href="#">
+                            <span class="cart n">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span></a>
                     </div>
                 </div>
                 <!-------------------p2----------------------->
@@ -141,13 +135,11 @@
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
                         </div>
-                        <span class="cart">
-                            <img src="src/icon/addcart.png" id="basket">
-                            หยิบใส่ตะกร้า
-                            <div class="overlay">
-                                <a href="login/login.html" class="text">Please Login before...</a>
-                            </div>
-                        </span>
+                        <a href="#">
+                            <span class="cart n">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span></a>
                     </div>
                 </div>
                 <!-------------------p3----------------------->
@@ -172,13 +164,11 @@
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
                         </div>
-                        <span class="cart">
-                            <img src="src/icon/addcart.png" id="basket">
-                            หยิบใส่ตะกร้า
-                            <div class="overlay">
-                                <a href="login/login.html" class="text">Please Login before...</a>
-                            </div>
-                        </span>
+                        <a href="#">
+                            <span class="cart n">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span></a>
                     </div>
                 </div>
                 <!-------------------p4----------------------->
@@ -203,13 +193,11 @@
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
                         </div>
-                        <span class="cart">
-                            <img src="src/icon/addcart.png" id="basket">
-                            หยิบใส่ตะกร้า
-                            <div class="overlay">
-                                <a href="login/login.html" class="text">Please Login before...</a>
-                            </div>
-                        </span>
+                        <a href="#">
+                            <span class="cart n">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span></a>
                     </div>
                 </div>
                 <!-------------------p5----------------------->
@@ -234,13 +222,11 @@
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
                         </div>
-                        <span class="cart">
-                            <img src="src/icon/addcart.png" id="basket">
-                            หยิบใส่ตะกร้า
-                            <div class="overlay">
-                                <a href="login/login.html" class="text">Please Login before...</a>
-                            </div>
-                        </span>
+                        <a href="#">
+                            <span class="cart n">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span></a>
                     </div>
                 </div>
                 <!-------------------p6----------------------->
@@ -265,13 +251,11 @@
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
                         </div>
-                        <span class="cart">
-                            <img src="src/icon/addcart.png" id="basket">
-                            หยิบใส่ตะกร้า
-                            <div class="overlay">
-                                <a href="login/login.html" class="text">Please Login before...</a>
-                            </div>
-                        </span>
+                        <a href="#">
+                            <span class="cart n">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span></a>
                     </div>
                 </div>
                 <!-------------------p7----------------------->
@@ -296,13 +280,11 @@
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
                         </div>
-                        <span class="cart">
-                            <img src="src/icon/addcart.png" id="basket">
-                            หยิบใส่ตะกร้า
-                            <div class="overlay">
-                                <a href="login/login.html" class="text">Please Login before...</a>
-                            </div>
-                        </span>
+                        <a href="#">
+                            <span class="cart n">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span></a>
                     </div>
                 </div>
                 <!-------------------p8----------------------->
@@ -327,13 +309,11 @@
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
                         </div>
-                        <span class="cart">
-                            <img src="src/icon/addcart.png" id="basket">
-                            หยิบใส่ตะกร้า
-                            <div class="overlay">
-                                <a href="login/login.html" class="text">Please Login before...</a>
-                            </div>
-                        </span>
+                        <a href="#">
+                            <span class="cart n">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span></a>
                     </div>
                 </div>
 

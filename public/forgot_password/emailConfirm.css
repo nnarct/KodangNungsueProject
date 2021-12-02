@@ -4,13 +4,12 @@
 }
 
 body {
-    font-family: Roboto;
+    font-family: Itim;
     background-color: #EBE5D7;
 }
 
 a{
     text-decoration: none;
-    
 }
 
 .container{
@@ -19,13 +18,15 @@ a{
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); 
-    width: 48%; 
+    width: 80%; 
+    max-width: 617px;
     height: auto; 
 }
 /*#EBE5D7*/
 .img{
     height: 150px;
 }
+
 .content{
     height: auto;
     width: 100%;
@@ -38,13 +39,11 @@ a{
   
 }
 
-
 .info{
     position: absolute;
-width:auto;
-
-background: #FFFFFF;
-border-radius: 20px;
+    width:auto;
+    background: #FFFFFF;
+    border-radius: 20px;
 }
 
 input{
@@ -68,14 +67,17 @@ input{
    background-color:#a5a5a5;
    height: 0.1px;
    width: 100%;
+   margin: 0.75%;
 }
 
 .navigationline{
+    height: auto;
+    margin: 2% 0px; font-size: 1.5rem;
 
-    height: auto;margin: 2% 0px; font-size: 1.2rem;
 }
 
-.navigationline2{
+.navigationline2 /* สำหรับหน้าที่ต้องใส่ passwor 2 ครั้ง (Password & confirmPassword) */
+{
     width: 80%;
     height: auto;margin: 0.5% 0px; font-size: 1.1rem;
 }
@@ -88,21 +90,26 @@ input{
 }
 
 .buttonContainer{
+    font-family: Itim;
     height: 20%; margin-top: 2%; margin-bottom: 4%;display: flex; flex-direction: row; align-items: center; justify-content: center; width: 100%;
 }
 
 .buttonBox{
+    font-family: Itim;
     width: 20%;
     cursor: pointer; 
 }
+
 .CancleButtonStyle{
+    font-family: Itim;
     width: 90%; padding: 3% 6%; background-color: white; border-color: #7CBA4B;
     border-radius: 100px; color: #7CBA4B; font-size: 1.2rem;
 }
 
 .ConfirmButtonStyle{
-     width: 90%; padding: 3% 6%; background-color: #7CBA4B; border-color: #7CBA4B;
-                    border-radius: 100px; font-display: #fff; font-size: 1.2rem;
+    font-family: Itim;
+    width: 90%; padding: 3% 6%; background-color: #7CBA4B; border-color: #7CBA4B;
+    border-radius: 100px; font-display: #fff; font-size: 1.2rem;
 }
 
 button{

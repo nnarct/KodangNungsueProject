@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+<title>KodangTest</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="prod.css">
+<link rel="shortcut icon" href="src/logo/logonobgn.png" />
+<!------------------------------------------------พวกสัญลักษณ์----------------------------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+<body>
+    <div id="main">
+        <!----------------------------------------เมนูบน------------------------------------------->
+        <div class="top">
+            <div class="navi">
+                <span><button class="openbtn" onclick="openNav()">☰</button>
+                    <a href="#"><img id="logo" src="src/logo/logona.png" /></a></span>
+                <ul class="menu">
+                    <li><a href="#">หน้าหลัก</a></li>
+                    <li><a href="#">วิธีการสั่งซื้อสินค้า</a></li>
+                    <li><a href="#">ติดต่อเรา</a></li>
+                    <li><a href="#">แจ้งชำระเงิน</a></li>
+                </ul>
+                <div class="rmenu" align="right">
+                    <a href="#"><img src="src/icon/cart.png" id="iconc">
+                        <span class="num">0</span></a>
+                    <a href="#"><img src="src/icon/peo.png" id="iconp"></a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!----------------------------------------รูปสไลด์------------------------------------------->
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="src/logo/pic1.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="src/logo/pic2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="src/logo/pic3.png" style="width:100%">
+            </div>
+
+            <a class="prev" onclick="pSlides(-1)">&#10094;</a>
+            <a class="next" onclick="pSlides(1)">&#10095;</a>
+
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <div class="search">
+                <h3>SEARCH BOX<img src="src/icon/find.png" id="find"></h3>
+                <hr color="#1D3D14" style="width: 80%; margin-bottom: 6%;">
+                <div class="input">
+                    <input type="search" name="bsearch" placeholder="ค้นหาชื่อหนังสือ">
+                </div>
+            </div>
+            <div class="cat">
+                <h3>CATEGORY</h3>
+                <hr color="#1D3D14" style="width: 80%; margin-bottom: 6%;" size="5">
+                <ul style="list-style-type:none">
+                    <h5><a href="#">หนังสือเรียน</a></h5>
+                    <li><a href="#">ประถมศึกษา</a></li>
+                    <li><a href="#">มัธยมศึกษาตอนต้น</a></li>
+                    <li><a href="#">มัธยมศึกษาตอนปลาย</a></li>
+                    <h5><a href="#">หนังสือเตรียมสอบ</a></h5>
+                    <li><a href="#">สอบเข้า ม.ต้น</a></li>
+                    <li><a href="#">สอบเข้า ม.ปลาย</a></li>
+                    <li><a href="#">สอบเข้า มหาวิทยาลัย</a></li>
+                    <h5><a href="#">หนังสือการ์ตูน</a></h5>
+                </ul>
+            </div>
+        </div>
+        <!---------------------------------------prod---------------------------------------->
+        <div class="bg">
+            <!---------------------------------------prode------------------------------------------>
+            <span class="de-container single-prod">
+                <div class="row">
+                    <div class="col-2" style="width: 47%;">
+                        <div class="cont">
+                            <div class="mySlidede">
+                                <div class="numbertext">1 / 6</div>
+                                <img src="src/testprod/p1.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlidede">
+                                <div class="numbertext">2 / 6</div>
+                                <img src="src/testprod/p2.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlidede">
+                                <div class="numbertext">3 / 6</div>
+                                <img src="src/testprod/p3.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlidede">
+                                <div class="numbertext">4 / 6</div>
+                                <img src="src/testprod/p4.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlidede">
+                                <div class="numbertext">5 / 6</div>
+                                <img src="src/testprod/p5.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlidede">
+                                <div class="numbertext">6 / 6</div>
+                                <img src="src/testprod/p6.jpg" style="width:100%">
+                            </div>
+
+                            <a class="pre" onclick="pluSlides(-1)">❮</a>
+                            <a class="nex" onclick="pluSlides(1)">❯</a>
+
+                            <div class="ro">
+                                <div class="colum">
+                                    <img class="demo cur imgl" src="src/testprod/p1.jpg" style="width:100%"
+                                        onclick="currentSlide(1)">
+                                </div>
+                                <div class="colum">
+                                    <img class="demo cur imgl" src="src/testprod/p2.jpg" style="width:100%"
+                                        onclick="curSlide(2)">
+                                </div>
+                                <div class="colum">
+                                    <img class="demo cur imgl" src="src/testprod/p3.jpg" style="width:100%"
+                                        onclick="curSlide(3)">
+                                </div>
+                                <div class="colum">
+                                    <img class="demo cur imgl" src="src/testprod/p4.jpg" style="width:100%"
+                                        onclick="curSlide(4)">
+                                </div>
+                                <div class="colum">
+                                    <img class="demo cur imgl" src="src/testprod/p5.jpg" style="width:100%"
+                                        onclick="curSlide(5)">
+                                </div>
+                                <div class="colum">
+                                    <img class="demo cur imgl" src="src/testprod/p6.jpg" style="width:100%"
+                                        onclick="curSlide(6)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2" style="width: 47%; margin-right: 2%;">
+                        <div class="bgde">
+                            <h1>ONE PIECE 500 QUIZ BOOK</h1>
+                            <h1>200 บาท</h1>
+                            <div class="star pro">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half-full checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <h3>ลงขายโดย<span class="light"> มังกี้ ดี ท็อฟฟี่</span> <br>
+                                จังหวัด<span class="light"> แกรนด์ไลน์</span><br>
+                                รายละเอียดสินค้า<br><br>
+                                <span class="light">อ่านสนุกอ่านมันอ่านเพลิน รู้ทุกเรื่องทั่วท้องทะเลเพื่อชิงวันพีช
+                                    แล้วเป็นราชาโจรสลัดไปด้วยกัน สินค้ามือ 1</span>
+                            </h3>
+                            <h3>สภาพสินค้า <span class="light"> 99%</span></h3>
+                            <h3>ลงขายเมื่อ<span class="light">19 กย. 2566</span> </h3><br>
+                            <h3>ประเภทสินค้า<span class="light">หนังสือการ์ตูน</span> </h3><br>
+                            <label for="quantity">จำนวน </label>
+                            <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="0"> เล่ม
+                            <h4><span class="light proleft">เหลือสินค้า 5 เล่ม</span></h4>
+                            <div class="addcart">
+                                <input type="submit" id="bas" value="หยิบลงตะกร้า">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </span>
+            <div class="review">
+                <h2>รีวิวสินค้า</h2>
+                <hr color="#1D3D14" style="width: 80%;" size="5">
+                <div class="star pro" align="center">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star-half-full checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <div class="reviewbox">
+
+                    <div class="rowre">
+                        <div class="side">
+                            <div>5 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                                <div class="bar-5"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>2</div>
+                        </div>
+                        <div class="side">
+                            <div>4 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                                <div class="bar-4"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>4</div>
+                        </div>
+                        <div class="side">
+                            <div>3 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                                <div class="bar-3"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>3</div>
+                        </div>
+                        <div class="side">
+                            <div>2 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                                <div class="bar-2"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>0</div>
+                        </div>
+                        <div class="side">
+                            <div>1 star</div>
+                        </div>
+                        <div class="middle">
+                            <div class="bar-container">
+                                <div class="bar-1"></div>
+                            </div>
+                        </div>
+                        <div class="side right">
+                            <div>3</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <hr style="border:3px solid #f1f1f1; width: 80%;">
+                <br>
+                <div class="comment">
+                    <div>
+                        <img src="icon/peo.png" class="peocom">
+                        <span class="namere">สมหวัง ถังสี</span>
+                        <span class="st-right">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </span>
+                        <p>ได้รับหนังสือครบถ้วน จัดส่งรวดเร็วว่องไว แพ็คมาดี
+                            ไม่เสียหาย ไว้จะมาอุดหนุนอีกนะครับ 💗💗💗💗👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼
+                            👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼</p>
+                    </div>
+                    <hr style="border:2px solid #f1f1f1; width: 100%;">
+                    <div>
+                        <img src="icon/peo.png" class="peocom">
+                        <span class="namere">สมดี มีตัง</span>
+                        <span class="st-right">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </span>
+                        <p>ได้รับหนังสือครบถ้วน จัดส่งไว แพ็คมาดี ไว้จะมาอุดหนุนอีกนะคะ</p>
+                    </div>
+                    <hr style="border:2px solid #f1f1f1; width: 100%;">
+                    <!-- Trigger/Open The Modal -->
+                    <button id="myBtn">ดูทั้งหมด</button>
+
+                    <!-- The Modal -->
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="closemd">&times;</span>
+                            <div class="allre">
+                                <div>
+                                    <img src="icon/peo.png" class="peocom">
+                                    <span class="namere">สมหวัง ถังสี</span>
+                                    <span class="st-right">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </span>
+                                    <p>ได้รับหนังสือครบถ้วน จัดส่งรวดเร็วว่องไว แพ็คมาดี
+                                        ไม่เสียหาย ไว้จะมาอุดหนุนอีกนะครับ 💗💗💗💗👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼
+                                        👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼</p>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                <div>
+                                    <img src="icon/peo.png" class="peocom">
+                                    <span class="namere">สมดี มีตัง</span>
+                                    <span class="st-right">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                    </span>
+                                    <p>ได้รับหนังสือครบถ้วน จัดส่งไว แพ็คมาดี ไว้จะมาอุดหนุนอีกนะคะ</p>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                <div>
+                                    <img src="icon/peo.png" class="peocom">
+                                    <span class="namere">สมหวัง ถังสี</span>
+                                    <span class="st-right">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star "></span>
+                                    </span>
+                                    <p>ได้รับหนังสือครบถ้วน จัดส่งรวดเร็วว่องไว แพ็คมาดี
+                                        ไม่เสียหาย ไว้จะมาอุดหนุนอีกนะครับ 💗💗💗💗👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼
+                                        👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼</p>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                <div>
+                                    <img src="icon/peo.png" class="peocom">
+                                    <span class="namere">สมดี มีตัง</span>
+                                    <span class="st-right">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star "></span>
+                                    </span>
+                                    <p>ได้รับหนังสือครบถ้วน จัดส่งไว แพ็คมาดี ไว้จะมาอุดหนุนอีกนะคะ</p>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                <div>
+                                    <img src="icon/peo.png" class="peocom">
+                                    <span class="namere">สมหวัง ถังสี</span>
+                                    <span class="st-right">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star "></span>
+                                    </span>
+                                    <p>ได้รับหนังสือครบถ้วน จัดส่งรวดเร็วว่องไว แพ็คมาดี
+                                        ไม่เสียหาย ไว้จะมาอุดหนุนอีกนะครับ 💗💗💗💗👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼
+                                        👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼</p>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                <div>
+                                    <img src="icon/peo.png" class="peocom">
+                                    <span class="namere">สมดี มีตัง</span>
+                                    <span class="st-right">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star "></span>
+                                    </span>
+                                    <p>ได้รับหนังสือครบถ้วน จัดส่งไว แพ็คมาดี ไว้จะมาอุดหนุนอีกนะคะ</p>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                <div>
+                                    <img src="icon/peo.png" class="peocom">
+                                    <span class="namere">สมหวัง ถังสี</span>
+                                    <span class="st-right">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star "></span>
+                                    </span>
+                                    <p>ได้รับหนังสือครบถ้วน จัดส่งรวดเร็วว่องไว แพ็คมาดี
+                                        ไม่เสียหาย ไว้จะมาอุดหนุนอีกนะครับ 💗💗💗💗👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼
+                                        👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼</p>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                <div>
+                                    <img src="icon/peo.png" class="peocom">
+                                    <span class="namere">สมดี มีตัง</span>
+                                    <span class="st-right">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star "></span>
+                                    </span>
+                                    <p>ได้รับหนังสือครบถ้วน จัดส่งไว แพ็คมาดี ไว้จะมาอุดหนุนอีกนะคะ</p>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                <div>
+                                    <img src="icon/peo.png" class="peocom">
+                                    <span class="namere">สมหวัง ถังสี</span>
+                                    <span class="st-right">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star "></span>
+                                    </span>
+                                    <p>ได้รับหนังสือครบถ้วน จัดส่งรวดเร็วว่องไว แพ็คมาดี
+                                        ไม่เสียหาย ไว้จะมาอุดหนุนอีกนะครับ 💗💗💗💗👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼
+                                        👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼👍🏼</p>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                <div>
+                                    <img src="icon/peo.png" class="peocom">
+                                    <span class="namere">สมดี มีตัง</span>
+                                    <span class="st-right">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star "></span>
+                                    </span>
+                                    <p>หนังสือยับนะคะ</p>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                <div>
+                                    <img src="icon/peo.png" class="peocom">
+                                    <span class="namere">สมหวัง ถังสี</span>
+                                    <span class="st-right">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star "></span>
+                                    </span>
+                                    <p>ห่วยครับ</p>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                <div>
+                                    <img src="icon/peo.png" class="peocom">
+                                    <span class="namere">สมดี มีตัง</span>
+                                    <span class="st-right">
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star "></span>
+                                        <span class="fa fa-star "></span>
+                                    </span>
+                                    <p>ช้าเว่อร์ๆๆนะคะ</p>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="rec">
+                <br>
+                <h2>สินค้าจากร้านเดียวกัน</h2>
+                <hr color="#1D3D14" style="width: 80%; margin-bottom: 2%;" size="5">
+                <div class="product">
+
+                    <br>
+                    <!-------------------p1----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="prodn.html">
+                                <img src="src/testprod/p1.jpg">
+                                <div class="overlay-up">
+                                    <span class="text-up">ดูเพิ่มเติม</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="pde">
+                            <a href="prodn.html">
+                                <span class="pname">ONE PIECE 500 QUIZ BOOK</span></a>
+                            <a href="prodn.html">
+                                <span class="pprice">฿200</span></a>
+                            <div class="star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half-full checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span>
+                        </div>
+                    </div>
+                    <!-------------------p2----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="prodn.html">
+                                <img src="src/testprod/p2.jpg">
+                                <div class="overlay-up">
+                                    <span class="text-up">ดูเพิ่มเติม</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="pde">
+                            <a href="prodn.html">
+                                <span class="pname">มานะ มานี ป.6</span></a>
+                            <a href="prodn.html">
+                                <span class="pprice">฿300</span></a>
+                            <div class="star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span>
+                        </div>
+                    </div>
+                    <!-------------------p3----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="prodn.html">
+                                <img src="src/testprod/p3.jpg" />
+                                <div class="overlay-up">
+                                    <span class="text-up">ดูเพิ่มเติม</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="pde">
+                            <a href="prodn.html">
+                                <span class="pname">ติวเข้มสอบเข้า ม.1 ฉบับสมบูรณ์</span></a>
+                            <a href="prodn.html">
+                                <span class="pprice">฿300</span></a>
+                            <div class="star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half-full checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span>
+                        </div>
+                    </div>
+                    <!-------------------p4----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="prodn.html">
+                                <img src="src/testprod/p4.jpg" />
+                                <div class="overlay-up">
+                                    <span class="text-up">ดูเพิ่มเติม</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="pde">
+                            <a href="prodn.html">
+                                <span class="pname">ฟิสิกส์ ขนมหวาน เล่มที่ 2</span></a>
+                            <a href="prodn.html">
+                                <span class="pprice">฿350</span></a>
+                            <div class="star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span>
+                        </div>
+                    </div>
+                    <!-------------------p5----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="prodn.html">
+                                <img src="src/testprod/p5.jpg" />
+                                <div class="overlay-up">
+                                    <span class="text-up">ดูเพิ่มเติม</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="pde"></a>
+                            <a href="prodn.html">
+                                <span class="pname">มงคลชีวิต หลักปฏิบัติมงคล 38 ประการของคนดี</span></a>
+                            <a href="prodn.html">
+                                <span class="pprice">฿65</span></a>
+                            <div class="star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span>
+                        </div>
+                    </div>
+                    <!-------------------p6----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="prodn.html">
+                                <img src="src/testprod/p6.jpg" />
+                                <div class="overlay-up">
+                                    <span class="text-up">ดูเพิ่มเติม</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="pde">
+                            <a href="prodn.html">
+                                <span class="pname">สรุปเข้ม Vocab พร้อมแนวข้อสอบ</span></a>
+                            <a href="prodn.html">
+                                <span class="pprice">฿141</span></a>
+                            <div class="star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star-half-full checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span>
+                        </div>
+                    </div>
+                    <!-------------------p7----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="prodn.html">
+                                <img src="src/testprod/p7.jpg" />
+                                <div class="overlay-up">
+                                    <span class="text-up">ดูเพิ่มเติม</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="pde">
+                            <a href="prodn.html">
+                                <span class="pname">ชิ้นส่วนเครื่องกล</span></a>
+                            <a href="prodn.html">
+                                <span class="pprice">฿148</span></a>
+                            <div class="star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span>
+                        </div>
+                    </div>
+                    <!-------------------p8----------------------->
+                    <div class="pbox">
+                        <div class="pimg">
+                            <a href="prodn.html">
+                                <img src="src/testprod/p8.jpg" />
+                                <div class="overlay-up">
+                                    <span class="text-up">ดูเพิ่มเติม</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="pde"></a>
+                            <a href="prodn.html">
+                                <span class="pname">ทฤษฎีดนตรี +DVD</span></a>
+                            <a href="prodn.html">
+                                <span class="pprice">฿189</span></a>
+                            <div class="star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <span class="cart">
+                                <img src="src/icon/addcart.png" id="basket">
+                                หยิบใส่ตะกร้า
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--------------------------slideshow--------------------------------------------------------------->
+        <script>
+            var slideInd = 1;
+            show(slideInd);
+
+            function pSlides(k) {
+                show(slideInd += k);
+            }
+
+            function currentSlide(k) {
+                show(slideInd = k);
+            }
+
+            function show(k) {
+                var i;
+                var sli = document.getElementsByClassName("mySlides");
+                if (k > sli.length) { slideInd = 1 }
+                if (k < 1) { slideInd = sli.length }
+                for (i = 0; i < sli.length; i++) {
+                    sli[i].style.display = "none";
+                }
+
+                sli[slideInd - 1].style.display = "block";
+            }
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+
+                slideInd++;
+                if (slideInd > x.length) { slideInd = 1 }
+                x[slideInd - 1].style.display = "block";
+                setTimeout(carousel, 3500); // Change image every 2 seconds
+            }
+        </script>
+        <!--------------------------slidebar--------------------------------------------------------------->
+        <script>
+            function openNav() {
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
+        <!--------------------------detail--------------------------------------------------------------->
+        <script>
+            var sIndex = 1;
+            showSlides(sIndex);
+
+            function pluSlides(n) {
+                showSlides(sIndex += n);
+            }
+
+            function curSlide(n) {
+                showSlides(sIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlidede");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) { sIndex = 1 }
+                if (n < 1) { sIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[sIndex - 1].style.display = "block";
+                dots[sIndex - 1].className += " active";
+                captionText.innerHTML = dots[sIndex - 1].alt;
+            }
+        </script>
+        <!-------------------------review------------------------------------------------------------------>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("closemd")[0];
+
+            // When the user clicks the button, open the modal 
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+</body>
+
+</html>

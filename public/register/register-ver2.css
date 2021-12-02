@@ -1,0 +1,189 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html{
+    background-color: #EBE5D7;
+}
+body {
+    font-family: Roboto;
+    background-color: #EBE5D7;
+}
+
+.contain {
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 80%;  /*mobile 80% , max 800px*/ 
+    max-width: 1000px;
+}
+
+.logo{
+    width: 40%;
+}
+
+.content {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #EBE5D7;
+    max-width: 1000px;
+}
+
+.info {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: #335E27;
+    max-width: 1000px;
+}
+
+
+.double {
+    color: #000;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row; /* potrait column , landscape row*/
+    align-items: center;
+    justify-content: center;
+    background-color: #335E27;
+    
+}
+.form-floating{
+    margin: 1% 1.5%;
+    width: 100%;
+    font-family: Roboto;
+    font-size: 120%;
+    color: #335E27;
+}
+.left{
+    margin: 1% 0.75% 1% 1.5%;
+    width: 100%;
+    font-family: Roboto;
+    font-size: 120%;
+    color: #335E27;
+}
+.right{
+    margin: 1% 1.5% 1% 0.75%  ;
+    width: 100%;
+    font-family: Roboto;
+    font-size: 120%;
+    color: #335E27;
+}
+
+textarea{
+    resize: none;
+    height: 100px;
+    max-height: 100px;
+}
+
+.question{
+    color: #fff;
+    width: 100%;
+    margin: 1% 0px 2% 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=button] {
+    width: 120px;
+    padding: 8px 15px;
+    margin-top:3.5px;
+    margin-bottom:3.5px;
+    height: 46px;
+    box-sizing: border-box;
+    border-radius:15px;
+    background-color: #65993c;
+    font-family: Roboto;
+    font-size:18px;
+    font-style: normal;
+    font-weight: normal;
+    color:#FFFFFF;
+    box-shadow: 2px 6px 5px rgba(0, 0, 0, 0.25);
+    cursor:pointer;
+}
+
+input[type=button]:hover{
+    background-color: #bedda6;
+    color: black;
+}
+
+.haveAccount{
+    color: #EBE5D7;
+    width: 100%;
+    height: fit-content;
+}
+
+#linklogin{
+    font-weight: bolder;
+    font-size: 105%;
+    color: white;
+    text-decoration: none;
+    margin: 0px 0px 0px 25px;
+}
+#linklogin:hover{
+    color: #60ff75;
+}
+.regbutton{
+    width: 100%;
+    margin: 1% 0px;  
+}
+
+@media (orientation: portrait) {
+    .contain {
+        position: fixed;
+        top: 48%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 80%;
+        
+        /*mobile 80% , max 800px*/
+    }
+    .content{
+        min-height: 100%;
+    }
+    .info{
+        width: 100%;
+       
+    }
+    .double {
+        color: #000;
+        width: 100%;
+        display: flex;
+        flex-direction: column; /* potrait column , landscape row*/
+        align-items: center;
+        justify-content: center;
+        background-color: #335E27;
+    }
+    .form-floating{
+        font-size: 100%;
+        margin: 1% 3%;
+    
+        width: 95%;
+        min-width: fit-content;
+    }
+    .regbutton{
+        width: 100%;
+        margin: 9% 0px;  
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .contain{
+        height: 60%;
+    }
+}
