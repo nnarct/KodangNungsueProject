@@ -62,18 +62,37 @@ function login() {
             database_ref.update(user_data)
 
             Swal.fire(
-                'Login Success',
-                'Welcome to homepage',
-                'success'
+                'Please Wait',
+                'System is processing',
+                'info'
             )
+            sessionStorage.setItem('user', JSON.stringify(user));
+            localStorage.setItem('lastUser', JSON.stringify(user));
+            document.getElementById('floatingInput').value = ''
+            document.getElementById('floatingPassword').value = ''
 
-            sessionStorage.setItem('userID', user.uid);
-            localStorage.setItem('localUserID', user.uid);
-            email = ''
-            password = ''
-            setTimeout(() => {
-                location.href = "../member/member-index.html";
-            }, 1500)
+            database_ref.get().then((doc) => {
+                let userDetail = {
+                    id: doc.id,
+                    address: doc.data().address,
+                    email: doc.data().email,
+                    Name: doc.data().name,
+                    surname: doc.data().surname,
+                    phone: doc.data().phone,
+                    type: doc.data().type,
+                    last_login: doc.data().last_login
+                }
+                Swal.fire(
+                    'Login Success',
+                    'Welcome to homepage',
+                    'success'
+                )
+                sessionStorage.setItem('userDetail', JSON.stringify(userDetail))
+                setTimeout(() => {
+                    location.href = "../member/member-index.html";
+                }, 1500)
+            })
+
 
         })
         .catch(function (error) {
@@ -99,7 +118,7 @@ function validate_email(email) {
 }
 
 function validate_password(password) {
-    if (password.toString().length < 8 || password.toString().length > 16) {
+    if (password.toString < 8 || password.toString > 16) {
         return false
     } else {
         return true

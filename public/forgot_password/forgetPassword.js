@@ -28,9 +28,11 @@ function sendEmail() {
             Swal.fire(
                 'Email has been sent to your email',
                 'Please check and verify',
-                'success'
+                'success',
+                'ok'
             )
-            email = '';
+            document.querySelector('#email').value = '';
+            document.querySelector('#show-hide').style.display = 'block';
         })
             .catch(function (error) {
                 var errorCode = error.code;
