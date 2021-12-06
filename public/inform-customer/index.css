@@ -1,0 +1,264 @@
+body {
+    margin: 0px;
+    padding: 0px;
+      font-family:Itim;
+      background-color: #EBE5D7;
+}
+  
+* { box-sizing: border-box }
+
+
+h1 { color: red; font-family: Kanit; padding: 10px; margin-left: 2.5%; width: 95%; background: white; margin-bottom: 0px; }
+.container { display: flex; flex-direction: column; align-items: center; font-family: Kanit; margin-left: 2.5%; width: 95%; background: white; }
+.topic { font-size: 2em; font-weight: bold; }
+
+.information, .details { 
+  display: flex;
+  flex-direction: row;
+  width: 90%; 
+  max-width: 700px;
+  min-width: fit-content; }
+.details { border-bottom: 1px solid lightgray; }
+
+.one { padding: 10px; text-align: right; width: 20%; align-self: center; min-width: fit-content;}
+.two { padding: 10px; width: 80%; align-self: center; }
+.three { padding: 5px; display: flex; flex-direction: column; justify-content: space-around; min-width: max-content;}
+.sep { width: 4%; }
+#bank-logo { height: 25px; width: 25px; margin: 2px 0px;}
+
+/* input style */
+input[type="radio"] { margin: 0px; padding: 0px;}
+#cost,#time,#date,#ref-no,#other  { border:1px; border-style: solid; border-color: lightgray; font-family: Itim; width: 50%; padding: 5px 0.25em; border-radius: 4px; font-size: 1em; }
+#time,#date { width: fit-content; }
+#ref-no { width: 100%; }
+#other { width: 100%; height: 170px; }
+
+/* Datails of the user */
+.Fullname { padding: 10px; text-align: right; width: 15%; align-self: center; min-width: fit-content; }
+.InputBuyerName { padding: 10px; width: 85%; align-self: center; }
+#get-fname, #get-lname, #getPhone { border:1px; border-style: solid; border-color: lightgray; font-family: Itim; width: 100%; padding: 5px 0.25em; border-radius: 4px; font-size: 1em; }
+
+/* warn user to carefully check their inputs again */
+.warning {
+  display: block; color: red; background: white; width: 95%;
+  font-size: 1.5em; font-family: Kanit; font-weight: bold;
+  margin-block-start: 0.67em; margin-block-end: 0.67em;
+  margin-inline-start: 0px; margin-inline-end: 0px;
+  margin-top: 0px; margin-bottom: 0px; padding: 10px;
+}
+
+/* confirm withdraw submit  */
+#confirmMoney { 
+  border-radius: 5rem; background-color: #2b8a2b;
+  padding: 4px 3%;   min-width: fit-content;
+  height: fit-content;min-height: fit-content; 
+  font-family: Itim; font-size: 1.7em; color: white; 
+}
+#confirmMoney:hover { background-color: #86e63d; color: black; }
+
+
+
+/*                    basic components                      */
+
+#main { transition: margin-left .5s; padding: 0px; }
+.top{
+	position:relative;
+	width:100%;
+	Background:#1D3D14;
+    height: 90px;   
+}
+.navi{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 30px;
+    height: 90px;
+}
+
+/* open button */
+.openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background-color:#1D3D14;
+    vertical-align: middle;
+    border: none;
+}
+.openbtn:hover { background-color: #183310; border-radius: 10px; }
+
+/* logo */
+#logo{
+    position: relative;
+    width: 90%;
+    max-width:200px;
+}
+@media screen and (max-width: 1043px) {
+    #logo { display: none; }
+}
+img {vertical-align: middle; }
+/* menu */
+ul.menu { padding: 0px; }
+.menu { display: flex; justify-content: space-evenly; width: 500px; }
+.menu li {
+	position: relative;
+	display: flex;
+	text-transform:uppercase;
+	align-items: center;
+	font-size:20px;
+}
+.menu li:hover { font-size:21px; }
+.menu a {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  padding-left: 0px;
+	color:#FFF;
+	text-decoration:none;
+}
+.menu a:hover{ color: #e7b975; }
+
+/* nnarct part login + register buttons */
+.button {
+    font: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-decoration: none;  
+}
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-decoration: none;
+    width: 100px;
+    margin: 0px 10px;
+    border-radius: 10rem;
+    border: 2px solid #EBE5D7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 33px;
+}
+
+.register {
+    color: #1D3D14;
+    background-color: #EBE5D7;
+}
+.register:hover {
+    font-size: 19px;
+    background-color: rgb(255, 255, 255);
+}
+.login { color: white; }
+.login:hover {
+    font-size: 20px;
+    border: 3px solid #EBE5D7;
+    color: #1D3D14;
+    background-color: #ffffff;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+    /* slide bar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+      
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #1D3D14;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover { color: #1D3D14; }
+      
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+     
+.search h3{
+    min-width: max-content;
+      margin-bottom: -3%;
+      margin-top: 5%;
+      margin-left: 10%;
+}
+
+.find{
+	position: relative;
+	transform: translateY(-15%);
+	width: 18px;
+	margin-left: 10px;
+	margin-top: 0px;
+}
+
+.input [type="search"]{
+	width: 75%;
+  padding: 10px 15px;
+	margin-left: 25px;
+	border: 1px solid #1D3D14;
+	border-radius: 60px;
+	font-size: 14px;
+	transition: width .6s ease-in-out;
+  transition: margin-left .6s ease-in-out;
+}
+
+.input [type="search"]:focus{
+	width: 90%;
+    margin-left: 10px;
+}
+
+.cat h3{
+  min-width: max-content;
+	margin-bottom: -3%;
+	margin-top: 5%;
+	margin-left: 10%;
+}
+
+.cat li{
+  min-width: max-content;
+	font-weight: lighter;
+	margin-bottom: 2%;
+	margin-top: 2%;
+	margin-left:2%;
+}
+
+.cat h5{
+  min-width: max-content;
+  font-size: 20px;
+	margin-bottom: 1%;
+	margin-top: 5%;
+  color: black;
+	margin-left: -10%;
+}
+
+.cat a{
+  font-size: 18px;
+	color: black;
+	text-decoration:none;
+}
+
+.cat h5 a:hover{
+  color: black;
+  background-color: #FA8334;
+}
+
+.cat li a:hover{
+	color: white;
+  background-color: #2e6f7e;
+}

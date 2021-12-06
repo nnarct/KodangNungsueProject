@@ -1,0 +1,360 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    background-color: #EBE5D7;
+}
+.logo{
+    width: 20%;
+    padding-bottom: 5px;
+}
+.content{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.info{
+    align-items: center;
+ justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #335E27;
+    border-radius: 20px;
+}
+.double{
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+}
+.topic{
+    font-size: 2rem;
+    font-family: Itim;
+    color: #fff;
+    padding: 5px;
+}
+textarea{
+    resize: none;
+    font-size: 1.2rem;
+}
+#address {
+    padding: 5px 10px;
+}
+
+input[type=button] {
+    box-sizing: border-box;
+    background-color: rgb(0, 122, 10);
+    font-family: Itim;
+    font-style: normal;
+    font-weight: normal;
+    color:#FFFFFF;
+    cursor:pointer;
+    border: 3px outset #fefffd;
+}
+input[type=button]:active {
+    border: 3px inset #fefffd;
+}
+
+input[type=button]:hover{
+    background-color: #53c000;
+    color: white;
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.question { font-family: Itim; }
+.question a:hover{
+    color: rgb(255, 174, 0);
+}
+
+#regbutton{
+    font-size: 1.2rem;
+    border-radius: 20rem;
+    padding: 0.4% 2%;
+}
+
+/*  Device = Desktops
+    Screen = 1281px to higher resolution desktops */
+@media (min-width: 1280px) and (orientation: landscape) {
+    .content{
+        top: 45%;
+        height: 80%;
+        width: 80%;
+    }
+    .info{
+        flex-direction: column;
+        border-radius: 2rem;
+    }
+    .logo{
+        width: 10.8125%;
+        margin:0.5%;
+    }
+    .topic{
+        font-size: 3rem;
+    }
+    .double{
+        flex-direction: row;
+        justify-content:space-evenly;
+    }
+    #inputName, #inputSurname, #inputEmail, #inputPhone, #inputPassword, #inputConfirmPassword{
+        font-size: 1.2rem;
+        font-family: Itim;
+    }
+    #inputAddress{
+        display: flex;
+        justify-content: center;
+        height: calc(8rem);
+        font-size: 1.2rem;
+    }
+    #address{
+        width: 96%;
+    }
+    .form-floating{
+        color: #335E27;
+        font-family: Itim;
+        margin: 0.3rem 0px;
+        width:  47%;
+        font-size: 1.2rem;
+    }
+     
+    .question{
+        color: white;
+        font-size: 1.5rem;
+    }
+    
+}
+
+
+/*  Device = Laptops, Desktops
+    Screen = B/w 1025px to 1280px */
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .content{
+        top: 45%;
+        height: 80%;
+        width: 80%;
+    }
+    .info{
+        flex-direction: column;
+        border-radius: 2rem;
+    }
+    .logo{
+        width: 10.8125%;
+        margin:0.5%;
+    }
+    .topic{
+        font-size: 2rem;
+    }
+    .double{
+        flex-direction: row;
+        justify-content:space-evenly;
+    }
+    #inputName, #inputSurname, #inputEmail, #inputPhone, #inputPassword, #inputConfirmPassword{
+        font-size: 1rem;
+        font-family: Itim;
+        height: calc(2.5rem);
+    }
+    #inputAddress{
+        display: flex;
+        justify-content: center;
+        height: calc(5rem);
+        font-size: 1rem;
+    }
+    #address{
+        width: 96%;
+    }
+    .form-floating{
+        color: #335E27;
+        font-family: Roboto;
+        margin: 0.3rem 0px;
+        width:  47%;
+        font-size: 1rem;
+    }
+    label{
+        margin-top: 0px;
+    }
+    .question{
+        color: white;
+        font-size: 1.32rem;
+    }
+    
+}
+
+/*  Device = Tablets, Ipads (portrait)
+    Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .content{
+        top: 50%;
+        height: 90%;
+        width: 80%;
+    }
+    .info{
+        flex-direction: column;
+        border-radius: 2rem;
+    }
+    .logo{
+        width: 15.8125%;
+        margin:0.5%;
+    }
+    .topic{
+        font-size: 2.5rem;
+    }
+    .double{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #inputName, #inputSurname, #inputEmail, #inputPhone, #inputPassword, #inputConfirmPassword{
+        font-family: Itim;
+        font-size: 1.2rem;
+        height: calc(4rem);
+        padding: 2.2rem 12px 12px 12px;
+    }
+    #inputAddress{
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+        height: calc(7rem);
+    }
+    #address{
+        width: 96%; 
+    }
+    .form-floating{
+        color: #335E27;
+        font-family: Itim;
+        margin: 0.2rem 0px;
+        width: 96%;
+        font-size: 1.5rem;
+    }
+    
+    .question{
+        color: white;
+        font-size: 1.5rem;
+    }
+}
+
+/*  Device = Tablets, Ipads (landscape)
+    Screen = B/w 768px to 1024px */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .content{
+        top: 45%;
+        height: 80%;
+        width: 80%;
+    }
+    .info{
+        flex-direction: column;
+        border-radius: 2rem;
+    }
+    .logo{
+        width: 8.8125%;
+        margin:0.5%;
+    }
+    .topic{
+        font-size: 2.2rem;
+    }
+    .double{
+        flex-direction: row;
+        justify-content:space-evenly;
+    }
+    #inputName, #inputSurname, #inputEmail, #inputPhone, #inputPassword, #inputConfirmPassword{
+        font-family: Itim;
+        height: calc(1rem);
+    }
+    #inputAddress{
+        display: flex;
+        justify-content: center;
+        height: calc(5rem);
+    }
+    #address{
+        width: 96%;
+    }
+    .form-floating{
+        color: #335E27;
+        font-family: Itim;
+        font-size: 1rem;
+        margin: 0.2rem 0px;
+        width:  47%;   
+    }
+    
+    .question{
+        color: white;
+        font-size: 1.3rem;
+    }
+}
+
+/*  Device = Low Resolution Tablets, Mobiles (Landscape)
+    Screen = B/w 481px to 767px */
+@media (min-width: 481px) and (max-width: 768px) and (orientation: landscape){
+    .double{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .info{
+        flex-direction: column;
+        border-radius: 2rem;
+    }
+}
+
+/*  Device = Most of the Smartphones Mobiles (Portrait)
+    Screen = B/w 320px to 479px */
+@media (min-width: 320px) and (max-width: 480px) {
+    .double{
+        flex-direction: column;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+    #address {
+        width: 96%;
+        padding: 0px;
+    }
+    .info{
+        width: 100%;
+        flex-direction: column;
+        border-radius: 2rem;
+    }
+}
+
+@media (max-width: 768) and (min-height: 411px) and (max-height: 580px) and (orientation: landscape){
+    .content{
+        top: 45%;
+    }
+    .logo{
+        width: 7%;
+    }
+    .topic{
+        font-size: 1.7rem;
+    }
+    #inputName, #inputSurname, #inputEmail, #inputPhone, #inputPassword, #inputConfirmPassword{
+        font-family: Itim;
+        height: calc(0.5rem);
+        font-size: 1rem;
+    }
+    .form-floating{
+        color: #335E27;
+        font-family: Itim;
+        height: fit-content;
+        font-size: 1rem;
+        width:  47%;   
+    }
+    #inputAddress{
+        height: calc(3.5rem);
+    }
+    #regbutton{
+        font-size: 1.2rem;
+        border-radius: 20rem;
+        padding: 0.5% 2%;
+    }
+    .question{
+        color: white;
+        font-size: 0.9rem;
+    }
+}
+
