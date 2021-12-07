@@ -7,123 +7,57 @@ body {
     font-family: Itim;
     background-color: #EBE5D7;
 }
-
-a{
-    text-decoration: none;
-}
-.logo{
-    height: 120px;
-    width: 120px;
-    margin:2%;
-}
-
 .container{
     position: fixed;
-    top: 45%;
+    top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); 
-    width: 80%; 
-    max-width: 617px;
-    height: auto; 
+    width: 80%; min-width: 400px;
+    max-width: 500px;
+    min-height: 377pxx;
 }
+.logo { width:40%; max-width: 120px; min-width: 40px; }
+.content { display: flex; flex-direction: column; justify-content: space-between;
+    background-color: white; border-radius: 10px; box-shadow: 5px 3px 3px 0.5px rgb(197, 197, 197);
+    padding: 5%; min-width: fit-content; }
+.topic { font-weight: normal; min-width: 250px; }
+.separateline { border-bottom: 1px solid gray; height: 10px; margin-bottom: 10px; }
+ .navigationline { min-width: fit-content; padding-bottom: 10px; font-size: 1.2em; }
 /*#EBE5D7*/
-.img{
-    height: 150px;
-}
-
-.content{
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #FFFFFF;
-    border-radius: 20px;
-  
-}
-
-.info{
-    position: absolute;
-    width:auto;
-    background: #FFFFFF;
-    border-radius: 20px;
-}
-
-input{
-    width: 95%;
-    height:auto;
-    font-size: 1.2rem;
-    padding: 10px 10px;
-    border-color: #000;
-    border-radius: 25px;
-}
-
-.topic{
-    height: auto; 
-    margin: 2% 0px;
-    margin-top: 2%;
-    margin-right: auto; margin-left: 5%; font-size: 1.7rem; 
-    
-}
-
-.separateline{
-   background-color:#a5a5a5;
-   height: 0.1px;
-   width: 100%;
-   margin: 0.75%;
-}
-
-.navigationline{
-    height: auto;
-    margin: 2% 0px;
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.navigationline2 /* สำหรับหน้าที่ต้องใส่ passwor 2 ครั้ง (Password & confirmPassword) */
-{
-    width: 80%;
-    height: auto;
-    margin: 0.5% 0px;
-    font-size: 1.1rem;
-}
-
-.usersInput{
-    align-items: center;
-    height: auto; 
-    width: 80%;
-    margin: 1.5%;
-}
-
+#goto { text-align: center; }
+input { width: 90%; min-width: max-content; max-width: 480px; padding: 0.5rem; font-size: 1rem; font-family: Itim; border-radius: 10px; border: 1px solid gray;  }
+input[type="email"]:focus {  border: 1px solid gray; }
 .buttonContainer{
     font-family: Itim;
     height: 20%;
-    margin-top: 2%;
-    margin-bottom: 3%;
+    margin-top: 15px;
     display: flex; 
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
-
+a { text-decoration: none; }
 .buttonBox{
     font-family: Itim;
-    width: 20%;
     cursor: pointer; 
+    padding: 5px 7px;
+    min-width: fit-content;
 }
+button { text-decoration: none; padding: 5px 10px; }
 
 .CancleButtonStyle{
-    font-family: Itim;
-    width: 90%; padding: 3% 6%; background-color: white; border-color: #7CBA4B;
+    font-family: Itim; min-width: fit-content;
+    width: 80px; padding: 3% 6%; background-color: white; border-color: #7CBA4B;
     border-radius: 100px; color: #7CBA4B; font-size: 1.2rem;
 }
 
-.ConfirmButtonStyle{
-    font-family: Itim;
-    width: 90%; padding: 3% 6%; background-color: #7CBA4B; border-color: #7CBA4B;
+
+.ConfirmButtonStyle{ 
+    
+    font-family: Itim; min-width: fit-content;
+    width:80px; padding: 3% 6%; background-color: #7CBA4B; border-color: #7CBA4B;
     border-radius: 100px; font-display: #fff; font-size: 1.2rem;
 }
 .goto{
@@ -148,4 +82,9 @@ button{
 .extIMG{
     height: 27px;
     padding: 0px 22px;
+}
+
+@media screen and ( max-width: 635px) {
+    .external { width: 100%; flex-direction: column; justify-content: center; }
+    .extIMG { padding-top: 7px; height: 32px; }
 }
