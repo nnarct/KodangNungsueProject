@@ -350,14 +350,17 @@ img { vertical-align: middle; }
 }
 
 #bas{
-  background-color: #7CBA4B;
+  background-color: #49a800;
   color: #ffffff;
-  padding: 10px 53px;
-  border-radius: 15px;
+  padding: 10px 40px;
+  border-radius: 20px;
   font-size: 20px;
   font-weight: lighter;
   font-family: itim;
-  
+}
+
+#bas:hover{
+  background-color: #74da26;
 }
 
 #quantity{
@@ -393,9 +396,6 @@ img { vertical-align: middle; }
   height: 100%;
 }
 
-#bas:hover{
-  background-color: #FA8334;
-}
 
 .textno {
   color: white;

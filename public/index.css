@@ -77,12 +77,20 @@ ul.menu { padding: 0px; }
 }
 .menu a:hover{ color: #e7b975; }
 
+@media screen and (orientation:portrait)  {
+  #logo { display: none; }
+}
+
 /* icon */
-#iconc { width: 20%; }
+#iconc, #iconp{
+  width: 20%;
+  min-width: 42px;
+}
 #iconcn {  width: 40%; }
-#iconp { width: 20%; }
+
 
 /*rmenu */
+.rmenu {   min-width: 130px ; }
 .rmenu img { margin-right: 20px; }
 .rmenu a { text-decoration: none; }
 .num{

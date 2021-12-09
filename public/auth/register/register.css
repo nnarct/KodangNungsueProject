@@ -1,0 +1,241 @@
+* { margin: 0px; padding: 0px; }
+body { background-color: #EBE5D7; font-family: Itim; }
+.container {
+    font-family: Itim;
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 90% ;
+    max-width: 800px;
+}
+.content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo { width: 100px;}
+.topic { font-size: 2rem; color: white; margin: 5px 0px;}
+.question { font-size: 1.2rem; margin-bottom: 1rem; color: white;}
+.question a { text-decoration: none; color: white; }
+.question a:hover { color:  lightgreen; }
+
+.info {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #335E27; border-radius: 25px;
+}
+.double{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 0px 10px;
+}
+.form-floating{
+    color: #335E27;
+    font-family: Itim;
+}
+
+/* buttom */
+.bottom { display: flex; flex-direction: column; width: 100%; font-size: 125%; height: auto; }
+/* confirm button */
+.btnArea { margin: 0.5rem 0px; }
+.regbutton { 
+    min-width: fit-content;
+    padding: 1% 3%;
+    border-radius: 10rem;
+    color: white;
+    background:#7CBA4B;
+    height: fit-content;
+}
+.regbutton:hover { color: black; background-color: #89ee3b ;}
+#iphone5 { display: none; }
+
+
+
+ @media screen and (max-height: 560px) and (orientation: landscape)    {
+    .logo { display: none; }
+    .topic {  font-size: 1.7rem; margin: 0px; display: flex; flex-direction: row;  align-items: center; }
+    #iphone5 { display: flex; height: 30px; padding-right: 5px; }
+    .address { height: 60px; }
+    #address { width: 100%; }
+    #inputAddress { height: 60px; }
+    .form-floating{ margin: 0px; width:  58%; }
+    .bottom { display: flex; flex-direction: row; 
+        flex-flow: row-reverse; 
+        justify-content: space-between; 
+        width: 80%;
+        align-items: center; }
+    .question { margin: 0px; }
+    .btnArea { width: 25%; }
+    .regbutton {  padding: 0px 20%;}
+}
+ 
+
+@media  screen and (min-height:410px) {
+    .container {
+        font-family: Itim;
+        position: fixed;
+        top: 48%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 90% ;
+        max-width: 800px;
+    }
+    .content {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .logo { width: 100px;}
+    .topic { font-size: 2rem; color: white; margin: 5px 0px;}
+    .question { font-size: 1.2rem; margin-bottom: 1rem; color: white;}
+    .question a { text-decoration: none; color: white; }
+    .question a:hover { color:  lightgreen; }
+    
+    .info {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #335E27; border-radius: 25px;
+    }
+    .double{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-evenly;
+        padding: 0px 10px;
+    }
+    .form-floating{
+        color: #335E27;
+        font-family: Itim;
+    }
+    
+    /* buttom */
+    .bottom { display: flex; flex-direction: column; width: 100%; font-size: 125%; height: auto; }
+    /* confirm button */
+    .btnArea { margin: 0.5rem 0px; }
+    .regbutton { 
+        min-width: fit-content;
+        padding: 1% 3%;
+        border-radius: 10rem;
+        color: white;
+        background:#7CBA4B;
+        height: fit-content;
+    }
+    .regbutton:hover { color: black; background-color: #89ee3b ;}
+    #iphone5 { display: none; } 
+
+}
+
+
+@media screen and (min-width: 701px) and (orientation: landscape){
+    input { padding: 2%; height: 20px;}
+    #inputName, #inputSurname,
+    #inputEmail, #inputPhone,
+    #inputPassword, #inputConfirmPassword {
+        font-size: 1.2rem; font-family: Itim; }
+    .form-floating{ margin: 0.2rem 0px; width:  58%; }
+    #inputName, #inputEmail, #inputPassword { border-radius: 0.25rem 0px 0px 0.25rem; }
+    #inputSurname, #inputPhone, #inputConfirmPassword { border-radius: 0px 0.25rem 0.25rem 0px; }
+    #address { width: 100%; }
+    .address { height: 100px; }
+    #inputAddress { height: 100px; }
+}
+
+@media screen and (orientation: portrait){
+    .logo { margin-top: 20px; margin-bottom: 0px; width: 70px;}
+    .topic { margin-top: 0px; }
+    .info { height: 90%; }
+    .double { flex-direction: column; }
+    .btnArea { margin: 3px; }
+    .question { margin-bottom: 7px; }
+    .form-control { border-radius: 0px;}
+    #inputName { border-radius: 0.5rem 0.5rem 0px 0px; }
+    #inputAddress { border-radius:  0px 0px 0.5rem 0.5rem; }   
+}
+
+/* ipad pro แนวตั้ง */
+@media only screen and (max-height:1367px) and (min-height: 1092px) and (orientation: portrait) { 
+    .container { max-width: 900px; }
+    .logo { height: 120px; width: 120px;}
+    .topic { font-size: 3.5rem; }
+    #inputName, #inputSurname, #inputEmail,
+    #inputPhone, #inputPassword, #inputConfirmPassword { 
+    height:100px; font-family: Itim; margin-bottom: 3px; }
+    label { font-size: 1.8rem; }
+    .form-control { font-size: 2rem;}
+    .address { height: 200px; }
+    #inputAddress { height: 200px; border-radius:  0px 0px 0.5rem 0.5rem; }
+    .btnArea { margin: 2%; }
+    .regbutton { font-size: 2.3rem; }
+    .question { font-size: 2rem; padding-bottom: 18px;}
+}
+
+/* ipadแนวตั้ง */
+@media only screen and (max-height:1025px) and (min-width: 766px) and (orientation: portrait) { 
+    .container { max-width: 900px; }
+    .logo { height: 100px; width: 100px; margin-top: 30px;}
+    .topic { font-size: 3rem;margin-bottom: 0px; }
+    #inputName, #inputSurname, #inputEmail,
+    #inputPhone, #inputPassword, #inputConfirmPassword { 
+    height:90px; font-family: Itim; }
+    label { font-size: 1.4rem; }
+    .form-control { font-size: 2rem;}
+    .address { height: 140px; }
+    #inputAddress { height: 140px; border-radius:  0px 0px 0.5rem 0.5rem; }
+    .btnArea { margin: 1.5%; margin-bottom: 0px;}
+    .regbutton { font-size: 2.1rem; padding: 1% 5%;}
+    .question { font-size: 2rem;}
+    .question a { font-size: 2.2rem; font-weight: bold;}
+}
+
+/*@media only screen and (min-width: 770px) {
+    .logo { margin-top: 15px; margin-bottom: 5px; width: 80px;}
+    .container{ width: 800px; height: 80%; }
+    .info { min-height: fit-content; max-height: 426px; height: 100%;}
+    .double{ justify-content: space-between; height:300%; width:  100%; }
+}*/
+
+/* Iphone 5/SE */
+@media only screen and (max-height:570px) and (orientation: portrait) {
+    .logo { display: none; }
+    .topic {  font-size: 1.7rem; margin: 0px; display: flex; flex-direction: row;  align-items: center; }
+    .container { width: 320px; }
+    #inputName, #inputSurname, #inputEmail,
+    #inputPhone, #inputPassword, #inputConfirmPassword { 
+    height:58px; font-size: 1rem; font-family: Itim; }
+    #inputName { border-radius: 0.5rem 0.5rem 0px 0px; }
+    .form-control { padding: 0.7rem 0.5rem; padding-bottom: 0px; border-radius: 0px; line-height: 1; }
+    .double { height: 116px; }
+    .address { height: 65px; }
+    #inputAddress { height: 65px; border-radius:  0px 0px 0.5rem 0.5rem; }
+    .btnArea { height: 40px; margin-top: 8px; margin-bottom: 2px; }
+    .question { margin-bottom: 2px; }
+    .regbutton { padding: 1% 5%; }
+    #iphone5 { display: flex; height: 30px; padding-right: 5px; }
+}
+
+/* iPhone X แนวนอน */
+@media screen and (min-height:50px) and ( orientation: landscape){
+    .address { height: 70px; }
+    #inputAddress { height: 70px; }
+}

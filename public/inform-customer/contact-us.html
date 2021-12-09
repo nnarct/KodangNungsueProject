@@ -3,38 +3,79 @@
 <title>KodangNungsue</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="../member/popup.css">
 <link rel="shortcut icon" href="../src/logo/logonobgn.png" />
 <!------------------------------------------------พวกสัญลักษณ์----------------------------->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-
+<!--script-->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+    .currentPage { cursor: pointer; text-align: center;color: white; }
+    .currentPage:hover { color: #e7b975; }
+</style>
 <body>
     <div id="main">
         <!----------------------------------------เมนูบน------------------------------------------->
         <div class="top">
             <div class="navi">
                 <span><button class="openbtn" onclick="openNav()">☰</button>
-                    <img id="logo" src="../src/logo/logona.png" alt="homepage" /></span>
+                    <a href="../index.html"><img id="logo" src="../src/logo/logona.png" alt="homepage" /></a></span>
                 <ul class="menu">
                     <li><a href="../index.html" style="width: 75px;">หน้าหลัก</a></li>
-                    <li><a href="#" style="width: 145px; ">วิธีการสั่งซื้อสินค้า</a></li>
-                    <li><a href="#" style="width: 90px;">ติดต่อเรา</a></li>
-                    <li><a href="#" style="width: 105px;">แจ้งชำระเงิน</a></li>
+                    <li><a href="how-to-order.html" style="width: 145px; ">วิธีการสั่งซื้อสินค้า</a></li>
+                    <li><div class="currentPage" style="width: 90px;">ติดต่อเรา</div></li>
+                    <li><a href="payment-report.html" style=" width: 105px;">แจ้งชำระเงิน</a></li>
                 </ul>
 
                 <!-- not log in user UI-->
                 <div class="button">
-                    <a href="../login/login.html" class="btn login" >
+                    <a href="../auth/login/login.html" class="btn login" >
                         <div id="text1" >Login</div>
                     </a>
-                    <a href="../register/register.html" class="btn register" >
+                    <a href="../auth/register/register.html" class="btn register" >
                         <div id="text2">Register</div>
                     </a>
                 </div>
+
+                <div class="rmenu" align="right">
+                    <a href="#"><img src="../src/icon/cart.png" id="iconc">
+                        <span class="num">0</span></a>
+                    <!-- popup to logout -->
+                    <img src="../src/icon/peo.png" id="iconp" style="cursor: pointer;">            
+                </div>
             </div>
-        </div> 
-    </div>   
-    <br>
+        
+    
+            <div id="logoutshow" class="logout">
+                <div id="logoutpop" class="logoutpopcl">
+                    <a href="../member/profile.html" style="text-decoration: none; color: black;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;">ดูโปรไฟล์</div></a>
+                    <div class="textbox tbLogout">ออกจากระบบ</div>
+                </div>
+            </div>
+            <br>
+        </div>
+            <!--------------------------logout  ------------------------------------------------------------->
+            <script>
+                document.getElementById("iconp").onclick = function () {
+                    document.getElementById("logoutshow").style.display = "block";
+                }
+                // document.getElementById("backprofile").onclick = function () {
+                //     document.getElementById("logoutshow").style.display = "none";
+                // }
+                document.addEventListener('mouseup', function(e) {
+                    let container = document.getElementById('logoutshow');
+                    if (!container.contains(e.target)) {
+                        container.style.display = 'none';
+                    }
+                });
+            </script>
+            <!------------------------------------------------------------------------------------------->
+
     <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <div class="search">
@@ -115,7 +156,7 @@
                 document.getElementById("main").style.marginLeft = "0";
             }
         </script>
-
+        <script src="../index.js"></script>
 </body>
 
 </html>

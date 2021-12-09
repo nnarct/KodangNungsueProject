@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<title>KodangDetailBuyer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="details.css">
+<link rel="stylesheet" href="../popup.css">
+<link rel="shortcut icon" href="logo/logonobgn.png" />
+<!------------------------------------------------พวกสัญลักษณ์----------------------------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+<body>
+    <!----------------------------------------เมนูบน------------------------------------------->
+    <div class="top">
+        <div class="navi">
+            <span>
+                <a href="#"><img id="logo" src="src/logo/logona.png" /></a></span>
+            <ul class="menu">
+                <li><a href="index.html"style="width: 75px;">หน้าหลัก</a></li>
+                <li><a href="inform-customer/how-to-order.html" style="width: 145px;">วิธีการสั่งซื้อสินค้า</a></li>
+                <li><a href="inform-customer/contact-us.html" style="width: 90px;">ติดต่อเรา</a></li>
+                <li><a href="inform-customer/payment-report.html" style="width: 105px;">แจ้งชำระเงิน</a></li>
+            </ul>
+            
+            <div class="rmenu" align="right">
+                <a href="#"><img src="src/icon/cart.png" id="iconc">
+                    <span class="num">0</span></a>
+                <!-- popup to logout -->
+                <img src="src/icon/peo.png" id="iconp" style="cursor: pointer;">            
+        </div>
+    </div>
+</div>
+
+    <div id="logoutshow" class="logout">
+        <div id="logoutpop" class="logoutpopcl">
+            <a href="member/profile.html" style="text-decoration: none; color: black; box-shadow: none;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey; box-shadow: none;">ดูโปรไฟล์</div></a>
+            <div class="textbox tbLogout" style="text-decoration: none; color: black; box-shadow: none;">ออกจากระบบ</div>
+        </div>
+    </div>
+<br>
+    <!--------------------------logout  ------------------------------------------------------------->
+    <script>
+        document.getElementById("iconp").onclick = function () {
+            document.getElementById("logoutshow").style.display = "block";
+        }
+        // document.getElementById("backprofile").onclick = function () {
+        //     document.getElementById("logoutshow").style.display = "none";
+        // }
+        document.addEventListener('mouseup', function(e) {
+            let container = document.getElementById('logoutshow');
+            if (!container.contains(e.target)) {
+                container.style.display = 'none';
+            }
+        });
+    </script>
+    <!------------------------------------------------------------------------------------------->
+
+    <div class="bg">
+        <div class="debuy">
+            <h1 class="topna">เลขที่ใบคำสั่งซื้อ 99999999</h1>
+
+        </div>
+        <div class="detailbuy">
+            <h2>ชื่อผู้รับ<span style="margin-left: 2%;">สมหวัง ถังสี</span></h2>
+            <h2>ที่อยู่<span style="margin-left: 2%;">99/9 ม.9 ต.แปรงทาสี อ.สีแสดสมใจ จ.บ้านสมหวัง 99999</span></h2>
+            <h2>เบอร์โทรศัพท์<span style="margin-left: 2%;">099-999-9999</span></h2>
+            <h1>รายการสินค้าที่ต้องจัดส่ง</h1>
+            <li>PIECE 500 QUIZ BOOK</li>
+            <li>มานะ มานี ป.6</li>
+        </div>
+        <div class="infoforbuy">
+            <label  for="prodnum"class="info">ป้อนเลขเลขแทรกกิ้ง</label><br>
+            <input type="text" class="info" id="prodnum" name="prodnum" style="height: 35px; width: 400px;" required><br>
+            <label  for="carname"class="info">บริษัทขนส่งที่ใช้บริการ</label><br>
+            <input type="text" class="info" id="carname" name="carname" style="height: 35px; width: 400px;" required><br><br>
+        </div>
+        <div class="conbuy" align="right">
+            <input type="submit" class="pad1 gBtn" value="แจ้งชำระเงิน">
+        </div>
+
+    </div>
+    <!--------------------------logout  ------------------------------------------------------------->
+    <script>
+        document.getElementById("iconp").onclick = function () {
+            document.getElementById("logoutshow").style.display = "block";
+        }
+        document.getElementById("backprofile").onclick = function () {
+            document.getElementById("logoutshow").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

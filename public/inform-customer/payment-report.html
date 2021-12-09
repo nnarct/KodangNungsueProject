@@ -8,21 +8,18 @@
 <!------------------------------------------------พวกสัญลักษณ์----------------------------->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-
-<!-- firebase script -->
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+<!--script-->
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
 <style>
     .currentPage { width: 105px; cursor: pointer; text-align: center;color: white; }
     .currentPage:hover { color: #e7b975; }
 </style>
-
 <body>
- 
     <div id="main">
         <!----------------------------------------เมนูบน------------------------------------------->
         <div class="top">
@@ -30,10 +27,10 @@
                 <span><button class="openbtn" onclick="openNav()">☰</button>
                     <a href="../index.html"><img id="logo" src="../src/logo/logona.png" alt="homepage" /></a></span>
                 <ul class="menu">
-                    <li><a href="../index.html"style="width: 75px;">หน้าหลัก</a></li>
-                    <li><div class="currentPage" style="width: 145px;">วิธีการสั่งซื้อสินค้า</div></li>
+                    <li><a href="../index.html" style="width: 75px;">หน้าหลัก</a></li>
+                    <li><a href="how-to-order.html" style="width: 145px; ">วิธีการสั่งซื้อสินค้า</a></li>
                     <li><a href="contact-us.html" style="width: 90px;">ติดต่อเรา</a></li>
-                    <li><a href="payment-report.html" style="width: 105px;">แจ้งชำระเงิน</a></li>
+                    <li><div class="currentPage">แจ้งชำระเงิน</div></li>
                 </ul>
 
                 <!-- not log in user UI-->
@@ -51,41 +48,13 @@
                         <span class="num">0</span></a>
                     <!-- popup to logout -->
                     <img src="../src/icon/peo.png" id="iconp" style="cursor: pointer;">            
-                </div>
             </div>
-       
-    
-            <div id="logoutshow" class="logout">
-                <div id="logoutpop" class="logoutpopcl">
-                    <a href="../member/profile.html" style="text-decoration: none; color: black;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;">ดูโปรไฟล์</div></a>
-                    <div class="textbox tbLogout">ออกจากระบบ</div>
-                </div>
-            </div>
-            <br>
-            <!--------------------------logout  ------------------------------------------------------------->
-            <script>
-                document.getElementById("iconp").onclick = function () {
-                    document.getElementById("logoutshow").style.display = "block";
-                }
-                // document.getElementById("backprofile").onclick = function () {
-                //     document.getElementById("logoutshow").style.display = "none";
-                // }
-                document.addEventListener('mouseup', function(e) {
-                    let container = document.getElementById('logoutshow');
-                    if (!container.contains(e.target)) {
-                        container.style.display = 'none';
-                    }
-                });
-            </script>
-            <!------------------------------------------------------------------------------------------->
-           
-            
         </div>
     </div>
     
         <div id="logoutshow" class="logout">
             <div id="logoutpop" class="logoutpopcl">
-                <a href="member/profile.html" style="text-decoration: none; color: black;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;">ดูโปรไฟล์</div></a>
+                <a href="../member/profile.html" style="text-decoration: none; color: black;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;">ดูโปรไฟล์</div></a>
                 <div class="textbox tbLogout">ออกจากระบบ</div>
             </div>
         </div>
@@ -106,8 +75,107 @@
             });
         </script>
         <!------------------------------------------------------------------------------------------->
-        </div>  <br>
-        
+
+            </div>
+        </div> 
+   
+    <br>  
+    
+    <h1> คำเตือน : โปรด Login ก่อนแจ้งชำระเงิน</h1>
+    <div class="container">    
+        <br><br>
+        <div class="topic">รายละเอียดการโอนเงิน</div> 
+        <div class="details">
+            <div class="one"> บัญชีที่โอนเงิน </div>
+            
+            <form class="three">
+                <input type="checkbox" name="checkbox" onclick="myFun(this)" />
+                <input type="checkbox" name="checkbox" onclick="myFun(this)" />
+                <input type="checkbox" name="checkbox" onclick="myFun(this)" />
+            </form>
+    
+            <div class="three">
+                <img id="bank-logo" src="https://i.ibb.co/7GKWmv0/unknown.png" alt="truemoneyLOGO" >
+                <img id="bank-logo" src="https://i.ibb.co/5GCcGsf/download.png" alt="krungThaiLogo" >
+                <img id="bank-logo" src="https://cdn.discordapp.com/attachments/917439533820305458/917466187007393792/unknown.png" alt="truemoneyLOGO" >
+            </div>
+            <div class="three">
+                <div>True Money</div>
+                <div>ธนาคารกรุงเทพ</div>
+                <div>ธนาคาารไทยพาณิชย์</div>
+            </div>
+            <div class="sep"></div>
+            <div class="three">
+                <div>081-234-5678</div>
+                <div>012-345678-9</div>
+                <div>987-654321-0</div>
+            </div>
+            <div class="sep"></div>
+            <div class="three" >
+                <div>โกดังหนังสือ</div>
+                <div>KodangNungsue WEB</div>
+                <div>KodangNungsue</div>
+            </div>
+        </div>
+        <div class="details">
+            <div class="one"> วันที่ </div>
+            <div class="two"> <input type="date" id="date" placeholder="dd-mm-yyyy"
+                min="1997-01-01" max="2020-12-31"> </div>
+        </div>
+        <div class="details">
+            <div class="one"> เวลา </div>
+            <div class="two"> <input type="time" id="time" value="11:30"> น. </div>
+        </div>
+        <div class="details">
+            <div class="one"> จำนวนเงิน </div>
+            <div class="two"> <input type="number" id="cost"> บาท</div>
+        </div>
+        <div class="details">
+            <div class="one"> หลักฐานการโอน </div>
+            <div class="two"> input </div>
+        </div>
+
+        <br><br>
+        <div class="topic">กรอกเลขใบคำสั่งซื้อที่ชำระเงินแล้ว</div>
+        <div class="details">
+            <div class="one"> เลขที่ใบสั่งซื้อ </div>
+            <div class="two"> <input type="text" id="ref-no"> </div> 
+        </div>
+
+        <br><br>
+        <div class="topic">รายละเอียดอื่นๆ</div>
+        <div class="information">
+           <div class="two" style="width: 100%;">
+                <textarea type="text" id="other" style="resize: none;" placeholder="รายละเอียดอื่น ๆ"></textarea>
+           </div>
+        </div>
+
+        <br><br>
+        <div class="topic">รายละเอียดผู้แจ้งชำระเงิน</div>
+        <div class="information">
+            <div class="Fullname"> ชื่อ </div>
+            <div class="InputBuyerName "> <input type="text" maxlength="30" id="get-fname"> </div>
+        </div>
+        <div class="information">
+            <div class="Fullname"> นามสกุล </div>
+            <div class="InputBuyerName "> <input type="text" maxlength="30" id="get-lname"> </div>
+        </div>
+        <div class="information">
+            <div class="Fullname"> โทรศัพท์ </div>
+            <div class="InputBuyerName "> <input type="tel" maxlength="10" placeholder="08xxxxxxxx" id="getPhone"> </div>
+        </div>
+        <br>
+        <div class="warning">กรุณาตรวจสอบรายละอียดให้ถูกต้องอีกครั้ง ก่อนยืนยันการแจ้งชำระเงิน</div>
+        <br><br><br>
+        <button type="button" value="แจ้งชำระเงิน" id="confirmMoney">แจ้งชำระเงิน</button>
+        <br><br><br><br><br><br>
+    </div>
+    
+    
+
+
+
+    <!-- แถบค้าหน -->
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <div class="search">
@@ -135,46 +203,18 @@
         </div>
        
         
-
+    
 
         <!--------------------------slideshow--------------------------------------------------------------->
         <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
+            
+            function myFun(checkbox) {
+            var checkboxes = document.getElementsByName('checkbox')
+            checkboxes.forEach(e => {
+                if (e !== checkbox) e.checked =  false
+            })
+        }
 
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("mySlides");
-                if (n > slides.length) { slideIndex = 1 }
-                if (n < 1) { slideIndex = slides.length }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-
-                slides[slideIndex - 1].style.display = "block";
-            }
-            carousel();
-
-            function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-
-                slideIndex++;
-                if (slideIndex > x.length) { slideIndex = 1 }
-                x[slideIndex - 1].style.display = "block";
-                setTimeout(carousel, 3500); // Change image every 2 seconds
-            }
         </script>
         <!--------------------------slidebar--------------------------------------------------------------->
         <script>
@@ -188,7 +228,7 @@
                 document.getElementById("main").style.marginLeft = "0";
             }
         </script>
-       <script src="../index.js"></script>
+     <script src="../index.js"></script>
 </body>
 
 </html>

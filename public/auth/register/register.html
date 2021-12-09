@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Normal Elements-->
+    <meta charset="UTF-8">
+    <title>Register kodangnungsue</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <!-- style CSS + google fonts -->
+    <link href="../../bootstrap/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+    <!-- Firebase elements-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+</head>
+<body>
+    <div class="container" align="center">
+        <div class="content" >
+            <a href="../../index.html" style=" background-color: #EBE5D7; margin: 5px 0px;" align="center">
+                <img src="../../src/logogr.png" class="logo" align="center"></a>
+            <div class="info" >
+                <div class="topic"><img src="../../src/logo/logonobgn.png" id="iphone5">Register</div>
+                
+                <div class="double">
+                        <div class="form-floating left">
+                            <input type="text" class="form-control"  id="inputName"
+                            name="fname" placeholder="firstname" autofocus required>
+                            <label for="floatingInput">ชื่อ</label>
+                        </div>
+                        <div class="form-floating right">
+                            <input type="text" class="form-control" id="inputSurname"
+                            name="surname" placeholder="lastname" required>
+                            <label for="floatingInput">นามสกุล</label>
+                        </div>
+                    </div>
+                    
+                    <form class="double">
+                        <div class="form-floating left">
+                            <input type="email" class="form-control" id="inputEmail"
+                            name="email"   placeholder="email" required>
+                            <label for="floatingInput">อีเมล</label>
+                        </div>
+                        <div class="form-floating right">
+                            <input type="tel" class="form-control" id="inputPhone"
+                            maxlength="10" name="tel" pattern="[0][1-9][0-9]-[0-9]{3}-[0-9]{4}"
+                            placeholder="tel" required>
+                            <label for="floatingInput">เบอร์โทร</label>
+                        </div>
+                    </form>
+
+                    <form class="double">
+                        <div class="form-floating left">
+                            <input type="password" class="form-control" id="inputPassword" minlength="8" maxlength="16"
+                            name="password" placeholder="Password" required>
+                            <label for="floatingInput">Password</label>
+                        </div>
+                        <div class="form-floating right">
+                            <input type="password" class="form-control" id="inputConfirmPassword" minlength="8" maxlength="16"
+                            name="confirm_password"    placeholder="cfPassword" required>
+                            <label for="floatingInput">Confirm Password</label>
+                        </div>
+                    </form>
+
+                    <div align="center" class="double address">
+                        <div class="form-floating" id="address">
+                            <textarea type="tel" class="form-control" id="inputAddress"
+                            style="resize: none;" name="address" placeholder="ที่อยู่" required></textarea>
+                            <label for="floatingInput">ที่อยู่</label>
+                        </div>
+                    </div>
+
+                <!-- functioanl zone buttom-->
+                <div class="bottom">
+                    <!-- Confirm Button -->
+                    <div class="btnArea" align="center">
+                        <input class="regbutton" id="regbutton" type="button" value="Register" />
+                    </div>
+
+                    <!-- for unregistered user -->
+                    <div class="question">
+                        มีบัญชีอยู่แล้ว?
+                        <a href="../login/login.html" id="linklogin">
+                            Login
+                        </a>
+                    </div>
+                </div>
+                
+            </div>  
+        </div>
+    </div>
+    <br>
+    <script src="register.js"></script>
+</body>
+</html>

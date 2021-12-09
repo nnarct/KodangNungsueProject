@@ -1,0 +1,370 @@
+body {
+    margin: 0px;
+    padding: 0px;
+	font-family:Itim;
+	background-color: #EBE5D7;
+}
+
+*{
+    box-sizing: border-box;
+    
+}
+
+nav{
+    width: 100%;
+    box-shadow: 2px 2px 30px rgb(36, 36, 36);
+    z-index: 100;
+}
+
+.right{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+
+.right a{
+  margin: 0px 10px;
+  padding: 10px 20px;
+font-size: 1.1rem;;
+font-style: normal;
+  font-weight: bold;
+cursor:pointer;
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+}
+
+.right a:hover{
+font-size: 1.3rem;
+transition:all ease 0.3s;
+}
+
+#logo{
+	position: relative;
+	width:200px;
+}
+.top{
+	position:relative;
+	width:100%;
+	Background:#1D3D14;
+	max-height: 86px;
+}
+
+
+.log{
+  background-color: #388697;
+  border: 1px solid white;
+  padding: 1px 20px;
+  border-radius: 50px 50px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.reg{
+  background-color: #FA8334;
+  border: 1px solid white;
+  padding: 2px 10px;
+  border-radius: 50px 50px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.navi{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 30px;
+	
+}
+
+ul.menu{
+    padding: 0px 0px 0px 0px;
+}
+
+
+.menu{
+	display: flex;
+}
+
+.menu li{
+	position:relative;
+	margin:15px;
+	display:flex;
+	text-transform:uppercase;
+	align-items: center;
+	font-size:20px;
+}
+
+.menu a{
+    padding-left: 0%;
+	color:#FFF;
+	text-decoration:none;
+} 
+
+#iconc{
+    width: 20%;
+}
+
+
+#iconcn{
+  width: 40%;
+}
+
+#iconp{
+  width: 20%;
+  cursor: pointer; 
+}
+.rmenu img{
+    margin-right: 20px;
+}
+.rmenu a{
+   text-decoration: none;
+}
+.num{
+    position: absolute;
+    top: 10px;
+    right: 105px;
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+    border-radius: 50%;
+    color: black;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    text-decoration: none;
+}
+.numn{
+  position: absolute;
+  top: 10px;
+  right: 35px;
+  width: 25px;
+  height: 25px;
+  font-size: 1rem;
+  border-radius: 50%;
+  color: black;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.menu li:hover{
+	font-size:21px;
+}
+
+.rmenu a img:hover,
+.num:hover,
+.numn:hover{
+    animation: shake 0.5s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+.logout{
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid black;
+  right: 2%;
+  text-align: center;
+  display: none;
+  box-shadow: 2px 2px 25px rgb(65, 65, 65);
+}
+
+#logoutpop{
+  border: none;
+}
+
+.logoutpopcl{
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.1em;
+}
+
+.logoutpopcl td{
+  padding: 15px;
+}
+
+.logoutpopcl td a{
+  color: black;
+}
+.logoutpopcl td:hover a{
+  color: #FFF;
+}
+
+.logoutpopcl td:hover{
+  background-color: #7CBA4B;
+}
+
+#backprofile{
+  padding: 0%;
+  margin-bottom: 0%;
+  font-size: 1.5em;
+  right: 0;
+  text-align: center;
+  padding-left: 40%;
+  cursor: pointer;
+}
+
+#backprofile:hover{
+  color: #FA8334;
+  background-color: transparent;
+}
+
+.bg{
+	background-color: #ffffff;
+	margin:1% 5%;
+  padding-bottom: 5%;
+}
+
+.basketp{
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: 4%;
+}
+
+.topna{
+  font-size: 1.4em;
+  font-weight: lighter;
+  padding-top: 2%;
+  margin-left: 4%;
+}
+
+table{
+  border: 1px solid rgb(211, 211, 211);
+}
+#customers {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 1.1em;
+}
+
+#customers td, #customers th {
+  padding: 8px;
+}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #9bb986;
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: black;
+}
+
+.imgbas img {
+  width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.imgbas{
+  margin-left: 5%;
+  height: 240px;
+  width: 160px;
+}
+
+.check{
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  margin-top: 7%;
+  margin-left: -2%;
+  display: none;
+}
+
+
+tr .delbas{
+  position: absolute; 
+}
+
+td a{
+  text-decoration: none;
+  color: #FA8334;
+  font-size: 1.2em;
+}
+
+.quanprod{
+  width: 50px;
+  height: 40px;
+  padding: 5px;
+  font-family: itim;
+  font-size: 1em;
+}
+
+td span input{
+  width: 100px;
+}
+
+.addq1{
+  position: relative;
+  
+}
+
+.chos1{
+  position: relative;
+  display: none;
+}
+
+.gBtn{
+  background-color: #7CBA4B;
+}
+
+.pad1{
+  padding: 5px 10px 5px 10px;
+  border-radius: 15px;
+  font-family: itim;
+  color: white;
+  font-size: 1em;
+}
+
+.oBtn{
+  background-color: #FA8334;
+}
+
+.total{
+  display: none;
+  justify-content: flex-end;
+  font-size: 1.2em;
+}
+
+.total table{
+  border-top: 3px solid #9bb986;
+  width: 100%;
+  max-width: 380px;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.total td:last-child{
+  text-align: center;
+}

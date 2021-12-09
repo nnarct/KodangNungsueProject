@@ -1,0 +1,59 @@
+.addq #quantity{
+    width: 15%;
+}
+
+.addq label{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.addq{
+    position: relative;
+    font-size: 1.1em;
+}
+
+.showq{
+    position: relative;
+    font-size: 1.2em;
+}
+
+.liq{
+    font-weight: lighter;
+}
+
+.addq1{
+    position: relative;
+}
+
+.showq1{
+    position: relative;
+}
+
+#backqBtn{
+    margin-right: 10%;
+}
+
+.gBtn{
+    background-color: #7CBA4B;
+    font-family: itim;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.pad1{
+    padding: 15px 20px 15px 20px;
+    border-radius: 15px;
+    font-family: itim;
+    color: white;
+    font-size: 1.2em;
+}
+
+.oBtn{
+    background-color: #FA8334;
+}
+
+#addproq,#aq1{
+    display: none;
+}

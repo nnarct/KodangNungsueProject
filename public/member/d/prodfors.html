@@ -1,118 +1,52 @@
 <!DOCTYPE html>
 <html>
-<title>KodangTest</title>
+<title>KodangDetailForSell</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="prod.css">
-<link rel="stylesheet" href="member/popup.css">
+<link rel="stylesheet" href="prodfors.css">
 <link rel="shortcut icon" href="src/logo/logonobgn.png" />
 <!------------------------------------------------พวกสัญลักษณ์----------------------------->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <body>
     <div id="main">
         <!----------------------------------------เมนูบน------------------------------------------->
         <div class="top">
             <div class="navi">
-                <span><button class="openbtn" onclick="openNav()">☰</button>
-                    <a href="#"><img id="logo" src="src/logo/logona.png" /></a></span>
+                <a href="#"><img id="logo" src="logo/logona.png" /></a>
                 <ul class="menu">
-                    <li><a href="index.html" style="width: 75px;">หน้าหลัก</a></li>
+                    <li><a href="index.html"style="width: 75px;">หน้าหลัก</a></li>
                     <li><a href="inform-customer/how-to-order.html" style="width: 145px;">วิธีการสั่งซื้อสินค้า</a></li>
                     <li><a href="inform-customer/contact-us.html" style="width: 90px;">ติดต่อเรา</a></li>
-                    <li><a href="inform-customer/payment-report.html" style="width: 105px;">แจ้งชำระเงิน</a></li>
+                    <li><a href="inform-customer/payment-reporthtml" style="width: 105px;">แจ้งชำระเงิน</a></li>
                 </ul>
-                <div class="button">
-                    <a href="auth/login/login.html" class="btn login">
-                        <div id="text1">Login</div>
-                    </a>
-                    <a href="auth/register/register.html" class="btn register">
-                        <div id="text2">Register</div>
-                    </a>
-                </div>
-
                 <div class="rmenu" align="right">
-                    <a href="#"><img src="src/icon/cart.png" id="iconc">
+                    <a href="#"><img src="icon/cart.png" id="iconc">
                         <span class="num">0</span></a>
                     <!-- popup to logout -->
                     <img src="src/icon/peo.png" id="iconp" style="cursor: pointer;">            
             </div>
         </div>
     </div>
-    
-        <div id="logoutshow" class="logout"  style="box-shadow: none;">
-            <div id="logoutpop" style="box-shadow: none;">
-                <a href="member/profile.html" style="text-decoration: none; color: black; box-shadow: none;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;  box-shadow: none;">ดูโปรไฟล์</div></a>
-                <div class="textbox tbLogout" style="box-shadow: none;">ออกจากระบบ</div>
+    <br>
+        <div id="logoutshow" class="logout">
+            <div id="logoutpop" class="logoutpopcl">
+                <div id="backprofile">^</div>
+                <a href="profile.html"></a><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;">ดูโปรไฟล์</div></a>
+                <div class="textbox tbLogout">ออกจากระบบ</div>
             </div>
         </div>
-<br>
+
         <!--------------------------logout  ------------------------------------------------------------->
         <script>
             document.getElementById("iconp").onclick = function () {
                 document.getElementById("logoutshow").style.display = "block";
             }
-            // document.getElementById("backprofile").onclick = function () {
-            //     document.getElementById("logoutshow").style.display = "none";
-            // }
-            document.addEventListener('mouseup', function(e) {
-                let container = document.getElementById('logoutshow');
-                if (!container.contains(e.target)) {
-                    container.style.display = 'none';
-                }
-            });
+            document.getElementById("backprofile").onclick = function () {
+                document.getElementById("logoutshow").style.display = "none";
+            }
         </script>
         <!------------------------------------------------------------------------------------------->
-
-        <!----------------------------------------รูปสไลด์------------------------------------------->
-
-        <div class="slideshow-container">
-
-            <div class="mySlides fade">
-                <img src="src/logo/pic1.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="src/logo/pic2.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <img src="src/logo/pic3.png" style="width:100%">
-            </div>
-
-            <a class="prev" onclick="pSlides(-1)">&#10094;</a>
-            <a class="next" onclick="pSlides(1)">&#10095;</a>
-
-        </div>
-        <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-            <div class="search">
-                <h3>SEARCH BOX<img src="src/icon/find.png" class="find"></h3>
-                <hr color="#1D3D14" style="width: 80%; margin-bottom: 6%;">
-                <div class="input">
-                    <input type="search" name="bsearch" placeholder="ค้นหาชื่อหนังสือ">
-                </div>
-            </div>
-            <div class="cat">
-                <h3>CATEGORY</h3>
-                <hr color="#1D3D14" style="width: 80%; margin-bottom: 6%;" size="5">
-                <ul style="list-style-type:none">
-                    <h5><a href="#">หนังสือเรียน</a></h5>
-                    <li><a href="#">ประถมศึกษา</a></li>
-                    <li><a href="#">มัธยมศึกษาตอนต้น</a></li>
-                    <li><a href="#">มัธยมศึกษาตอนปลาย</a></li>
-                    <h5><a href="#">หนังสือเตรียมสอบ</a></h5>
-                    <li><a href="#">สอบเข้า ม.ต้น</a></li>
-                    <li><a href="#">สอบเข้า ม.ปลาย</a></li>
-                    <li><a href="#">สอบเข้า มหาวิทยาลัย</a></li>
-                    <h5><a href="#">หนังสือการ์ตูน</a></h5>
-                </ul>
-            </div>
-        </div>
         <!---------------------------------------prod---------------------------------------->
         <div class="bg">
             <!---------------------------------------prode------------------------------------------>
@@ -122,32 +56,32 @@
                         <div class="cont">
                             <div class="mySlidede">
                                 <div class="numbertext">1 / 6</div>
-                                <img src="src/testprod/p1.jpg" style="width:100%">
+                                <img src="testprod/p1.jpg" style="width:100%">
                             </div>
 
                             <div class="mySlidede">
                                 <div class="numbertext">2 / 6</div>
-                                <img src="src/testprod/p2.jpg" style="width:100%">
+                                <img src="testprod/p2.jpg" style="width:100%">
                             </div>
 
                             <div class="mySlidede">
                                 <div class="numbertext">3 / 6</div>
-                                <img src="src/testprod/p3.jpg" style="width:100%">
+                                <img src="testprod/p3.jpg" style="width:100%">
                             </div>
 
                             <div class="mySlidede">
                                 <div class="numbertext">4 / 6</div>
-                                <img src="src/testprod/p4.jpg" style="width:100%">
+                                <img src="testprod/p4.jpg" style="width:100%">
                             </div>
 
                             <div class="mySlidede">
                                 <div class="numbertext">5 / 6</div>
-                                <img src="src/testprod/p5.jpg" style="width:100%">
+                                <img src="testprod/p5.jpg" style="width:100%">
                             </div>
 
                             <div class="mySlidede">
                                 <div class="numbertext">6 / 6</div>
-                                <img src="src/testprod/p6.jpg" style="width:100%">
+                                <img src="testprod/p6.jpg" style="width:100%">
                             </div>
 
                             <a class="pre" onclick="pluSlides(-1)">❮</a>
@@ -155,27 +89,27 @@
 
                             <div class="ro">
                                 <div class="colum">
-                                    <img class="demo cur imgl" src="src/testprod/p1.jpg" style="width:100%"
+                                    <img class="demo cur imgl" src="testprod/p1.jpg" style="width:100%"
                                         onclick="curSlide(1)">
                                 </div>
                                 <div class="colum">
-                                    <img class="demo cur imgl" src="src/testprod/p2.jpg" style="width:100%"
+                                    <img class="demo cur imgl" src="testprod/p2.jpg" style="width:100%"
                                         onclick="curSlide(2)">
                                 </div>
                                 <div class="colum">
-                                    <img class="demo cur imgl" src="src/testprod/p3.jpg" style="width:100%"
+                                    <img class="demo cur imgl" src="testprod/p3.jpg" style="width:100%"
                                         onclick="curSlide(3)">
                                 </div>
                                 <div class="colum">
-                                    <img class="demo cur imgl" src="src/testprod/p4.jpg" style="width:100%"
+                                    <img class="demo cur imgl" src="testprod/p4.jpg" style="width:100%"
                                         onclick="curSlide(4)">
                                 </div>
                                 <div class="colum">
-                                    <img class="demo cur imgl" src="src/testprod/p5.jpg" style="width:100%"
+                                    <img class="demo cur imgl" src="testprod/p5.jpg" style="width:100%"
                                         onclick="curSlide(5)">
                                 </div>
                                 <div class="colum">
-                                    <img class="demo cur imgl" src="src/testprod/p6.jpg" style="width:100%"
+                                    <img class="demo cur imgl" src="testprod/p6.jpg" style="width:100% "
                                         onclick="curSlide(6)">
                                 </div>
                             </div>
@@ -196,16 +130,27 @@
                                 จังหวัด<span class="light"> แกรนด์ไลน์</span><br>
                                 รายละเอียดสินค้า<br><br>
                                 <span class="light">อ่านสนุกอ่านมันอ่านเพลิน รู้ทุกเรื่องทั่วท้องทะเลเพื่อชิงวันพีช
-                                    แล้วเป็นราชาโจรสลัดไปด้วยกัน สินค้ามือ 1</span>
+                                    แล้วเป็นราชาโจรสลัดไปด้วยกัน สินค้ามือ 1อ่านสนุกอ่านมันอ่านเพลิน รู้ทุกเรื่องทั่วท้องทะเลเพื่อชิงวันพีช
+                                    แล้วเป็นราชาโจรสลัดไปด้วยกัน สินค้ามือ 1อ่านสนุกอ่านมันอ่านเพลิน รู้ทุกเรื่องทั่วท้องทะเลเพื่อชิงวันพีช
+                                    แล้วเป็นราชาโจรสลัดไปด้วยกัน สินค้ามือ </span>
                             </h3>
                             <h3>สภาพสินค้า <span class="light"> 99%</span></h3>
-                            <h3>ลงขายเมื่อ<span class="light">19 กย. 2566</span> </h3><br>
-                            <h3>ประเภทสินค้า<span class="light">หนังสือการ์ตูน</span> </h3><br>
-                            <label for="quantity">จำนวน </label>
-                            <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="0"> เล่ม
-                            <h4><span class="light proleft">เหลือสินค้า 5 เล่ม</span></h4>
-                            <div class="addcart">
-                                <input type="submit" id="bas" value="หยิบลงตะกร้า">
+                            <h3>ลงขายเมื่อ<span class="light">19 กย. 2566</span> </h3>
+                            <h3>ประเภทสินค้า<span class="light">หนังสือการ์ตูน</span> </h3>
+                            <div class="addq" id="addproq">
+                                <label for="quantity">จำนวนที่มี </label>
+                                <input type="number" id="quantity" name="quantity" min="1"> เล่ม
+                            </div>
+                            <div class="showq" id="showquan">
+                                <h4><span class="liq proleft">คงเหลือสินค้า 6 เล่ม</span></h4>
+                            </div>
+                            <div class="addq1" id="aq1" align="right" style="margin-right: 10%;">
+                                
+                                <input type="button" id="backqBtn" class="pad1 oBtn" value="ย้อนกลับ">
+                                <input type="submit" id="addquan" class="pad1 gBtn" value="ยืนยัน">
+                            </div>
+                            <div id="showq1" align="right" style="margin-right: 10%;">
+                                <input type="button" id="editqBtn" class="gBtn" value="แก้ไขจำนวนสินค้า">
                             </div>
                         </div>
                     </div>
@@ -314,7 +259,7 @@
                     </div>
                     <hr style="border:2px solid #f1f1f1; width: 100%;">
                     <!-- Trigger/Open The Modal -->
-                    <button id="myBtn">ดูทั้งหมด</button>
+                    <button id="myBtn" style="margin-bottom: 10%;">ดูทั้งหมด</button>
 
                     <!-- The Modal -->
                     <div id="myModal" class="modal">
@@ -495,294 +440,28 @@
                     </div>
                 </div>
             </div>
-            <div class="rec">
-                <br>
-                <h2>สินค้าจากร้านเดียวกัน</h2>
-                <hr color="#1D3D14" style="width: 80%; margin-bottom: 2%;" size="5">
-                <div class="product">
-
-                    <br>
-                    <!-------------------p1----------------------->
-                    <div class="pbox">
-                        <div class="pimg">
-                            <a href="prodn.html">
-                                <img src="src/testprod/p1.jpg">
-                                <div class="overlay-up">
-                                    <span class="text-up">ดูเพิ่มเติม</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="pde">
-                            <a href="prodn.html">
-                                <span class="pname">ONE PIECE 500 QUIZ BOOK</span></a>
-                            <a href="prodn.html">
-                                <span class="pprice">฿200</span></a>
-                            <div class="star">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-half-full checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <span class="cart">
-                                <img src="src/icon/addcart.png" id="basket">
-                                หยิบใส่ตะกร้า
-                            </span>
-                        </div>
-                    </div>
-                    <!-------------------p2----------------------->
-                    <div class="pbox">
-                        <div class="pimg">
-                            <a href="prodn.html">
-                                <img src="src/testprod/p2.jpg">
-                                <div class="overlay-up">
-                                    <span class="text-up">ดูเพิ่มเติม</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="pde">
-                            <a href="prodn.html">
-                                <span class="pname">มานะ มานี ป.6</span></a>
-                            <a href="prodn.html">
-                                <span class="pprice">฿300</span></a>
-                            <div class="star">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <span class="cart">
-                                <img src="src/icon/addcart.png" id="basket">
-                                หยิบใส่ตะกร้า
-                            </span>
-                        </div>
-                    </div>
-                    <!-------------------p3----------------------->
-                    <div class="pbox">
-                        <div class="pimg">
-                            <a href="prodn.html">
-                                <img src="src/testprod/p3.jpg" />
-                                <div class="overlay-up">
-                                    <span class="text-up">ดูเพิ่มเติม</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="pde">
-                            <a href="prodn.html">
-                                <span class="pname">ติวเข้มสอบเข้า ม.1 ฉบับสมบูรณ์</span></a>
-                            <a href="prodn.html">
-                                <span class="pprice">฿300</span></a>
-                            <div class="star">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-half-full checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <span class="cart">
-                                <img src="src/icon/addcart.png" id="basket">
-                                หยิบใส่ตะกร้า
-                            </span>
-                        </div>
-                    </div>
-                    <!-------------------p4----------------------->
-                    <div class="pbox">
-                        <div class="pimg">
-                            <a href="prodn.html">
-                                <img src="src/testprod/p4.jpg" />
-                                <div class="overlay-up">
-                                    <span class="text-up">ดูเพิ่มเติม</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="pde">
-                            <a href="prodn.html">
-                                <span class="pname">ฟิสิกส์ ขนมหวาน เล่มที่ 2</span></a>
-                            <a href="prodn.html">
-                                <span class="pprice">฿350</span></a>
-                            <div class="star">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <span class="cart">
-                                <img src="src/icon/addcart.png" id="basket">
-                                หยิบใส่ตะกร้า
-                            </span>
-                        </div>
-                    </div>
-                    <!-------------------p5----------------------->
-                    <div class="pbox">
-                        <div class="pimg">
-                            <a href="prodn.html">
-                                <img src="src/testprod/p5.jpg" />
-                                <div class="overlay-up">
-                                    <span class="text-up">ดูเพิ่มเติม</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="pde"></a>
-                            <a href="prodn.html">
-                                <span class="pname">มงคลชีวิต หลักปฏิบัติมงคล 38 ประการของคนดี</span></a>
-                            <a href="prodn.html">
-                                <span class="pprice">฿65</span></a>
-                            <div class="star">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <span class="cart">
-                                <img src="src/icon/addcart.png" id="basket">
-                                หยิบใส่ตะกร้า
-                            </span>
-                        </div>
-                    </div>
-                    <!-------------------p6----------------------->
-                    <div class="pbox">
-                        <div class="pimg">
-                            <a href="prodn.html">
-                                <img src="src/testprod/p6.jpg" />
-                                <div class="overlay-up">
-                                    <span class="text-up">ดูเพิ่มเติม</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="pde">
-                            <a href="prodn.html">
-                                <span class="pname">สรุปเข้ม Vocab พร้อมแนวข้อสอบ</span></a>
-                            <a href="prodn.html">
-                                <span class="pprice">฿141</span></a>
-                            <div class="star">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star-half-full checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <span class="cart">
-                                <img src="src/icon/addcart.png" id="basket">
-                                หยิบใส่ตะกร้า
-                            </span>
-                        </div>
-                    </div>
-                    <!-------------------p7----------------------->
-                    <div class="pbox">
-                        <div class="pimg">
-                            <a href="prodn.html">
-                                <img src="src/testprod/p7.jpg" />
-                                <div class="overlay-up">
-                                    <span class="text-up">ดูเพิ่มเติม</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="pde">
-                            <a href="prodn.html">
-                                <span class="pname">ชิ้นส่วนเครื่องกล</span></a>
-                            <a href="prodn.html">
-                                <span class="pprice">฿148</span></a>
-                            <div class="star">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <span class="cart">
-                                <img src="src/icon/addcart.png" id="basket">
-                                หยิบใส่ตะกร้า
-                            </span>
-                        </div>
-                    </div>
-                    <!-------------------p8----------------------->
-                    <div class="pbox">
-                        <div class="pimg">
-                            <a href="prodn.html">
-                                <img src="src/testprod/p8.jpg" />
-                                <div class="overlay-up">
-                                    <span class="text-up">ดูเพิ่มเติม</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="pde"></a>
-                            <a href="prodn.html">
-                                <span class="pname">ทฤษฎีดนตรี +DVD</span></a>
-                            <a href="prodn.html">
-                                <span class="pprice">฿189</span></a>
-                            <div class="star">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <span class="cart">
-                                <img src="src/icon/addcart.png" id="basket">
-                                หยิบใส่ตะกร้า
-                            </span>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
         </div>
-
-
-
-        <!--------------------------slideshow--------------------------------------------------------------->
+        <!------------------------edit----------------------------------------------------------------->
         <script>
-            var slideInd = 1;
-            show(slideInd);
-
-            function pSlides(k) {
-                show(slideInd += k);
+            document.getElementById("editqBtn").onclick = function () {
+                document.getElementById("aq1").style.display = "block";
+                document.getElementById("showq1").style.display = "none";
+                document.getElementById("showquan").style.display = "none";
+                document.getElementById("addproq").style.display = "block";
             }
-
-            function currentSlide(k) {
-                show(slideInd = k);
+            document.getElementById("backqBtn").onclick = function () {
+                document.getElementById("aq1").style.display = "none";
+                document.getElementById("showq1").style.display = "block";
+                document.getElementById("showquan").style.display = "block";
+                document.getElementById("addproq").style.display = "none";
             }
+            document.getElementById("addquan").onclick = function () {
+                document.getElementById("aq1").style.display = "none";
+                document.getElementById("showq1").style.display = "block";
+                document.getElementById("showquan").style.display = "block";
+                document.getElementById("addproq").style.display = "none";
+            } 
 
-            function show(k) {
-                var i;
-                var sli = document.getElementsByClassName("mySlides");
-                if (k > sli.length) { slideInd = 1 }
-                if (k < 1) { slideInd = sli.length }
-                for (i = 0; i < sli.length; i++) {
-                    sli[i].style.display = "none";
-                }
-
-                sli[slideInd - 1].style.display = "block";
-            }
-            carousel();
-
-            function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-
-                slideInd++;
-                if (slideInd > x.length) { slideInd = 1 }
-                x[slideInd - 1].style.display = "block";
-                setTimeout(carousel, 3500); // Change image every 2 seconds
-            }
-        </script>
-        <!--------------------------slidebar--------------------------------------------------------------->
-        <script>
-            function openNav() {
-                document.getElementById("mySidebar").style.width = "250px";
-                document.getElementById("main").style.marginLeft = "250px";
-            }
-
-            function closeNav() {
-                document.getElementById("mySidebar").style.width = "0";
-                document.getElementById("main").style.marginLeft = "0";
-            }
         </script>
         <!--------------------------detail--------------------------------------------------------------->
         <script>
@@ -843,7 +522,7 @@
                 }
             }
         </script>
-         <script src="index.js"></script>
+        
 </body>
 
 </html>

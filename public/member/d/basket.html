@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<title>KodangBasket</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="basket.css">
+<link rel="stylesheet" href="../popup.css">
+<link rel="shortcut icon" href="logo/logonobgn.png" />
+<!------------------------------------------------พวกสัญลักษณ์----------------------------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+<body>
+    <!----------------------------------------เมนูบน------------------------------------------->
+    <div class="top">
+        <div class="navi">
+            <span>
+                <a href="#"><img id="logo" src="logo/logona.png" /></a></span>
+            <ul class="menu">
+                < <li><a href="index.html"style="width: 75px;">หน้าหลัก</a></li>
+                <li><a href="inform-customer/how-to-order.html" style="width: 145px;">วิธีการสั่งซื้อสินค้า</a></li>
+                <li><a href="inform-customer/contact-us.html" style="width: 90px;">ติดต่อเรา</a></li>
+                <li><a href="inform-customer/payment-reporthtml" style="width: 105px;">แจ้งชำระเงิน</a></li>
+            </ul>
+            <div class="rmenu" align="right">
+                <a href="#"><img src="icon/cart.png" id="iconc">
+                    <span class="num">0</span></a>
+               <!-- popup to logout -->
+               <img src="src/icon/peo.png" id="iconp" style="cursor: pointer;">            
+            </div>
+        </div>
+    </div>
+            <div id="logoutshow" class="logout">
+                    <a href="member/profile.html" style="text-decoration: none; color: black;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;">ดูโปรไฟล์</div></a>
+                    <div class="textbox tbLogout">ออกจากระบบ</div>
+            </div>
+           
+            <!--------------------------logout  ------------------------------------------------------------->
+            <script>
+                document.getElementById("iconp").onclick = function () {
+                    document.getElementById("logoutshow").style.display = "block";
+                }
+                // document.getElementById("backprofile").onclick = function () {
+                //     document.getElementById("logoutshow").style.display = "none";
+                // }
+                document.addEventListener('mouseup', function(e) {
+                    let container = document.getElementById('logoutshow');
+                    if (!container.contains(e.target)) {
+                        container.style.display = 'none';
+                    }
+                });
+            </script>
+            <!------------------------------------------------------------------------------------------->
+    <div class="bg">
+        <div class="basketp">
+            <h1 class="topna">ตะกร้าของฉัน</h1>
+            <table id="customers">
+                <tr>
+                    <th colspan="2" style="width: 50%;">ชื่อสินค้า</th>
+                    <th style="width: 15%;">ราคา</th>
+                    <th style="width: 15%;">จำนวน</th>
+                    <th style="width: 15%;">ราคารวม</th>
+                </tr>
+                <tr style="background-color: #ddd; border: 0.5px solid rgb(139, 139, 139);">
+                    <td colspan="4">มังกี้ ดี ท๊อฟฟี่</td>
+                    <td><span class="addq1" id="aq1">
+                            <input type="button" id="editqBtn" class="pad1 gBtn" value="เลือกร้านนี้">
+                        </span></span>
+                        <span class="chos1" id="chs1">
+                            <input type="button" id="backqBtn" class="pad1 oBtn" value="ยกเลิก">
+                        </span>
+                    </td>
+
+                </tr>
+                <tr align="center">
+                    <td style="width:20%">
+                        <div class="imgbas">
+                            <input type="checkbox" class="check" id="check">
+                            <img src="testprod/p1.jpg">
+                        </div>
+                    </td>
+                    <td align="left">
+                        <div>
+                            <p>PIECE 500 QUIZ BOOK</p>
+                            <a href="">ลบออกจากตะกร้า</a>
+                        </div>
+                    </td>
+                    <td>200 บาท</td>
+                    <td><input type="number" min="0" value="1" class="quanprod"></td>
+                    <td>200 บาท</td>
+                </tr>
+                <tr align="center">
+                    <td style="width:20%">
+                        <div class="imgbas">
+                            <input type="checkbox" class="check" id="check2">
+                            <img src="testprod/p2.jpg">
+                        </div>
+                    </td>
+                    <td align="left">
+                        <div>
+                            <p>มานะ มานี ป.6</p>
+                            <a href="">ลบออกจากตะกร้า</a>
+                        </div>
+                    </td>
+                    <td>200 บาท</td>
+                    <td><input type="number" min="0" value="1" class="quanprod"></td>
+                    <td>200 บาท</td>
+                </tr>
+            </table>
+            <div class="total" id="t-b" style="padding-bottom: 3%;">
+                <table>
+                    <tr>
+                        <td>ค่าหนังสือ</td>
+                        <td>400 บาท</td>
+                    </tr>
+                    <tr>
+                        <td>ค่าส่ง</td>
+                        <td>50 บาท</td>
+                    </tr>
+                    <tr>
+                        <td>ราคารวม</td>
+                        <td>450 บาท</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="button" id="editqBtn" class="pad1 gBtn" value="ชำระเงิน"></td>
+                    </tr>
+                </table>
+            </div>
+            <table id="customers">
+                <tr style="background-color: #ddd; border: 0.5px solid rgb(139, 139, 139);">
+                    <td colspan="4">มังกี้ ดี ท๊อฟฟี่</td>
+                    <td><span class="addq1" id="aq2">
+                            <input type="button" id="editqBtn" class="pad1 gBtn" value="เลือกร้านนี้">
+                        </span></span>
+                        <span class="chos1" id="chs1">
+                            <input type="button" id="backqBtn" class="pad1 oBtn" value="ยกเลิก">
+                        </span>
+                    </td>
+
+                </tr>
+                <tr align="center">
+                    <td style="width:20%">
+                        <div class="imgbas">
+                            <input type="checkbox" class="check" id="check">
+                            <img src="testprod/p1.jpg">
+                        </div>
+                    </td>
+                    <td align="left">
+                        <div>
+                            <p>PIECE 500 QUIZ BOOK</p>
+                            <a href="">ลบออกจากตะกร้า</a>
+                        </div>
+                    </td>
+                    <td>200 บาท</td>
+                    <td><input type="number" min="0" value="1" class="quanprod"></td>
+                    <td>200 บาท</td>
+                </tr>
+                <tr align="center">
+                    <td style="width:20%">
+                        <div class="imgbas">
+                            <input type="checkbox" class="check" id="check2">
+                            <img src="testprod/p2.jpg">
+                        </div>
+                    </td>
+                    <td align="left">
+                        <div>
+                            <p>มานะ มานี ป.6</p>
+                            <a href="">ลบออกจากตะกร้า</a>
+                        </div>
+                    </td>
+                    <td>200 บาท</td>
+                    <td><input type="number" min="0" value="1" class="quanprod"></td>
+                    <td>200 บาท</td>
+                </tr>
+            </table>
+            <div class="total" id="t-b" style="padding-bottom: 3%;">
+                <table>
+                    <tr>
+                        <td>ค่าหนังสือ</td>
+                        <td>400 บาท</td>
+                    </tr>
+                    <tr>
+                        <td>ค่าส่ง</td>
+                        <td>50 บาท</td>
+                    </tr>
+                    <tr>
+                        <td>ราคารวม</td>
+                        <td>450 บาท</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <!--------------------------logout  ------------------------------------------------------------->
+    <script>
+        document.getElementById("iconp").onclick = function () {
+            document.getElementById("logoutshow").style.display = "block";
+        }
+        document.getElementById("backprofile").onclick = function () {
+            document.getElementById("logoutshow").style.display = "none";
+        }
+    </script>
+    <!------------------------choose----------------------------------------------------------------->
+    <script>
+        document.getElementById("editqBtn").onclick = function () {
+            document.getElementById("chs1").style.display = "block";
+            document.getElementById("aq1").style.display = "none";
+            document.getElementById("aq2").style.display = "none";
+            document.getElementById("check").style.display = "block";
+            document.getElementById("check2").style.display = "block";
+            document.getElementById("t-b").style.display = "flex";
+        }
+        document.getElementById("backqBtn").onclick = function () {
+            document.getElementById("chs1").style.display = "none";
+            document.getElementById("aq1").style.display = "block";
+            document.getElementById("aq2").style.display = "block";
+            document.getElementById("check").style.display = "none";
+            document.getElementById("check2").style.display = "none";
+            document.getElementById("t-b").style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>

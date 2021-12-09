@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html>
-<title>KodangTest</title>
+<title>ProductNungsue</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="prod.css">
-<link rel="stylesheet" href="member/popup.css">
 <link rel="shortcut icon" href="src/logo/logonobgn.png" />
 <!------------------------------------------------พวกสัญลักษณ์----------------------------->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <body>
     <div id="main">
         <!----------------------------------------เมนูบน------------------------------------------->
         <div class="top">
             <div class="navi">
                 <span><button class="openbtn" onclick="openNav()">☰</button>
-                    <a href="#"><img id="logo" src="src/logo/logona.png" /></a></span>
+                    <img id="logo" src="src/logo/logona.png" alt="homepage" />  </span>
                 <ul class="menu">
                     <li><a href="index.html" style="width: 75px;">หน้าหลัก</a></li>
                     <li><a href="inform-customer/how-to-order.html" style="width: 145px;">วิธีการสั่งซื้อสินค้า</a></li>
@@ -27,47 +22,16 @@
                     <li><a href="inform-customer/payment-report.html" style="width: 105px;">แจ้งชำระเงิน</a></li>
                 </ul>
                 <div class="button">
-                    <a href="auth/login/login.html" class="btn login">
-                        <div id="text1">Login</div>
+                    <a href="login/login.html" class="btn login" >
+                        <div id="text1" >Login</div>
                     </a>
-                    <a href="auth/register/register.html" class="btn register">
+                    <a href="register/register.html" class="btn register" >
                         <div id="text2">Register</div>
                     </a>
                 </div>
-
-                <div class="rmenu" align="right">
-                    <a href="#"><img src="src/icon/cart.png" id="iconc">
-                        <span class="num">0</span></a>
-                    <!-- popup to logout -->
-                    <img src="src/icon/peo.png" id="iconp" style="cursor: pointer;">            
             </div>
         </div>
-    </div>
-    
-        <div id="logoutshow" class="logout"  style="box-shadow: none;">
-            <div id="logoutpop" style="box-shadow: none;">
-                <a href="member/profile.html" style="text-decoration: none; color: black; box-shadow: none;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;  box-shadow: none;">ดูโปรไฟล์</div></a>
-                <div class="textbox tbLogout" style="box-shadow: none;">ออกจากระบบ</div>
-            </div>
-        </div>
-<br>
-        <!--------------------------logout  ------------------------------------------------------------->
-        <script>
-            document.getElementById("iconp").onclick = function () {
-                document.getElementById("logoutshow").style.display = "block";
-            }
-            // document.getElementById("backprofile").onclick = function () {
-            //     document.getElementById("logoutshow").style.display = "none";
-            // }
-            document.addEventListener('mouseup', function(e) {
-                let container = document.getElementById('logoutshow');
-                if (!container.contains(e.target)) {
-                    container.style.display = 'none';
-                }
-            });
-        </script>
-        <!------------------------------------------------------------------------------------------->
-
+        <br>
         <!----------------------------------------รูปสไลด์------------------------------------------->
 
         <div class="slideshow-container">
@@ -206,6 +170,9 @@
                             <h4><span class="light proleft">เหลือสินค้า 5 เล่ม</span></h4>
                             <div class="addcart">
                                 <input type="submit" id="bas" value="หยิบลงตะกร้า">
+                                <span class="overlay-no">
+                                    <a href="login/login.html" class="textno">Please Login before...</a>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -286,7 +253,7 @@
                 <br>
                 <div class="comment">
                     <div>
-                        <img src="icon/peo.png" class="peocom">
+                        <img src="src/icon/peo.png" class="peocom">
                         <span class="namere">สมหวัง ถังสี</span>
                         <span class="st-right">
                             <span class="fa fa-star checked"></span>
@@ -301,7 +268,7 @@
                     </div>
                     <hr style="border:2px solid #f1f1f1; width: 100%;">
                     <div>
-                        <img src="icon/peo.png" class="peocom">
+                        <img src="src/icon/peo.png" class="peocom">
                         <span class="namere">สมดี มีตัง</span>
                         <span class="st-right">
                             <span class="fa fa-star checked"></span>
@@ -324,7 +291,7 @@
                             <span class="closemd">&times;</span>
                             <div class="allre">
                                 <div>
-                                    <img src="icon/peo.png" class="peocom">
+                                    <img src="src/icon/peo.png" class="peocom">
                                     <span class="namere">สมหวัง ถังสี</span>
                                     <span class="st-right">
                                         <span class="fa fa-star checked"></span>
@@ -339,7 +306,7 @@
                                 </div>
                                 <hr style="border:2px solid #f1f1f1; width: 100%;">
                                 <div>
-                                    <img src="icon/peo.png" class="peocom">
+                                    <img src="src/icon/peo.png" class="peocom">
                                     <span class="namere">สมดี มีตัง</span>
                                     <span class="st-right">
                                         <span class="fa fa-star checked"></span>
@@ -352,7 +319,7 @@
                                 </div>
                                 <hr style="border:2px solid #f1f1f1; width: 100%;">
                                 <div>
-                                    <img src="icon/peo.png" class="peocom">
+                                    <img src="src/icon/peo.png" class="peocom">
                                     <span class="namere">สมหวัง ถังสี</span>
                                     <span class="st-right">
                                         <span class="fa fa-star checked"></span>
@@ -367,7 +334,7 @@
                                 </div>
                                 <hr style="border:2px solid #f1f1f1; width: 100%;">
                                 <div>
-                                    <img src="icon/peo.png" class="peocom">
+                                    <img src="src/icon/peo.png" class="peocom">
                                     <span class="namere">สมดี มีตัง</span>
                                     <span class="st-right">
                                         <span class="fa fa-star checked"></span>
@@ -380,7 +347,7 @@
                                 </div>
                                 <hr style="border:2px solid #f1f1f1; width: 100%;">
                                 <div>
-                                    <img src="icon/peo.png" class="peocom">
+                                    <img src="src/icon/peo.png" class="peocom">
                                     <span class="namere">สมหวัง ถังสี</span>
                                     <span class="st-right">
                                         <span class="fa fa-star checked"></span>
@@ -395,7 +362,7 @@
                                 </div>
                                 <hr style="border:2px solid #f1f1f1; width: 100%;">
                                 <div>
-                                    <img src="icon/peo.png" class="peocom">
+                                    <img src="src/icon/peo.png" class="peocom">
                                     <span class="namere">สมดี มีตัง</span>
                                     <span class="st-right">
                                         <span class="fa fa-star checked"></span>
@@ -408,7 +375,7 @@
                                 </div>
                                 <hr style="border:2px solid #f1f1f1; width: 100%;">
                                 <div>
-                                    <img src="icon/peo.png" class="peocom">
+                                    <img src="src/icon/peo.png" class="peocom">
                                     <span class="namere">สมหวัง ถังสี</span>
                                     <span class="st-right">
                                         <span class="fa fa-star checked"></span>
@@ -423,7 +390,7 @@
                                 </div>
                                 <hr style="border:2px solid #f1f1f1; width: 100%;">
                                 <div>
-                                    <img src="icon/peo.png" class="peocom">
+                                    <img src="src/icon/peo.png" class="peocom">
                                     <span class="namere">สมดี มีตัง</span>
                                     <span class="st-right">
                                         <span class="fa fa-star checked"></span>
@@ -436,7 +403,7 @@
                                 </div>
                                 <hr style="border:2px solid #f1f1f1; width: 100%;">
                                 <div>
-                                    <img src="icon/peo.png" class="peocom">
+                                    <img src="src/icon/peo.png" class="peocom">
                                     <span class="namere">สมหวัง ถังสี</span>
                                     <span class="st-right">
                                         <span class="fa fa-star checked"></span>
@@ -451,7 +418,7 @@
                                 </div>
                                 <hr style="border:2px solid #f1f1f1; width: 100%;">
                                 <div>
-                                    <img src="icon/peo.png" class="peocom">
+                                    <img src="src/icon/peo.png" class="peocom">
                                     <span class="namere">สมดี มีตัง</span>
                                     <span class="st-right">
                                         <span class="fa fa-star checked"></span>
@@ -464,7 +431,7 @@
                                 </div>
                                 <hr style="border:2px solid #f1f1f1; width: 100%;">
                                 <div>
-                                    <img src="icon/peo.png" class="peocom">
+                                    <img src="src/icon/peo.png" class="peocom">
                                     <span class="namere">สมหวัง ถังสี</span>
                                     <span class="st-right">
                                         <span class="fa fa-star checked"></span>
@@ -477,7 +444,7 @@
                                 </div>
                                 <hr style="border:2px solid #f1f1f1; width: 100%;">
                                 <div>
-                                    <img src="icon/peo.png" class="peocom">
+                                    <img src="src/icon/peo.png" class="peocom">
                                     <span class="namere">สมดี มีตัง</span>
                                     <span class="st-right">
                                         <span class="fa fa-star checked"></span>
@@ -527,6 +494,9 @@
                             <span class="cart">
                                 <img src="src/icon/addcart.png" id="basket">
                                 หยิบใส่ตะกร้า
+                                <div class="overlay">
+                                    <a href="login/login.html" class="text">Please Login before...</a>
+                                </div>
                             </span>
                         </div>
                     </div>
@@ -555,6 +525,9 @@
                             <span class="cart">
                                 <img src="src/icon/addcart.png" id="basket">
                                 หยิบใส่ตะกร้า
+                                <div class="overlay">
+                                    <a href="login/login.html" class="text">Please Login before...</a>
+                                </div>
                             </span>
                         </div>
                     </div>
@@ -583,6 +556,9 @@
                             <span class="cart">
                                 <img src="src/icon/addcart.png" id="basket">
                                 หยิบใส่ตะกร้า
+                                <div class="overlay">
+                                    <a href="login/login.html" class="text">Please Login before...</a>
+                                </div>
                             </span>
                         </div>
                     </div>
@@ -611,6 +587,9 @@
                             <span class="cart">
                                 <img src="src/icon/addcart.png" id="basket">
                                 หยิบใส่ตะกร้า
+                                <div class="overlay">
+                                    <a href="login/login.html" class="text">Please Login before...</a>
+                                </div>
                             </span>
                         </div>
                     </div>
@@ -639,6 +618,9 @@
                             <span class="cart">
                                 <img src="src/icon/addcart.png" id="basket">
                                 หยิบใส่ตะกร้า
+                                <div class="overlay">
+                                    <a href="login/login.html" class="text">Please Login before...</a>
+                                </div>
                             </span>
                         </div>
                     </div>
@@ -667,6 +649,9 @@
                             <span class="cart">
                                 <img src="src/icon/addcart.png" id="basket">
                                 หยิบใส่ตะกร้า
+                                <div class="overlay">
+                                    <a href="login/login.html" class="text">Please Login before...</a>
+                                </div>
                             </span>
                         </div>
                     </div>
@@ -695,6 +680,9 @@
                             <span class="cart">
                                 <img src="src/icon/addcart.png" id="basket">
                                 หยิบใส่ตะกร้า
+                                <div class="overlay">
+                                    <a href="login/login.html" class="text">Please Login before...</a>
+                                </div>
                             </span>
                         </div>
                     </div>
@@ -723,6 +711,9 @@
                             <span class="cart">
                                 <img src="src/icon/addcart.png" id="basket">
                                 หยิบใส่ตะกร้า
+                                <div class="overlay">
+                                    <a href="login/login.html" class="text">Please Login before...</a>
+                                </div>
                             </span>
                         </div>
                     </div>
@@ -843,7 +834,6 @@
                 }
             }
         </script>
-         <script src="index.js"></script>
 </body>
 
 </html>
