@@ -157,17 +157,18 @@ nav {
     }
     
 
-.navLeft h1 { font-weight: lighter; font-size: 1.2em; cursor: default; padding-left: 10%; }   
+.navLeft h1 { font-weight: lighter; font-size: 1.5em; cursor: default; padding-left: 10%; }   
 .contents { position: absolute;width:96%; height: fit-content; margin: 2%; min-width: 900px;}
 .contents { display: flex; flex-direction: row; justify-content: space-between; }
 .navLeft { height: fit-content; width: 18%; min-width: fit-content; padding: 17px; max-width: 230px; }
 .navRight { height: fit-content; width: 82%; min-width: fit-content; }
 
-h2 { text-align: left; width:fit-content; font-size: 1em; font-weight: lighter; padding-top: 10px; display: flex; align-items: center;}
+h2 { text-align: left; width:fit-content; font-size: 1.2em; font-weight: lighter; padding-top: 10px; display: flex; align-items: center;}
 .colored { padding: 0px 3px; color: transparent; }
 h2:hover .colored { display: block; color: green;  }
+.navLeft h1:hover .colored { font-size: 1em; color: orange; min-width: fit-content;}
 
-.navLeft h2 { margin-left: 26px; padding-left: 10%; width: 93%; transition: .5s ease; min-width: fit-content;}
+.navLeft h2 { margin-left: 26px; padding-left: 10%; width: fit-content; transition: .5s ease; min-width: fit-content;}
 .navLeft h2:hover{ cursor: pointer; transform: translateX(7%); }
 
 #popup1, #popup2, #popup3, #popup4, #popup5 { display: none; width: 90%; min-height: 350px; height: fit-content; min-width: fit-content; 
@@ -326,24 +327,28 @@ h2:hover .colored { display: block; color: green;  }
     .nameaga{
     font-size: 1.4em;
     text-decoration: none;
+    color: black;
     }
     
     .namesaga{
         font-size: 1em;
         font-weight: lighter;
         text-decoration: none;
+    color: black;
     }
     
     .rd p{
     font-size: 1em;
     margin: 0%;
     font-weight: lighter;
+    color: black;
     }
     
     .rd h1{
     font-size: 1.1em;
     margin: 0%;
     font-weight: lighter;
+    color: black;
     }
     
     .rd h3{

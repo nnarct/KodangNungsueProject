@@ -55,7 +55,8 @@
                 <h2 id="orderHistory" >ประวัติการซื้อ <span class="colored">❯</span></h2> 
                 <h2 id="unpaid" >ที่ต้องชำระ <span class="colored">❯</span></h2>
                 <h2 id="orderStatus" > สถานะสินค้า <span class="colored">❯</span></h2><br>
-                <h1 id="selling">เริ่มการขาย</h1>      
+                <h1 id="selling">เริ่มการขาย <span class="colored">❯</span></h1>  <!-- will show only non-seller user -->
+                <h1 id="seller">ร้านของฉัน <span class="colored">❯</span></h1>  <!-- will show only seller user-->
             </div>
             <!----------------------------------->
 
@@ -162,7 +163,7 @@
                     <div class="topicName">ประวัติการซื้อของฉัน</div> <div class="sepLine"></div>
                     <div class="allaga">
                         <div class="modal-content">
-                            <a href="#.html">
+                            <a href="#.html" style="text-decoration: none;">
                                 <div class="rowna">
                                     <div class="col-2" style="width: 30%;" align="right">
                                         <div class="prodaga">
@@ -232,51 +233,8 @@
         
             
             <!------------------------information------------------------------------------------------------------>
-            <script>
-                 
-                document.getElementById("myinfo").onclick = function () {
-                    document.getElementById("toEdit-btn").style.display = "block";
-                    document.getElementById("editing").style.display = "none";
-                    document.getElementById("displayInput").style.display = "none";
-                    document.getElementById("display").style.display = "flex";
-                    document.getElementById("preview").style.display = "none";
-                    document.getElementById("proPic").style.display = "block";   
-                    document.getElementById("popup1").style.display = "block";
-                    document.getElementById("popup2").style.display = "none";
-                    document.getElementById("popup3").style.display = "none";
-                    document.getElementById("popup4").style.display = "none";
-                    document.getElementById("popup5").style.display = "none";
-                                   
-                }
-                document.getElementById("changePassword").onclick = function () {
-                    document.getElementById("popup1").style.display = "none";
-                    document.getElementById("popup2").style.display = "block";
-                    document.getElementById("popup3").style.display = "none";
-                    document.getElementById("popup4").style.display = "none";
-                    document.getElementById("popup5").style.display = "none";
-                }
-                document.getElementById("orderHistory").onclick = function () {
-                    document.getElementById("popup1").style.display = "none";
-                    document.getElementById("popup2").style.display = "none";
-                    document.getElementById("popup3").style.display = "block";
-                    document.getElementById("popup4").style.display = "none";
-                    document.getElementById("popup5").style.display = "none";
-                }
-                document.getElementById("unpaid").onclick = function () {
-                    document.getElementById("popup1").style.display = "none";
-                    document.getElementById("popup2").style.display = "none";
-                    document.getElementById("popup3").style.display = "none";
-                    document.getElementById("popup4").style.display = "block";
-                    document.getElementById("popup5").style.display = "none";
-                }
-                document.getElementById("orderStatus").onclick = function () {
-                    document.getElementById("popup1").style.display = "none";
-                    document.getElementById("popup2").style.display = "none";
-                    document.getElementById("popup3").style.display = "none";
-                    document.getElementById("popup4").style.display = "none";
-                    document.getElementById("popup5").style.display = "block";
-                }
-                  
+            <script src="popup-toggle.js">
+                
             </script>
             
             <!------------------------Preview------------------------------------------------------------------>

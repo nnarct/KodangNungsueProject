@@ -21,23 +21,53 @@ let userLogin = false;
 let headerButton = document.querySelector('.button');
 let headerBasket = document.querySelector('.rmenu');
 headerBasket.style.display = 'none';
+const searchFormOtherPage = JSON.parse(sessionStorage.getItem('searchFromOtherPage'));
+sessionStorage.removeItem('searchFromOtherPage');
 
 auth.onAuthStateChanged((user) => {
     if (user) {
         userLogin = true;
         headerButton.style.display = 'none';
         headerBasket.style.removeProperty('display');
-        reset();
-        showProductSearch('');
     }
     else {
         userLogin = false;
         headerBasket.style.display = 'none';
         headerButton.style.removeProperty('display');
-        reset();
-        showProductSearch('');
-
     }
+    reset();
+    // เทียบว่ามีข้อมูลมาจากหน้าอื่นหรือไม่
+    if (searchFormOtherPage === null) {
+        showProductSearch('');
+    }
+    else if (searchFormOtherPage.type === 'search') {
+        showProductSearch(searchFormOtherPage.value);
+        headingTitle.innerHTML = 'รายการที่ค้นหา';
+    }
+    else {
+        showProductType(searchFormOtherPage.value);
+        headingTitle.innerHTML = searchFormOtherPage.value;
+    }
+});
+
+// ส่วน Log Out 
+let buttonLogout = document.querySelector('.tbLogout');
+buttonLogout.addEventListener('click', () => {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "Do you want to log out ?",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sure'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            auth.signOut().then(() => {
+                location.href = 'index.html';
+            });
+        }
+    });
 });
 
 let headingTitle = document.querySelector('#heading-title');
@@ -45,7 +75,7 @@ let inputText = document.querySelector('.input > input');
 inputText.addEventListener('keyup', (event) => {
     if (event.key === 'Enter') {
         if (inputText.value === '') {
-            headingTitle.innerHTML = 'หนังสือแนะนำ';
+            headingTitle.innerHTML = 'หนังสือทั้งหมด';
         }
         else {
             headingTitle.innerHTML = 'รายการที่ค้นหา';
@@ -88,6 +118,32 @@ function reset() {
     allProduct.append(document.createElement('br'));
 }
 
+function loadProductOnlyUser(userId) {
+    let database_ref = database.collection('products').where("userId", "==", userId);
+    return new Promise((resolve) => {
+        let products = [];
+        database_ref.get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                products.push({
+                    id: doc.id,
+                    amount: doc.data().amount,
+                    condition: doc.data().condition,
+                    date: doc.data().date,
+                    detail: doc.data().detail,
+                    price: doc.data().price,
+                    name: doc.data().productName,
+                    province: doc.data().province,
+                    rating: doc.data().rating,
+                    seller: doc.data().seller,
+                    type: doc.data().type,
+                    userId: doc.data().userId
+                });
+            });
+            resolve(products);
+        });
+    });
+}
+
 function showProductSearch(searchText) {
     let database_ref = database.collection('products');
 
@@ -99,6 +155,7 @@ function showProductSearch(searchText) {
             let product = {
                 id: doc.id,
                 amount: doc.data().amount,
+                commentCount: doc.data().commentCount,
                 condition: doc.data().condition,
                 date: doc.data().date,
                 detail: doc.data().detail,
@@ -125,12 +182,12 @@ function showProductSearch(searchText) {
                 let connect1 = document.createElement('a');
                 connect1.href = 'prod.html';
                 connect1.addEventListener('click', function () {
-                    sessionStorage.setItem('productSelected', JSON.stringify(product));
+                    localStorage.setItem('productSelected', JSON.stringify(product));
                 });
 
                 // ภาพสินค้า
                 let image = document.createElement('img');
-                image.src = 'src/noImage.png';
+                image.src = 'product/noImage.png';
                 storageRef.child(product.userId + '/' + product.id + '/image1').getDownloadURL()
                     .then((url) => {
                         image.src = url;
@@ -162,7 +219,7 @@ function showProductSearch(searchText) {
                 let connect2 = document.createElement('a');
                 connect2.href = 'prod.html';
                 connect2.addEventListener('click', function () {
-                    sessionStorage.setItem('productSelected', JSON.stringify(product));
+                    localStorage.setItem('productSelected', JSON.stringify(product));
                 });
 
                 // ชื่อสินค้า
@@ -177,7 +234,7 @@ function showProductSearch(searchText) {
                 let connect3 = document.createElement('a');
                 connect3.href = 'prod.html';
                 connect3.addEventListener('click', function () {
-                    sessionStorage.setItem('productSelected', product);
+                    localStorage.setItem('productSelected', product);
                 });
 
                 // ราคาสินค้า
@@ -213,7 +270,8 @@ function showProductSearch(searchText) {
 
                 // ไอคอนตะกร้า
                 let cartImg = document.createElement('img');
-                cartImg.src = "src/icon/addcart.png";
+                // cartImg.src = "src/icon/addcart.png";
+                cartImg.src = 'product/addcart.png';
                 cartImg.id = 'basket';
 
                 // ประกอบปุ่มตะกร้า
@@ -282,9 +340,9 @@ function showProductType(type) {
 
                 // ตัวเชื่อมไปหน้าสินค้า 1
                 let connect1 = document.createElement('a');
-                connect1.href = 'prodn.html';
+                connect1.href = 'prod.html';
                 connect1.addEventListener('click', function () {
-                    sessionStorage.setItem('productSelected', JSON.stringify(product));
+                    localStorage.setItem('productSelected', JSON.stringify(product));
                 });
 
                 // ภาพสินค้า
@@ -319,9 +377,9 @@ function showProductType(type) {
 
                 // ตัวเชื่อมไปหน้าสินค้า 2
                 let connect2 = document.createElement('a');
-                connect2.href = 'prodn.html';
+                connect2.href = 'prod.html';
                 connect2.addEventListener('click', function () {
-                    sessionStorage.setItem('productSelected', JSON.stringify(product));
+                    localStorage.setItem('productSelected', JSON.stringify(product));
                 });
 
                 // ชื่อสินค้า
@@ -334,9 +392,9 @@ function showProductType(type) {
 
                 // ตัวเชื่อมไปหน้าสินค้า 3
                 let connect3 = document.createElement('a');
-                connect3.href = 'prodn.html';
+                connect3.href = 'prod.html';
                 connect3.addEventListener('click', function () {
-                    sessionStorage.setItem('productSelected', product);
+                    localStorage.setItem('productSelected', product);
                 });
 
                 // ราคาสินค้า
