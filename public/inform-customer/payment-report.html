@@ -24,7 +24,7 @@
         <!----------------------------------------เมนูบน------------------------------------------->
         <div class="top">
             <div class="navi">
-                <span><button class="openbtn" onclick="openNav()">☰</button>
+                <span><button class="openbtn" id="openNav">☰</button>
                     <a href="../index.html"><img id="logo" src="../src/logo/logona.png" alt="homepage" /></a></span>
                 <ul class="menu">
                     <li><a href="../index.html" style="width: 75px;">หน้าหลัก</a></li>
@@ -54,7 +54,7 @@
     
         <div id="logoutshow" class="logout">
             <div id="logoutpop" class="logoutpopcl">
-                <a href="../member/profile.html" style="text-decoration: none; color: black;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;">ดูโปรไฟล์</div></a>
+                <a href="../member/profile.html" style="text-decoration: none; color: black;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;">ข้อมูลของฉัน</div></a>
                 <div class="textbox tbLogout">ออกจากระบบ</div>
             </div>
         </div>
@@ -75,7 +75,7 @@
             });
         </script>
         <!------------------------------------------------------------------------------------------->
-
+        
             </div>
         </div> 
    
@@ -177,7 +177,7 @@
 
     <!-- แถบค้าหน -->
         <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
             <div class="search">
                 <h3>SEARCH BOX<img src="../src/icon/find.png" class="find"></h3>
                 <hr color="#1D3D14" style="width: 80%; margin-bottom: 6%;">
@@ -218,17 +218,29 @@
         </script>
         <!--------------------------slidebar--------------------------------------------------------------->
         <script>
-            function openNav() {
+            // function openNav() {
+            //     document.getElementById("mySidebar").style.width = "250px";
+            //     document.getElementById("main").style.marginLeft = "250px";
+            // }
+
+            // function closeNav() {
+            //     document.getElementById("mySidebar").style.width = "0";
+            //     document.getElementById("main").style.marginLeft = "0";
+            // }
+            document.getElementById("openNav").onclick = function () {
                 document.getElementById("mySidebar").style.width = "250px";
                 document.getElementById("main").style.marginLeft = "250px";
             }
-
-            function closeNav() {
-                document.getElementById("mySidebar").style.width = "0";
-                document.getElementById("main").style.marginLeft = "0";
-            }
+            document.addEventListener('mouseup', function(e) {
+                let container = document.getElementById('mySidebar');
+                if (!container.contains(e.target)) {
+                    document.getElementById("mySidebar").style.width = "0";
+                   document.getElementById("main").style.marginLeft = "0";
+                }
+            });
         </script>
-     <script src="../index.js"></script>
+     
+     <script src="basic.js"></script>
 </body>
 
 </html>

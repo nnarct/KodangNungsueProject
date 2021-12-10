@@ -17,10 +17,10 @@
 
 <body>
     <div id="main">
-        <!----------------------------------------เมนูบน------------------------------------------->
+        <!----------------------------------------เมนูบน-------------------------------------------><!--onclick="openNav()"-->
         <div class="top">
             <div class="navi">
-                <span><button class="openbtn" onclick="openNav()">☰</button>
+                <span><button class="openbtn" id="openNav" >☰</button>
                     <a href="index.html"><img id="logo" src="src/logo/logona.png" alt="homepage" /></a> </span>
                 <ul class="menu">
                     <li><a href="index.html" style="width: 75px;">หน้าหลัก</a></li>
@@ -28,6 +28,8 @@
                     <li><a href="inform-customer/contact-us.html" style="width: 90px;">ติดต่อเรา</a></li>
                     <li><a href="inform-customer/payment-report.html" style="width: 105px;">แจ้งชำระเงิน</a></li>
                 </ul>
+
+                <!--for not-logged-in user -->
                 <div class="button">
                     <a href="auth/login/login.html" class="btn login">
                         <div id="text1">Login</div>
@@ -37,18 +39,19 @@
                     </a>
                 </div>
 
+                <!--for logged-in user -->
                 <div class="rmenu" align="right">
                     <a href="#"><img src="src/icon/cart.png" id="iconc">
                         <span class="num">0</span></a>
                     <!-- popup to logout -->
                     <img src="src/icon/peo.png" id="iconp" style="cursor: pointer;">            
+                </div>
             </div>
         </div>
-    </div>
     
         <div id="logoutshow" class="logout">
             <div id="logoutpop" class="logoutpopcl">
-                <a href="member/profile.html" style="text-decoration: none; color: black;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey; box-shadow: 2px 2px 2px 1px gray;">ดูโปรไฟล์</div></a>
+                <a href="member/profile.html" style="text-decoration: none; color: black;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey; box-shadow: 2px 2px 2px 1px gray;">ข้อมูลของฉัน</div></a>
                 <div class="textbox tbLogout" style="box-shadow: 2px 2px 2px 1px gray;">ออกจากระบบ</div>
             </div>
         </div>
@@ -91,7 +94,7 @@
 
         </div>
         <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
             <div class="search">
                 <h3>SEARCH BOX<img src="src/icon/find.png" class="find"></h3>
                 <hr color="#1D3D14" style="width: 80%; margin-bottom: 6%;">
@@ -102,7 +105,7 @@
             <div class="cat">
                 <h3>CATEGORY</h3>
                 <hr color="#1D3D14" style="width: 80%; margin-bottom: 6%;" size="5">
-                <ul style="list-style-type:none" id="category">
+                <ul style="list-style-type:none">
                     <h5><a href="#">หนังสือเรียน</a></h5>
                     <li><a href="#">ประถมศึกษา</a></li>
                     <li><a href="#">มัธยมศึกษาตอนต้น</a></li>
@@ -174,15 +177,26 @@
         </script>
         <!--------------------------slidebar--------------------------------------------------------------->
         <script>
-            function openNav() {
+            // function openNav() {
+            //     document.getElementById("mySidebar").style.width = "250px";
+            //     document.getElementById("main").style.marginLeft = "250px";
+            // }
+
+            // function closeNav() {
+            //     document.getElementById("mySidebar").style.width = "0";
+            //     document.getElementById("main").style.marginLeft = "0";
+            // }
+            document.getElementById("openNav").onclick = function () {
                 document.getElementById("mySidebar").style.width = "250px";
                 document.getElementById("main").style.marginLeft = "250px";
             }
-
-            function closeNav() {
-                document.getElementById("mySidebar").style.width = "0";
-                document.getElementById("main").style.marginLeft = "0";
-            }
+            document.addEventListener('mouseup', function(e) {
+                let container = document.getElementById('mySidebar');
+                if (!container.contains(e.target)) {
+                    document.getElementById("mySidebar").style.width = "0";
+                   document.getElementById("main").style.marginLeft = "0";
+                }
+            });
         </script>
          <script src="index.js"></script>
 

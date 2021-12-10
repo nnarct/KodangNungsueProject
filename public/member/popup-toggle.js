@@ -10,7 +10,8 @@
         document.getElementById("popup2").style.display = "none"; // popup เปลี่ยนพาสเวิด
         document.getElementById("popup3").style.display = "none"; // popup ประวัติการซื้อ
         document.getElementById("popup4").style.display = "none"; // popup สินค้าที่ต้องชำะ
-        document.getElementById("popup5").style.display = "none"; // popup สถานะสินค้า                
+        document.getElementById("popup5").style.display = "none"; // popup สถานะสินค้า            
+        document.getElementById("popup6").style.display = "none"; // popup การขาย    
     }
     document.getElementById("changePassword").onclick = function () {
         document.getElementById("popup1").style.display = "none"; // popup บัญชีของฉัน
@@ -18,7 +19,7 @@
         document.getElementById("popup3").style.display = "none"; // popup ประวัติการซื้อ
         document.getElementById("popup4").style.display = "none"; // popup สินค้าทีต้องชำระ
         document.getElementById("popup5").style.display = "none"; // popup สถานะสินค้า
-        document.getElementById("popup6").style.display = "none"; // popup เริ่มการขาย
+        document.getElementById("popup6").style.display = "none"; // popup การขาย
     }
     document.getElementById("orderHistory").onclick = function () {
         document.getElementById("popup1").style.display = "none"; // popup บัญชีของฉัน
@@ -26,7 +27,7 @@
         document.getElementById("popup3").style.display = "block";// popup ประวัติการซื้อ
         document.getElementById("popup4").style.display = "none"; // popup สินค้าที่ต้อชำระ
         document.getElementById("popup5").style.display = "none"; // popup สถานะสินค้า
-        document.getElementById("popup6").style.display = "none"; // popup เริ่มการขาย
+        document.getElementById("popup6").style.display = "none"; // popup การขาย
     }
     document.getElementById("unpaid").onclick = function () {
         document.getElementById("popup1").style.display = "none"; // popup บัญชีของฉัน
@@ -34,7 +35,7 @@
         document.getElementById("popup3").style.display = "none"; // popup ประวัติการซื้อ
         document.getElementById("popup4").style.display = "block";// popup สินค้าที่ต้องชำระ
         document.getElementById("popup5").style.display = "none"; // popup สถานะสินค้า
-        document.getElementById("popup6").style.display = "none"; // popup เริ่มการขาย
+        document.getElementById("popup6").style.display = "none"; // popup การขาย
     }
     document.getElementById("orderStatus").onclick = function () {
         document.getElementById("popup1").style.display = "none"; // popup บัญชีของฉัน
@@ -42,7 +43,7 @@
         document.getElementById("popup3").style.display = "none"; // popup ประวัติการซื้อ
         document.getElementById("popup4").style.display = "none"; // popup สินค้าที่ต้องชำระ
         document.getElementById("popup5").style.display = "block";// popup สถานะสินค้า
-        document.getElementById("popup6").style.display = "none"; // popup เริ่มการขาย
+        document.getElementById("popup6").style.display = "none"; // popup การขาย
     }
     document.getElementById("selling").onclick = function () {
         document.getElementById("popup1").style.display = "none"; // popup บัญชีของฉัน
@@ -50,6 +51,14 @@
         document.getElementById("popup3").style.display = "none"; // popup ประวัติการซื้อ
         document.getElementById("popup4").style.display = "none"; // popup สินค้าที่ต้องชำระ
         document.getElementById("popup5").style.display = "none"; // popup สถานะสินค้า
-        document.getElementById("popup6").style.display = "block";// popup เริ่มการขาย
+        document.getElementById("popup6").style.display = "block";// popup การขาย
+    }
+    document.getElementById("seller").onclick = function () {
+        document.getElementById("popup1").style.display = "none"; // popup บัญชีของฉัน
+        document.getElementById("popup2").style.display = "none"; // popup เปลี่ยนพาสเวิด
+        document.getElementById("popup3").style.display = "none"; // popup ประวัติการซื้อ
+        document.getElementById("popup4").style.display = "none"; // popup สินค้าที่ต้องชำระ
+        document.getElementById("popup5").style.display = "none"; // popup สถานะสินค้า
+        document.getElementById("popup6").style.display = "block";// popup การขาย
     }
         

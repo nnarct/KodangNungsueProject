@@ -1,7 +1,6 @@
-
 <!DOCTYPE html>
 <html>
-<title>KodangTest</title>
+<title>KodangProduct</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="prod.css">
 <link rel="stylesheet" href="member/popup.css">
@@ -14,12 +13,13 @@
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <body>
     <div id="main">
         <!----------------------------------------เมนูบน------------------------------------------->
         <div class="top">
             <div class="navi">
-                <span><button class="openbtn" onclick="openNav()">☰</button>
+                <span><button class="openbtn" id="openNav">☰</button>
                     <a href="#"><img id="logo" src="src/logo/logona.png" /></a></span>
                 <ul class="menu">
                     <li><a href="index.html" style="width: 75px;">หน้าหลัก</a></li>
@@ -40,18 +40,21 @@
                     <a href="#"><img src="src/icon/cart.png" id="iconc">
                         <span class="num">0</span></a>
                     <!-- popup to logout -->
-                    <img src="src/icon/peo.png" id="iconp" style="cursor: pointer;">            
+                    <img src="src/icon/peo.png" id="iconp" style="cursor: pointer;">
+                </div>
             </div>
         </div>
-    </div>
-    
-        <div id="logoutshow" class="logout"  style="box-shadow: none;">
+
+        <div id="logoutshow" class="logout" style="box-shadow: none;">
             <div id="logoutpop" style="box-shadow: none;">
-                <a href="member/profile.html" style="text-decoration: none; color: black; box-shadow: none;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;  box-shadow: none;">ดูโปรไฟล์</div></a>
+                <a href="member/profile.html" style="text-decoration: none; color: black; box-shadow: none;">
+                    <div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;  box-shadow: none;">
+                        ดูโปรไฟล์</div>
+                </a>
                 <div class="textbox tbLogout" style="box-shadow: none;">ออกจากระบบ</div>
             </div>
         </div>
-<br>
+        <br>
         <!--------------------------logout  ------------------------------------------------------------->
         <script>
             document.getElementById("iconp").onclick = function () {
@@ -60,7 +63,7 @@
             // document.getElementById("backprofile").onclick = function () {
             //     document.getElementById("logoutshow").style.display = "none";
             // }
-            document.addEventListener('mouseup', function(e) {
+            document.addEventListener('mouseup', function (e) {
                 let container = document.getElementById('logoutshow');
                 if (!container.contains(e.target)) {
                     container.style.display = 'none';
@@ -90,7 +93,7 @@
 
         </div>
         <div id="mySidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
             <div class="search">
                 <h3>SEARCH BOX<img src="src/icon/find.png" class="find"></h3>
                 <hr color="#1D3D14" style="width: 80%; margin-bottom: 6%;">
@@ -101,7 +104,7 @@
             <div class="cat">
                 <h3>CATEGORY</h3>
                 <hr color="#1D3D14" style="width: 80%; margin-bottom: 6%;" size="5">
-                <ul style="list-style-type:none" id="category">
+                <ul style="list-style-type:none">
                     <h5><a href="#">หนังสือเรียน</a></h5>
                     <li><a href="#">ประถมศึกษา</a></li>
                     <li><a href="#">มัธยมศึกษาตอนต้น</a></li>
@@ -130,105 +133,117 @@
                     </div>
                     <div class="col-2" style="width: 47%; margin-right: 2%;">
                         <div class="bgde">
-                            
+
                         </div>
                     </div>
                 </div>
             </span>
             <div class="review">
-                
+
             </div>
             <div class="rec">
 
-                </div>
             </div>
         </div>
+    </div>
 
 
 
-        <!--------------------------slideshow--------------------------------------------------------------->
-        <script>
-            var slideInd = 1;
-            show(slideInd);
+    <!--------------------------slideshow--------------------------------------------------------------->
+    <script>
+        var slideInd = 1;
+        show(slideInd);
 
-            function pSlides(k) {
-                show(slideInd += k);
+        function pSlides(k) {
+            show(slideInd += k);
+        }
+
+        function currentSlide(k) {
+            show(slideInd = k);
+        }
+
+        function show(k) {
+            var i;
+            var sli = document.getElementsByClassName("mySlides");
+            if (k > sli.length) { slideInd = 1 }
+            if (k < 1) { slideInd = sli.length }
+            for (i = 0; i < sli.length; i++) {
+                sli[i].style.display = "none";
             }
 
-            function currentSlide(k) {
-                show(slideInd = k);
+            sli[slideInd - 1].style.display = "block";
+        }
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
             }
 
-            function show(k) {
-                var i;
-                var sli = document.getElementsByClassName("mySlides");
-                if (k > sli.length) { slideInd = 1 }
-                if (k < 1) { slideInd = sli.length }
-                for (i = 0; i < sli.length; i++) {
-                    sli[i].style.display = "none";
-                }
+            slideInd++;
+            if (slideInd > x.length) { slideInd = 1 }
+            x[slideInd - 1].style.display = "block";
+            setTimeout(carousel, 3500); // Change image every 2 seconds
+        }
+    </script>
+    <!--------------------------slidebar--------------------------------------------------------------->
+    <script>
+        // function openNav() {
+            //     document.getElementById("mySidebar").style.width = "250px";
+            //     document.getElementById("main").style.marginLeft = "250px";
+            // }
 
-                sli[slideInd - 1].style.display = "block";
-            }
-            carousel();
-
-            function carousel() {
-                var i;
-                var x = document.getElementsByClassName("mySlides");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                }
-
-                slideInd++;
-                if (slideInd > x.length) { slideInd = 1 }
-                x[slideInd - 1].style.display = "block";
-                setTimeout(carousel, 3500); // Change image every 2 seconds
-            }
-        </script>
-        <!--------------------------slidebar--------------------------------------------------------------->
-        <script>
-            function openNav() {
+            // function closeNav() {
+            //     document.getElementById("mySidebar").style.width = "0";
+            //     document.getElementById("main").style.marginLeft = "0";
+            // }
+            document.getElementById("openNav").onclick = function () {
                 document.getElementById("mySidebar").style.width = "250px";
                 document.getElementById("main").style.marginLeft = "250px";
             }
-
-            function closeNav() {
-                document.getElementById("mySidebar").style.width = "0";
-                document.getElementById("main").style.marginLeft = "0";
-            }
-        </script>
-        <!--------------------------detail--------------------------------------------------------------->
-        <script>
-            var sIndex = 1;
-            showSlides(sIndex);
-
-            function pluSlides(n) {
-                showSlides(sIndex += n);
-            }
-
-            function curSlide(n) {
-                showSlides(sIndex = n);
-            }
-
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("mySlidede");
-                var dots = document.getElementsByClassName("demo");
-                var captionText = document.getElementById("caption");
-                if (n > slides.length) { sIndex = 1 }
-                if (n < 1) { sIndex = slides.length }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
+            document.addEventListener('mouseup', function(e) {
+                let container = document.getElementById('mySidebar');
+                if (!container.contains(e.target)) {
+                    document.getElementById("mySidebar").style.width = "0";
+                   document.getElementById("main").style.marginLeft = "0";
                 }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[sIndex - 1].style.display = "block";
-                dots[sIndex - 1].className += " active";
-                captionText.innerHTML = dots[sIndex - 1].alt;
+            });
+    </script>
+    <!--------------------------detail--------------------------------------------------------------->
+    <script>
+        var sIndex = 1;
+        showSlides(sIndex);
+
+        function pluSlides(n) {
+            showSlides(sIndex += n);
+        }
+
+        function curSlide(n) {
+            showSlides(sIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlidede");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { sIndex = 1 }
+            if (n < 1) { sIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
             }
-        </script>
-         <script src="prod.js"></script>
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[sIndex - 1].style.display = "block";
+            dots[sIndex - 1].className += " active";
+            captionText.innerHTML = dots[sIndex - 1].alt;
+        }
+    </script>
+    <script src="basic.js"></script>
+    <script src="prod.js"></script>
 </body>
 
 </html>

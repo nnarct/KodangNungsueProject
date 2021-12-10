@@ -1,0 +1,6 @@
+#popup6 { padding: 0px; height: 74%;}
+.seller-menu { display: flex; flex-direction: row; width: 100%; height: fit-content;  }
+.branch { border: none;text-align: center; width: 25%; padding: 2% 1.75%;font-size: 1.7em; font-family: Itim; background-color: white; }
+.branch { border-bottom: 7px solid transparent; cursor: pointer;}
+.branch:hover { border-bottom: 7px solid green; }
+.branch:active { background-color: rgb(124, 186, 75); border-bottom: 7px solid rgb(124, 186, 75); }

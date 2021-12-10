@@ -50,26 +50,6 @@ auth.onAuthStateChanged((user) => {
     }
 });
 
-// ส่วน Log Out 
-let buttonLogout = document.querySelector('.tbLogout');
-buttonLogout.addEventListener('click', () => {
-    Swal.fire({
-        title: 'Are you sure?',
-        text: "Do you want to log out ?",
-        icon: 'question',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Sure'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            auth.signOut().then(() => {
-                location.href = 'index.html';
-            });
-        }
-    });
-});
-
 let headingTitle = document.querySelector('#heading-title');
 let inputText = document.querySelector('.input > input');
 inputText.addEventListener('keyup', (event) => {
@@ -85,8 +65,8 @@ inputText.addEventListener('keyup', (event) => {
     }
 })
 
-let cates = document.querySelectorAll('#category > h5');
-let subCates = document.querySelectorAll('#category > li');
+let cates = document.querySelectorAll('#cat > ul > h5');
+let subCates = document.querySelectorAll('#cat > ul > li');
 
 cates.forEach((cate) => {
     cate.addEventListener('click', () => {
@@ -110,38 +90,33 @@ subCates.forEach((subCate, index) => {
         }
     });
 });
+
+// <-------------------- ส่วน Log Out --------------------->
+let buttonLogout = document.querySelector('.tbLogout');
+buttonLogout.addEventListener('click', () => {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "Do you want to log out ?",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sure'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            auth.signOut().then(() => {
+                location.href = 'index.html';
+            });
+        }
+    });
+});
+
 // <------------------------------ส่วนฟังก์ชันต่างๆ--------------------------------------->
 
 function reset() {
     let allProduct = document.querySelector('.product');
     allProduct.innerHTML = null;
     allProduct.append(document.createElement('br'));
-}
-
-function loadProductOnlyUser(userId) {
-    let database_ref = database.collection('products').where("userId", "==", userId);
-    return new Promise((resolve) => {
-        let products = [];
-        database_ref.get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                products.push({
-                    id: doc.id,
-                    amount: doc.data().amount,
-                    condition: doc.data().condition,
-                    date: doc.data().date,
-                    detail: doc.data().detail,
-                    price: doc.data().price,
-                    name: doc.data().productName,
-                    province: doc.data().province,
-                    rating: doc.data().rating,
-                    seller: doc.data().seller,
-                    type: doc.data().type,
-                    userId: doc.data().userId
-                });
-            });
-            resolve(products);
-        });
-    });
 }
 
 function showProductSearch(searchText) {
@@ -187,7 +162,7 @@ function showProductSearch(searchText) {
 
                 // ภาพสินค้า
                 let image = document.createElement('img');
-                image.src = 'product/noImage.png';
+                image.src = 'src/noImage.png';
                 storageRef.child(product.userId + '/' + product.id + '/image1').getDownloadURL()
                     .then((url) => {
                         image.src = url;
@@ -267,11 +242,11 @@ function showProductSearch(searchText) {
                 // ปุ่มใส่ตะกร้า
                 let cart = document.createElement('span');
                 cart.classList.add('cart');
+                
 
                 // ไอคอนตะกร้า
                 let cartImg = document.createElement('img');
-                // cartImg.src = "src/icon/addcart.png";
-                cartImg.src = 'product/addcart.png';
+                cartImg.src = "src/icon/addcart.png";
                 cartImg.id = 'basket';
 
                 // ประกอบปุ่มตะกร้า
@@ -287,7 +262,7 @@ function showProductSearch(searchText) {
                     noLogin.classList.add('overlay');
                     let connectLogin = document.createElement('a');
                     connectLogin.classList.add('text');
-                    connectLogin.href = 'login/login.html';
+                    connectLogin.href = 'auth/login/login.html ';
                     connectLogin.innerHTML = 'Please Login before...';
                     noLogin.append(connectLogin);
                     cart.append(noLogin);
@@ -347,7 +322,7 @@ function showProductType(type) {
 
                 // ภาพสินค้า
                 let image = document.createElement('img');
-                image.src = 'product/noImage.png';
+                image.src = 'src/noImage.png';
                 storageRef.child(product.userId + '/' + product.id + '/image1').getDownloadURL()
                     .then((url) => {
                         image.src = url;
@@ -430,8 +405,7 @@ function showProductType(type) {
 
                 // ไอคอนตะกร้า
                 let cartImg = document.createElement('img');
-                // cartImg.src = "src/icon/addcart.png";
-                cartImg.src = 'product/addcart.png';
+                cartImg.src = "src/icon/addcart.png";
                 cartImg.id = 'basket';
 
                 // ประกอบปุ่มตะกร้า
@@ -447,7 +421,7 @@ function showProductType(type) {
                     noLogin.classList.add('overlay');
                     let connectLogin = document.createElement('a');
                     connectLogin.classList.add('text');
-                    connectLogin.href = 'login/login.html';
+                    connectLogin.href = 'auth/login/login.html ';
                     connectLogin.innerHTML = 'Please Login before...';
                     noLogin.append(connectLogin);
                     cart.append(noLogin);
@@ -463,27 +437,4 @@ function showProductType(type) {
 
     });
 
-}
-
-function showOnlyProduct() {
-    loadProductOnlyUser(userDetail.id).then((result) => {
-        products = result;
-        products.forEach((product) => {
-            storageRef.child(product.userId + '/' + product.id).listAll()
-                .then((res) => {
-                    res.items.forEach((itemRef) => {
-                        console.log(itemRef.name)
-                        itemRef.getDownloadURL().then((url) => {
-                            console.log(url);
-                        });
-                    });
-                }).catch((error) => {
-                    Swal.fire(
-                        'Error',
-                        error.message,
-                        'error'
-                    )
-                })
-        });
-    });
 }
