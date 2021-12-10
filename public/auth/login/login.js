@@ -93,7 +93,7 @@ function login() {
                 localStorage.setItem('userNow', JSON.stringify(userDetail));
                 sessionStorage.setItem('userDetail', JSON.stringify(userDetail));
                 setTimeout(() => {
-                    location.href = "../index.html";
+                    location.href = "../../index.html";
                 }, 1500)
             })
 

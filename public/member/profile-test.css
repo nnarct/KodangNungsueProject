@@ -156,27 +156,25 @@ nav {
       font-size: 1.2em;
     }
     
-    .peopro{
-      width: 5%;
-    }
-.navLeft h1 { font-weight: lighter; font-size: 1.2em; cursor: default; }   
-.contents { position: absolute; border: 3px solid green; width:96%; height: fit-content; margin: 2%; min-width: 900px;}
+
+.navLeft h1 { font-weight: lighter; font-size: 1.2em; cursor: default; padding-left: 10%; }   
+.contents { position: absolute;width:96%; height: fit-content; margin: 2%; min-width: 900px;}
 .contents { display: flex; flex-direction: row; justify-content: space-between; }
-.navLeft { height: fit-content; width: 18%; min-width: fit-content; border: 3px solid yellow; padding: 17px; max-width: 230px; }
-.navRight { height: fit-content; width: 82%; min-width: fit-content;  border: 4px solid pink; }
+.navLeft { height: fit-content; width: 18%; min-width: fit-content; padding: 17px; max-width: 230px; }
+.navRight { height: fit-content; width: 82%; min-width: fit-content; }
 
 h2 { text-align: left; width:fit-content; font-size: 1em; font-weight: lighter; padding-top: 10px; display: flex; align-items: center;}
-.colored {padding: 0px 3px;}
-h2:hover .colored { color: green; }
+.colored { padding: 0px 3px; color: transparent; }
+h2:hover .colored { display: block; color: green;  }
 
-.navLeft h2 { margin-left: 26px; width: 93%; transition: .5s ease; min-width: fit-content;}
+.navLeft h2 { margin-left: 26px; padding-left: 10%; width: 93%; transition: .5s ease; min-width: fit-content;}
 .navLeft h2:hover{ cursor: pointer; transform: translateX(7%); }
 
 #popup1, #popup2, #popup3, #popup4, #popup5 { display: none; width: 90%; min-height: 350px; height: fit-content; min-width: fit-content; 
-    padding: 2% 3%; margin: 0px 2%; border-radius: 20px; box-shadow: 0px 3px 4px 0.5px rgb(163, 163, 163); background-color: white;
+    padding: 2% 3%; margin:3% 2% 0px 2%; border-radius: 20px; box-shadow: 0px 3px 4px 0.5px rgb(163, 163, 163); background-color: white;
 
 }
-#popup2 { display: block; }
+#popup1 { display: block; }
 .sepLine { height: 2px; background-color: lightgray; margin: 1% 0px; width: 100%; }
 .topicName { font-size: 2em; padding-left: 5%; padding-top: 7px; }
 
@@ -191,9 +189,9 @@ h2:hover .colored { color: green; }
 .two {  display: flex; flex-direction: column; justify-content: top;  width: 74%; text-align: left; padding-left: 8px; margin: 5px 0px; }
 .pictureZone {  width: 38%; min-width: fit-content; min-width: fit-content; display: flex; align-items: center; justify-content: space-evenly; flex-direction: column; }
 .displayAddress { max-width: 300px; min-width:280px;}
-.two input { font-family: Itim; font-size: 0.7em; width: 95%; padding-top: px; margin: 5px 0px; height: calc(12.5% - 1px); }
+.two input { font-family: Itim; font-size: 0.7em; width: 95%; padding-top: px; margin: 5px 0px; height: calc(12.5% - 1px); border-radius: 5px; border: transparent ; box-shadow: 0px 0px 1.2px 0.7px lightgray; }
 .three { display: flex; flex-direction: column; justify-content: space-around; align-items: left; }
-.three textarea {  width: 95%; height: 80px; resize: none; margin-top: 5px ;}
+.three textarea {  width: 95%; height: 80px; resize: none; margin-top: 5px ; border-radius: 5px; border: transparent ; box-shadow: 0px 0px 1.2px 0.7px lightgray;}
 #displayAddress { font-family: Itim; height: 80px; }
 #displayInput { display: none; }
 .pictureFrame img{ width: 200px; height: 200px; border-radius: 20rem; box-shadow: 0px 0px 6px 3px lightgray; background: transparent; }
@@ -229,8 +227,11 @@ h2:hover .colored { color: green; }
 }
 .ConfirmButtonStyle:hover { background-color: #97e65b; border-color: #97e65b}
 
-
-
+.head { display: flex; flex-direction: row; width: fit-content; padding-bottom: 10px; margin-bottom: 10px; border-bottom: 2px solid #1d3d14; justify-content: space-evenly; align-items: center; }
+.smallProfilePic { width: 80px; height: 80px; padding: 3px ; }
+.smallProfilePic img { width: 80px; height: 80px; border-radius: 50%; }
+.name { width: 80%; min-width: 120px; text-align: center; font-size: 1.2em; padding: 3px;}
+.peopro img{ width: 50px; height: 50px; min-width: 50px; align-items: center; margin: 0px; padding: 0px; }
 .container{
     position: absolute;
     right: 8%;
@@ -310,4 +311,64 @@ h2:hover .colored { color: green; }
     object-fit: cover;
     border: none;
     border-radius: 3rem;
+}
+
+.rowna{
+    cursor: pointer;
+    margin-top: 2%;
+    padding-top: 2%;
+    }
+    
+    .rowna:hover{
+    background-color: #eeeeee;
+    }
+    
+    .nameaga{
+    font-size: 1.4em;
+    text-decoration: none;
+    }
+    
+    .namesaga{
+        font-size: 1em;
+        font-weight: lighter;
+        text-decoration: none;
+    }
+    
+    .rd p{
+    font-size: 1em;
+    margin: 0%;
+    font-weight: lighter;
+    }
+    
+    .rd h1{
+    font-size: 1.1em;
+    margin: 0%;
+    font-weight: lighter;
+    }
+    
+    .rd h3{
+    margin: 0%;
+    color: #FA8334;
+    font-size: 1.2em;
+    font-weight: lighter;
+    margin-bottom: 5%;
+    }
+.proaga{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: -5px 6px 4px 2px rgb(175, 175, 175);
+}
+    
+.prodaga{
+    position: relative;
+    height: 220px;
+    width: 150px;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+.col-2{
+    float: left;
+    margin: auto;
+    height: 100%;
 }

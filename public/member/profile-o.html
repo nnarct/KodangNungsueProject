@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+<title>KodangProfile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="profile-o.css">
+<link rel="stylesheet" href="popup.css">
+<link rel="shortcut icon" href="src/logo/logonobgn.png" />
+<!------------------------------------------------พวกสัญลักษณ์----------------------------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+<body>
+    <div id="main">
+        <!----------------------------------------เมนูบน------------------------------------------->
+        <div class="top">
+            <div class="navi">
+                <span>
+                    <a href="#"><img id="logo" src="src/logo/logona.png" /></a></span>
+                <ul class="menu">
+                    <li><a href="../index.html"style="width: 75px;">หน้าหลัก</a></li>
+                    <li><a href="../inform-customer/how-to-order.html" style="width: 145px;">วิธีการสั่งซื้อสินค้า</a></li>
+                    <li><a href="../inform-customer/contact-us.html" style="width: 90px;">ติดต่อเรา</a></li>
+                    <li><a href="../inform-customer/payment-report.html" style="width: 105px;">แจ้งชำระเงิน</a></li>
+                </ul>
+                <div class="rmenu" align="right">
+                    <a href="#"><img src="src/icon/cart.png" id="iconc">
+                       <span class="num">0</span></a>
+                    
+                    <!-- popup to logout -->
+                    <img src="src/icon/peo.png" id="iconp" style="cursor: pointer;">            
+                </div>
+            </div>
+       
+            <div id="logoutshow" class="logout">
+                <div id="logoutpop" class="logoutpopcl">
+                    <a href="profile.html" style="text-decoration: none; color: black;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;">ดูโปรไฟล์</div></a>
+                    <div class="textbox tbLogout">ออกจากระบบ</div>
+                </div>
+            </div>
+
+       </div>
+           
+        <br>
+        <!--------------------------logout  ------------------------------------------------------------->
+        <script>
+            document.getElementById("iconp").onclick = function () {
+                document.getElementById("logoutshow").style.display = "block";
+            }
+            // document.getElementById("backprofile").onclick = function () {
+            //     document.getElementById("logoutshow").style.display = "none";
+            // }
+            document.addEventListener('mouseup', function(e) {
+                let container = document.getElementById('logoutshow');
+                if (!container.contains(e.target)) {
+                    container.style.display = 'none';
+                }
+            });
+        </script>
+        <!------------------------------------------------------------------------------------------->
+
+             
+        <img class="bglogo" src="src/logobk.png">
+        <div class="rightmenu">
+            <img src="src/icon/peo.png" class="peopro">
+            <span class="name">สมหวัง ถังสี</span>
+            <hr color="#1D3D14" align="left" style=" width: 20%; margin-bottom: 2%;" size="5">
+            <div class="promenu">
+                <h1>บัญชีของฉัน</h1>
+                <!-------------------------------------- บัญชี--------------------------------------- -->
+                <h2 id="mymenu">ข้อมูลของฉัน<span>&#10095;</span></h2>
+                <div id="popup">
+                    <div class="closemd">&times;</div>
+                    <div class="content">
+                        <h1>ข้อมูลของฉัน</h1>
+                        <hr align="left" color="#C4CBC2" style=" width: 70%; margin-bottom: 2%;" size="4"> <!--เส้นคั่นระหว่างเนื้อหากับหัวข้อ-->
+                        <div class="row1">
+                            <div class="col-2" style="width: 15%;">
+                                <div class="topic">
+                                    <p>ชื่อ</p>
+                                    <p>นามสกุล</p>
+                                    <p>อีเมล</p>
+                                    <p>เบอร์โทรศัพท์</p>
+                                    <p>ที่อยู่</p>
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 50%;">
+                                <div id="beforeE" class="info"> <!-- แสดงข้อมูลผู้ใช้ -->
+                                    <p>สมหวัง</p>
+                                    <p>ถังสี</p>
+                                    <p>Somwang@gmail.com</p>
+                                    <p>099-999-9999</p>
+                                    <p>99/9 ม.9 ต.แปรงทาสี อ.สีแสดสมใจ จ.บ้านสมหวัง 99999</p>
+                                </div>
+                                <!-- ถ้าผู้ใชต้องการแก้ไขข้อมูล -->
+                                <div id="editzone" class="infoput">
+                                    <input type="text" id="fname" name="fname" style="width: 100%; height: 35px; 
+                                    margin-bottom: 2%;" required>
+                                    <input type="text" id="lname" name="lname" style="width: 100%; height: 35px; 
+                                    margin-bottom: 2%;" required>
+                                    <input type="email" id="email" name="email" style="width: 100%; height: 35px; 
+                                    margin-bottom: 2%;" required>
+                                    <input type="tel" id="phone" name="phone" maxlength="12" placeholder="099-999-9999"
+                                        pattern="[0][0-9]{2}-[0-9]{3}-[0-9]{4}" required style="width: 100%; height: 35px; 
+                                        margin-bottom: 2%;">
+                                    <textarea
+                                        placeholder="พิมพ์เลขที่, หมู่, อาคาร, ซอย, ถนน, จุดสังเกต(ถ้ามี), ตำบล, อำเภอ, จังหวัด, รหัสไปรษณีย์"
+                                        name="address" required></textarea>
+                                </div>
+                            </div>
+                          <!---->  <div class="col-2" style="width: 25%;">
+                                <div id="beforeE2" class="third info" align="center">
+                                    <img src="src/icon/peo.png" class="peopro show">
+                                </div>
+                                <div id="editzone2" class="Preview" align="center">
+                                    <div class="container">
+                                        <div class="wrap">
+                                            <div class="imgPre">
+                                                <img id="imgna" alt="">
+                                            </div>
+                                            <div class="inside">
+                                                <div class="textin">No file chosen -_-</div>
+                                            </div>
+                                            <div id="cancelimg">&times;</div>
+                                            <div class="file-name">File name here.</div>
+                                        </div>
+                                        <input id="de-btn" type="file" accept="image/*" hidden>
+                                        <button onclick="deBtnActive()" id="custom-btn">Choose a file ^_^</button>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div id="beforeE3">
+                        <input type="button" id="editBtn" class="pos gbtn" value="แก้ไขข้อมูล" onclick="openForm()">
+                    </div>
+                    <div id="editzone3">
+                        <input type="button" id="backBtn" class="pos bbtn" value="ย้อนกลับ" onclick="closeForm()">
+                        <input type="submit" id="okBtn" class="pos gbtn" value="ยืนยัน">
+                    </div>
+                </div>
+
+                <!-- change password -->
+                <h2><a href="#.html">เปลี่ยนรหัสผ่าน</a><span>&#10095;</span></h2>
+
+
+                <!-- order history -->
+                <h1>การซื้อของฉัน</h1>
+                <h2 id="hisbtn">ประวัติการซื้อ<span>&#10095;</span></h2>
+                <div id="popup3">
+                    <div class="closeaga">&times;</div>
+                    <div class="content3">
+                        <h1>ประวัติการซื้อของฉัน</h1>
+                        <hr align="left" color="#C4CBC2" style=" width: 90%; margin-bottom: 0;" size="4">
+                        <div class="allaga">
+                            <div class="modal-content">
+                                <a href="#.html">
+                                    <div class="rowna">
+                                        <div class="col-2" style="width: 30%;" align="right">
+                                            <div class="prodaga">
+                                                <img src="src/testprod/p1.jpg" class="proaga">
+                                            </div>
+                                        </div>
+                                        <div class="col-2" style="width: 60%; margin-right: 10%;">
+                                            <div class="nameaga" align="left">
+                                                ONE PIECE 500 QUIZ BOOK
+                                            </div>
+                                            <div class="namesaga" align="left">
+                                                มังกี้ ดี ท็อฟฟี่
+                                            </div>
+                                            <div class="rd" align="right">
+                                                <p>x1</p>
+                                                <h1>฿200</h1>
+                                                <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                                <a href="#1.html">
+                                                    <input type="button" id="agabtnna" class="pos gbtn"
+                                                        value="ซื้ออีกครั้ง">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="modal-content">
+                                <a href="#.html">
+                                    <div class="rowna">
+                                        <div class="col-2" style="width: 30%;" align="right">
+                                            <div class="prodaga">
+                                                <img src="src/testprod/p1.jpg" class="proaga">
+                                            </div>
+                                        </div>
+                                        <div class="col-2" style="width: 60%; margin-right: 10%;">
+                                            <div class="nameaga" align="left">
+                                                ONE PIECE 500 QUIZ BOOK
+                                            </div>
+                                            <div class="namesaga" align="left">
+                                                มังกี้ ดี ท็อฟฟี่
+                                            </div>
+                                            <div class="rd" align="right">
+                                                <p>x1</p>
+                                                <h1>฿200</h1>
+                                                <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                                <a href="#1.html">
+                                                    <input type="button" id="agabtnna" class="pos gbtn"
+                                                        value="ซื้ออีกครั้ง">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="modal-content">
+                                <a href="#.html">
+                                    <div class="rowna">
+                                        <div class="col-2" style="width: 30%;" align="right">
+                                            <div class="prodaga">
+                                                <img src="src/testprod/p1.jpg" class="proaga">
+                                            </div>
+                                        </div>
+                                        <div class="col-2" style="width: 60%; margin-right: 10%;">
+                                            <div class="nameaga" align="left">
+                                                ONE PIECE 500 QUIZ BOOK
+                                            </div>
+                                            <div class="namesaga" align="left">
+                                                มังกี้ ดี ท็อฟฟี่
+                                            </div>
+                                            <div class="rd" align="right">
+                                                <p>x1</p>
+                                                <h1>฿200</h1>
+                                                <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                                <a href="#1.html">
+                                                    <input type="button" id="agabtnna" class="pos gbtn"
+                                                        value="ซื้ออีกครั้ง">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="modal-content">
+                                <a href="#.html">
+                                    <div class="rowna">
+                                        <div class="col-2" style="width: 30%;" align="right">
+                                            <div class="prodaga">
+                                                <img src="src/testprod/p1.jpg" class="proaga">
+                                            </div>
+                                        </div>
+                                        <div class="col-2" style="width: 60%; margin-right: 10%;">
+                                            <div class="nameaga" align="left">
+                                                ONE PIECE 500 QUIZ BOOK
+                                            </div>
+                                            <div class="namesaga" align="left">
+                                                มังกี้ ดี ท็อฟฟี่
+                                            </div>
+                                            <div class="rd" align="right">
+                                                <p>x1</p>
+                                                <h1>฿200</h1>
+                                                <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                                <a href="#1.html">
+                                                    <input type="button" id="agabtnna" class="pos gbtn"
+                                                        value="ซื้ออีกครั้ง">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <hr style="border:2px solid #f1f1f1; width: 100%;">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- unpaid order  -->
+                <h2 id="cbbtn">รอการแจ้งชำระ<span>&#10095;</span></h2>
+                <div id="popup4">
+                    <div class="closecb">&times;</div>
+                    <div class="content4">
+                        <h1>คำสั่งซื้อรอการแจ้งชำระ</h1>
+                        <hr align="left" color="#C4CBC2" style=" width: 90%; margin-bottom: 0;" size="4">
+                        <div class="allcb">
+                            <div class="rowcb" style="margin-top: 2%;">
+                                <div class="col-2" style="width: 30%;" align="right">
+                                    <div class="prodaga">
+                                        <img src="src/testprod/p1.jpg" class="proaga">
+                                    </div>
+                                </div>
+                                <div class="col-2" style="width: 60%; margin-right: 10%;">
+                                    <div class="nameaga" align="left">
+                                        ONE PIECE 500 QUIZ BOOK
+                                    </div>
+                                    <div class="namesaga" align="left">
+                                        มังกี้ ดี ท็อฟฟี่
+                                    </div>
+                                    <div class="rd" align="right">
+                                        <p>x1</p>
+                                        <h1>฿200</h1>
+                                        <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                        <a href="#1.html">
+                                            <input type="button" id="agabtnna" class="pos gbtn" value="แจ้งชำระเงิน">
+                                        </a>
+                                    </div>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                            </div>
+                            <div class="rowcb" style="margin-top: 2%;">
+                                <div class="col-2" style="width: 30%;" align="right">
+                                    <div class="prodaga">
+                                        <img src="src/testprod/p1.jpg" class="proaga">
+                                    </div>
+                                </div>
+                                <div class="col-2" style="width: 60%; margin-right: 10%;">
+                                    <div class="nameaga" align="left">
+                                        ONE PIECE 500 QUIZ BOOK
+                                    </div>
+                                    <div class="namesaga" align="left">
+                                        มังกี้ ดี ท็อฟฟี่
+                                    </div>
+                                    <div class="rd" align="right">
+                                        <p>x1</p>
+                                        <h1>฿200</h1>
+                                        <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                        <a href="#1.html">
+                                            <input type="button" id="agabtnna" class="pos gbtn" value="แจ้งชำระเงิน">
+                                        </a>
+                                    </div>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                            </div>
+                            <div class="rowcb" style="margin-top: 2%;">
+                                <div class="col-2" style="width: 30%;" align="right">
+                                    <div class="prodaga">
+                                        <img src="src/testprod/p1.jpg" class="proaga">
+                                    </div>
+                                </div>
+                                <div class="col-2" style="width: 60%; margin-right: 10%;">
+                                    <div class="nameaga" align="left">
+                                        ONE PIECE 500 QUIZ BOOK
+                                    </div>
+                                    <div class="namesaga" align="left">
+                                        มังกี้ ดี ท็อฟฟี่
+                                    </div>
+                                    <div class="rd" align="right">
+                                        <p>x1</p>
+                                        <h1>฿200</h1>
+                                        <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                        <a href="#1.html">
+                                            <input type="button" id="agabtnna" class="pos gbtn" value="แจ้งชำระเงิน">
+                                        </a>
+                                    </div>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                            </div>
+                            <div class="rowcb" style="margin-top: 2%;">
+                                <div class="col-2" style="width: 30%;" align="right">
+                                    <div class="prodaga">
+                                        <img src="src/testprod/p1.jpg" class="proaga">
+                                    </div>
+                                </div>
+                                <div class="col-2" style="width: 60%; margin-right: 10%;">
+                                    <div class="nameaga" align="left">
+                                        ONE PIECE 500 QUIZ BOOK
+                                    </div>
+                                    <div class="namesaga" align="left">
+                                        มังกี้ ดี ท็อฟฟี่
+                                    </div>
+                                    <div class="rd" align="right">
+                                        <p>x1</p>
+                                        <h1>฿200</h1>
+                                        <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                        <a href="#1.html">
+                                            <input type="button" id="agabtnna" class="pos gbtn" value="แจ้งชำระเงิน">
+                                        </a>
+                                    </div>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Confirm Books acceotation -->
+                <h2 id="cfbtn">ยืนยันการได้รับสินค้า<span>&#10095;</span></h2>
+                <div id="popup5">
+                    <div class="closecf">&times;</div>
+                    <div class="content5">
+                        <h1>ยืนยันการได้รับสินค้า</h1>
+                        <hr align="left" color="#C4CBC2" style=" width: 90%; margin-bottom: 0;" size="4">
+                        <div class="allcf">
+                            <div id="procf" class="rowcf" style="margin-top: 2%;">
+                                <div class="col-2" style="width: 30%;" align="right">
+                                    <div class="prodaga">
+                                        <img src="src/testprod/p1.jpg" class="proaga">
+                                    </div>
+                                </div>
+                                <div class="col-2" style="width: 60%; margin-right: 10%;">
+                                    <div class="nameaga" align="left">
+                                        ONE PIECE 500 QUIZ BOOK
+                                    </div>
+                                    <div class="namesaga" align="left">
+                                        มังกี้ ดี ท็อฟฟี่
+                                    </div>
+                                    <div class="rd" align="right">
+                                        <p>x1</p>
+                                        <h1>฿200</h1>
+                                        <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                        <div id="cfzone">
+                                            <input type="button" id="cfbtnna" class="pos gbtn"
+                                                value="ตรวจสอบและยืนยันการได้รับสินค้า" onclick="opencf()">
+                                        </div>
+                                        <span id="stzone">
+                                            <input type="button" id="stbtnna" class="pos gbtn" value="ให้คะแนน"
+                                                onclick="openst()">
+                                        </span>
+                                    </div>
+                                </div>
+                                <hr style="border:2px solid #f1f1f1; width: 100%;">
+                            </div>
+                            <div id="popup6">
+                                <div class="closest">^</div>
+                                <div class="content6">
+                                    <div class="row1">
+                                        <div class="col-2" style="width: 25%; margin-right: 5%;" align="right">
+                                            <p>คะแนนดาว</p>
+                                            <p>คอมเมนท์</p>
+                                        </div>
+                                        <div class="col-2 mid" style="width: 40%; margin-left: 2%;" align="right">
+                                            <input type="range" min="1" max="5" class="slider" id="myRange" step="1">
+                                            <textarea placeholder="บอกคนอื่น ๆ กันว่า หนังสือร้านนี้ดียังไง^^"
+                                                name="address" required></textarea>
+                                        </div>
+                                        <div class="col-2 starna" style="width: 25%;" align="center">
+                                            <p id="demo"></p>
+                                            <i class="fa fa-star checked"></i>
+                                            <input type="submit" id="stcfbtn" class="pos gbtn" value="ยืนยัน">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                    <!------------------------------------ สมัครขาย --------------------------->
+                    <h1 id="shpreg" class="shp">เริ่มการขาย<span>&#10095;</span></h1>
+                    <div id="popup2">
+                        <div class="closeshp">&times;</div>
+                        <div class="content2">
+                            <h1>ยินดีต้อนรับผู้ขายรายใหม่ ^^</h1>
+                            <hr align="left" color="#C4CBC2" style=" width: 90%; margin-bottom: 2%;" size="4">
+                            <div id="con" class="pin" align="center">
+                                <h3>เริ่มการขายหนังสือของคุณได้ เพียงแค่</h3>
+                                <h1>กดปุ่ม "สร้างบัญชีผู้ขาย" ด้านล่าง</h1>
+                            </div>
+                            <div class="row2">
+                                <div class="col-2" style="width: 25%;">
+                                    <div id="shpzone" class="topic">
+                                        <p>ชื่อ</p>
+                                        <p>นามสกุล</p>
+                                        <p>อีเมล</p>
+                                        <p>เบอร์โทรศัพท์</p>
+                                        <p>ที่อยู่ผู้ขาย</p>
+                                        <br><br><br><br>
+                                        <p>ธนาคาร</p>
+                                        <p>เลขบัญชีผู้ขาย</p>
+                                    </div>
+                                </div>
+                                <div class="col-2" style="width: 50%;">
+                                    <div id="shpzone2" class="infoput">
+                                        <input type="text" id="fname" name="fname" style="width: 100%; height: 35px; 
+                                    margin-bottom: 2%;" required>
+                                        <input type="text" id="lname" name="lname" style="width: 100%; height: 35px; 
+                                    margin-bottom: 2%;" required>
+                                        <input type="email" id="email" name="email" style="width: 100%; height: 35px; 
+                                    margin-bottom: 2%;" required>
+                                        <input type="tel" id="phone" name="phone" maxlength="12"
+                                            placeholder="099-999-9999" pattern="[0][0-9]{2}-[0-9]{3}-[0-9]{4}" required
+                                            style="width: 100%; height: 35px; 
+                                        margin-bottom: 2%;">
+                                        <textarea
+                                            placeholder="พิมพ์เลขที่, หมู่, อาคาร, ซอย, ถนน, จุดสังเกต(ถ้ามี), ตำบล, อำเภอ, จังหวัด, รหัสไปรษณีย์"
+                                            name="address" required></textarea>
+                                        <input type="text" id="bname" name="bname" style="width: 100%; height: 35px; 
+                                    margin-bottom: 2%;" required>
+                                        <input type="text" id="bnum" name="bnum" style="width: 100%; height: 35px; 
+                                    margin-bottom: 2%;" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="con1">
+                            <input type="button" id="shpBtn" class="pos gbtn" value="สร้างบัญชีผู้ขาย"
+                                onclick="openshp()">
+                        </div>
+                        <div id="shpzone3">
+                            <input type="button" id="backshpBtn" class="pos bbtn" value="ย้อนกลับ" onclick="closeshp()">
+                            <input type="submit" id="okshpBtn" class="pos gbtn" value="ยืนยัน">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!------------------------information------------------------------------------------------------------>
+            <script>
+                var modal = document.getElementById("popup");
+                var btn = document.getElementById("mymenu");
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("closemd")[0];
+                    btn.onclick = function () {
+                        modal.style.display = "block";
+                }
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+               
+                // hide element when click outside
+                document.addEventListener('mouseup', function(e) {
+                    let information = document.getElementById('popup');
+                    if (!information.contains(e.target)) {
+                        information.style.display = 'none';
+                    }
+                });
+                document.addEventListener('mouseup', function(e) {
+                    let startSell = document.getElementById('popup2');
+                    if (!startSell.contains(e.target)) {
+                        startSell.style.display = 'none';
+                    }
+                });
+                document.addEventListener('mouseup', function(e) {
+                    let orderHistory = document.getElementById('popup3');
+                    if (!orderHistory.contains(e.target)) {
+                        orderHistory.style.display = 'none';
+                    }
+                });
+                document.addEventListener('mouseup', function(e) {
+                    let unpaidOrder = document.getElementById('popup4');
+                    if (!unpaidOrder.contains(e.target)) {
+                        unpaidOrder.style.display = 'none';
+                    }
+                });
+                document.addEventListener('mouseup', function(e) {
+                    let ConfirmRecieve = document.getElementById('popup5');
+                    if (!ConfirmRecieve.contains(e.target)) {
+                        ConfirmRecieve.style.display = 'none';
+                    }
+                });
+       
+            </script>
+            <!------------------------edit------------------------------------------------------------------>
+            <script>
+                function openForm() {
+                    document.getElementById("editzone").style.display = "block";
+                    document.getElementById("editzone2").style.display = "block";
+                    document.getElementById("editzone3").style.display = "block";
+                    document.getElementById("beforeE3").style.display = "none";
+                }
+
+                function closeForm() {
+                    document.getElementById("editzone").style.display = "none";
+                    document.getElementById("editzone2").style.display = "none";
+                    document.getElementById("editzone3").style.display = "none";
+                    document.getElementById("beforeE3").style.display = "block";
+                }
+            </script>
+            <!------------------------Preview------------------------------------------------------------------>
+            <script>
+                const defaultBtn = document.querySelector("#de-btn");
+                const cancelBtn = document.querySelector("#cancelimg");
+                const wrapper = document.querySelector(".wrap");
+                const filename = document.querySelector(".file-name");
+                const customBtn = document.querySelector("#custom-btn");
+                let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+                function deBtnActive() {
+                    defaultBtn.click();
+                }
+                defaultBtn.addEventListener("change", function () {
+                    if (defaultBtn.files && defaultBtn.files[0]) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            document.getElementById('imgna').style.visibility = "visible";
+                            document.getElementById('imgna').src = e.target.result;
+                            wrapper.classList.add("active");
+                        }
+                        cancelBtn.addEventListener("click", function () {
+                            document.getElementById('imgna').style.visibility = "hidden";
+                            wrapper.classList.remove("active");
+                        });
+                        reader.readAsDataURL(defaultBtn.files[0]);
+                    }
+                    if (this.value) {
+                        let valueStore = this.value.match(regExp);
+                        filename.textContent = valueStore;
+                    }
+                });
+            </script>
+            <!------------------------again------------------------------------------------------------------>
+            <script>
+                var pagain = document.getElementById("popup3");
+                var hisbtn = document.getElementById("hisbtn");
+                // Get the <span> element that closes the modal
+                var hisexbtn = document.getElementsByClassName("closeaga")[0];
+                hisbtn.onclick = function () {
+                    pagain.style.display = "block";
+                }
+                // When the user clicks on <span> (x), close the modal
+                hisexbtn.onclick = function () {
+                    pagain.style.display = "none";
+                }
+            </script>
+            <!------------------------callbuy------------------------------------------------------------------>
+            <script>
+                var pcb = document.getElementById("popup4");
+                var cbbtn = document.getElementById("cbbtn");
+                // Get the <span> element that closes the modal
+                var cbexbtn = document.getElementsByClassName("closecb")[0];
+                cbbtn.onclick = function () {
+                    pcb.style.display = "block";
+                }
+                // When the user clicks on <span> (x), close the modal
+                cbexbtn.onclick = function () {
+                    pcb.style.display = "none";
+                }
+            </script>
+            <!------------------------shp------------------------------------------------------------------>
+            <script>
+                var shp = document.getElementById("popup2");
+                var shpregbtn = document.getElementById("shpreg");
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("closeshp")[0];
+                shpregbtn.onclick = function () {
+                    shp.style.display = "block";
+                    document.getElementById("shpzone").style.display = "none";
+                    document.getElementById("shpzone2").style.display = "none";
+                    document.getElementById("shpzone3").style.display = "none";
+                    document.getElementById("con").style.display = "block";
+                    document.getElementById("con1").style.display = "block";
+                }
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    shp.style.display = "none";
+                }
+            </script>
+            <!------------------------cf------------------------------------------------------------------>
+            <script>
+                var cf = document.getElementById("popup5");
+                var cfbtn = document.getElementById("cfbtn");
+                // Get the <span> element that closes the modal
+                var cfexbtn = document.getElementsByClassName("closecf")[0];
+                cfbtn.onclick = function () {
+                    cf.style.display = "block";
+                    document.getElementById("stzone").style.display = "none";
+                    document.getElementById("cfzone").style.display = "block";
+
+                    document.getElementById("popup6").style.display = "none";
+                }
+                // When the user clicks on <span> (x), close the modal
+                cfexbtn.onclick = function () {
+                    cf.style.display = "none";
+                }
+            </script>
+            <!------------------------st------------------------------------------------------------------>
+            <script>
+                var cfbbtn = document.getElementById("cfbtnna");
+                cfbbtn.onclick = function () {
+                    document.getElementById("cfzone").style.display = "none";
+                    document.getElementById("stzone").style.display = "block";
+                    document.getElementById("popup6").style.display = "none";
+                }
+            </script>
+            <!------------------------st form------------------------------------------------------------------>
+            <script>
+                var stbtn = document.getElementById("stbtnna");
+                // Get the <span> element that closes the modal
+                var stexbtn = document.getElementsByClassName("closest")[0];
+                stbtn.onclick = function () {
+                    document.getElementById("stzone").style.display = "none";
+                    document.getElementById("cfzone").style.display = "none";
+                    document.getElementById("popup6").style.display = "block";
+                }
+                // When the user clicks on <span> (x), close the modal
+                stexbtn.onclick = function () {
+                    document.getElementById("popup6").style.display = "none";
+                    document.getElementById("stzone").style.display = "block";
+                }
+            </script>
+            <!------------------------stcf form------------------------------------------------------------------>
+            <script>
+                var stcfbtn = document.getElementById("stcfbtn");
+                stcfbtn.onclick = function () {
+                    document.getElementById("procf").style.display = "none";
+                    document.getElementById("popup6").style.display = "none";
+                }
+                
+            </script>
+            <!-- -------------------slidescore---------------------------------------------------------- -->
+            <script>
+                var slider = document.getElementById("myRange");
+                var output = document.getElementById("demo");
+                output.innerHTML = slider.value;
+
+                slider.oninput = function () {
+                    output.innerHTML = this.value;
+                }
+            </script>
+            <!------------------------regshp------------------------------------------------------------------>
+            <script>
+                function openshp() {
+                    document.getElementById("shpzone").style.display = "block";
+                    document.getElementById("shpzone2").style.display = "block";
+                    document.getElementById("shpzone3").style.display = "block";
+                    document.getElementById("con").style.display = "none";
+                    document.getElementById("con1").style.display = "none";
+                }
+
+                function closeshp() {
+                    document.getElementById("shpzone").style.display = "none";
+                    document.getElementById("shpzone2").style.display = "none";
+                    document.getElementById("shpzone3").style.display = "none";
+                    document.getElementById("con").style.display = "block";
+                    document.getElementById("con1").style.display = "block";
+                }
+            </script>
+</body>
+
+</html>
