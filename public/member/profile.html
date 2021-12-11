@@ -50,7 +50,7 @@
        
     </div id="main">      
         
-        <div class="contents">
+        <di v class="contents">
             <!-- menu for user to choose content display-->
             <div class="navLeft">
                 <div class="head">
@@ -89,14 +89,14 @@
                                     <p>ถังสี</p>
                                     <p>Somwang@gmail.com</p>
                                     <p>099-999-9999</p>
-                                    <div class="displayAddressInput" >9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999</div>
+                                    <div class="displayAddressInput" >9999</div>
                                 </div>
                                 <div class="two three" id="displayInput"> <!-- input fields สำหรับ user ที่ต้องกการแก้ไขข้อมูล-->
-                                    <p><input type="text" ></p>
-                                    <p><input type="text" ></p>
-                                    <p><input type="email" ></p>
-                                    <p><input type="tel" ></p>
-                                    <textarea type="text" ></textarea>
+                                    <p><input type="text" placeholder="name"></p>
+                                    <p><input type="text" placeholder="suename"></p>
+                                    <p><input type="email" placeholder="eail@example.com"></p>
+                                    <p><input type="tel" placeholder="099-999-999"></p>
+                                    <div class="displayAddressInput" ><textarea type="text" placeholder="address"></textarea></div>
                                 </div>
                             </div>
                         </div>
@@ -156,16 +156,16 @@
                 <!-- เปลี่ยนรหัสผ่าน -->
                 <div id="popup2">
                     <div class="topicName">เปลี่ยนรหัสผ่าน</div> <div class="sepLine"></div>
-                    <div class="article" style="justify-content: center">
-                        <p style="font-size: 1.5em; padding: 50px 0px 20px 0px;">โปรดป้อนอีเมลของคุณเพื่อรับลิงค์สำหรับการเปลี่ยนรหัสผ่าน</p>
+                    <div class="articleFP" style="justify-content: center">
+                        <p style="font-size: 1.5em; padding: 8% 0px 20px 0px;">โปรดป้อนอีเมลของคุณเพื่อรับลิงค์สำหรับการเปลี่ยนรหัสผ่าน</p>
                     </div>
-                    <div class="article" style="justify-content: center;">
+                    <div class="articleFP" style="justify-content: center;">
                         <input type="email" id="email" placeholder="example@mail.com" style=" width: 60%; padding: 5px; font-family: Itim; font-size: 1.2em; " required autofocus>
                     </div>
-                    <div class="article" style="justify-content: center; padding: 15px;">
+                    <div class="articleFP" style="justify-content: center; padding: 15px;">
                         <button type="button" style="color: white; padding: 5px; " class="ConfirmButtonStyle"  id="btn-confirm">ยืนยัน</button>
                     </div>
-                    <div class="article" style="justify-content: center;">
+                    <div class="articleFP" style="justify-content: center;">
                      <!-- Link to external website -->
                         <div id="show-hide" style="display: none">
                             <div align="center" class="external" id="externalna">
@@ -192,7 +192,6 @@
                 <!-- ประวัติการซื้อ -->
                 <div id="popup3">
                     <div class="topicName">ประวัติการซื้อของฉัน</div> <div class="sepLine"></div>
-                    <div class="allaga">
                         <div class="modal-content">
                             <a href="#.html" style="text-decoration: none;">
                                 <div class="rowna">
@@ -223,7 +222,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                
 
                 <!-- ที่ต้องชำระ -->
                 <div id="popup4">
@@ -329,13 +328,13 @@
                             <div class="S-Info" id="S-Info">Hi</div>
                             <div class="S-Storage" id="S-Storage"></div>
                             <div class="S-Ship" id="S-Ship"></div>
-                            <div class="S-AddProduct" id="S-AddProduct"   >
+                            <div class="S-AddProduct" id="S-AddProduct">
                                 <div class="topicName"> เพิ่มสินค้า</div> <div class="sepLine"></div>
-                                <div class="addProd-Content" >
-                                    <li><input type="text" id="product-name" placeholder="ชื่อสินค้า" /></li>
-                                    <li><input type="number" id="price" placeholder="ราคา" /></li>
-                                    <li><input type="text" id="province" placeholder="จังหวัด" /></li>
-                                    <li><input type="text" id="condition" placeholder="สภาพสินค้า" /></li>
+                                <div class="addProd-Content" style="marker: none;">
+                                    <li>ชื่อสินค้า <input type="text" id="product-name" placeholder="ชื่อสินค้า" /></li>
+                                    <li>ราคา <input type="number" id="price" placeholder="ราคา" /></li>
+                                    <li>จังหวัด <input type="text" id="province" placeholder="จังหวัด" /></li>
+                                    <li>สภาพสินค้า <input type="text" id="condition" placeholder="สภาพสินค้า" /></li>
                                     <li>
                                         
                                         <label for="type">ประเภทสินค้า</label>
@@ -349,57 +348,56 @@
                                             <option value="หนังสือการ์ตูน">หนังสือการ์ตูน</option>
                                         </select>
                                     </li>
-                                    <li><input type="number" id="amount" placeholder="จำนวนสินค้า" min="1" /></li>
-                                    <li><input type="text" id="detail" placeholder="รายละเอียดสินค้า" /></li>
+                                    <li>จำนวนสินค้า <input type="number" id="amount" placeholder="จำนวนสินค้า" min="1" /></li>
+                                    <li>รายละเอียดสินค้า <input type="text" id="detail" placeholder="สภาพสินค้า" /></li>
                                 </div>
-                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
-                                <br>
-                                <div style="width: 300px; border: 1px solid black;">
+                                <div align="center" width="100%"><input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                <div class="product-preview-frame">
                         
-                                    <img width="300" height="200">
-                        
-                                </div>
-                        
-                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
-                                <br>
-                                <div style="width: 300px; border: 1px solid black;">
-                        
-                                    <img width="300" height="200">
+                                    <img class="imagepreview">
                         
                                 </div>
                         
                                 <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
                                 <br>
-                                <div style="width: 300px; border: 1px solid black;">
+                                <div class="product-preview-frame">
                         
-                                    <img width="300" height="200">
-                        
-                                </div>
-                        
-                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
-                                <br>
-                                <div style="width: 300px; border: 1px solid black;">
-                        
-                                    <img width="300" height="200">
+                                    <img class="imagepreview">
                         
                                 </div>
                         
                                 <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
                                 <br>
-                                <div style="width: 300px; border: 1px solid black;">
+                                <div class="product-preview-frame">
                         
-                                    <img width="300" height="200">
+                                    <img class="imagepreview">
                         
                                 </div>
                         
                                 <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
                                 <br>
-                                <div style="width: 300px; border: 1px solid black;">
+                                <div class="product-preview-frame">
                         
-                                    <img width="300" height="200">
+                                    <img class="imagepreview">
                         
                                 </div>
-
+                        
+                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                <br>
+                                <div class="product-preview-frame">
+                        
+                                    <img class="imagepreview">
+                        
+                                </div>
+                        
+                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                <br>
+                                <div class="product-preview-frame">
+                        
+                                    <img class="imagepreview">
+                        
+                                </div>
+                                </div>
 
                             </div>
                             
@@ -409,7 +407,7 @@
 
                 </div>
                 <script src="seller.js"></script>
-
+            </div>
             </div>
         </div>
         <!--------------------------logout  ------------------------------------------------------------->

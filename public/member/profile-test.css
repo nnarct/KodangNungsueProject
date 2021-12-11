@@ -159,7 +159,7 @@ nav {
 
 .navLeft h1 { font-weight: lighter; font-size: 1.5em; cursor: default; padding-left: 10%; }   
 .contents { position: absolute;width:96%; height: 80%; border: 2px solid olive; margin: 2%; min-width: 900px;}
-.contents { display: flex; flex-direction: row; justify-content: space-between; }
+.contents { display: flex; flex-direction: row;}
 .navLeft { height: 80%; width: 18%; min-width: fit-content; padding: 17px; max-width: 230px; }
 .navRight { height: 86%; width: 82%; min-width: fit-content; }
 
@@ -176,13 +176,14 @@ h2:hover .colored { display: block; color: green;  }
     padding: 2% 3%; margin:3% 2% 0px 2%; border-radius: 20px; box-shadow: 0px 3px 4px 0.5px rgb(163, 163, 163); background-color: white;
    min-height: 420px;   height: 100%; overflow: auto; 
 }
-#popup1 { display: block; }
+#popup6 { display: block; }
 .sepLine { height: 2px; background-color: lightgray; margin: 1% 0px; width: 100%; }
 .topicName { font-size: 2em; padding-left: 5%; padding-top: 7px; }
 
 .article { display: flex; flex-direction: row; justify-content: space-between; height: 70%;}
+.articleFP { display: flex; justify-content: center; align-items: center; height: fit-content; margin-bottom: 5%;}
 .arti { display: flex; flex-direction: row; justify-content: space-between; height: 70%;}
-.allaga{margin-top: 7%; z-index: 9;}
+
 .allcb{margin-top: 9%; z-index: 9;}
 /* pop up 1 CSS ข้อมูลของฉัน */
 .infoZone { width: 62%; min-width: fit-content; height: 100%; border: 2px solid green;}
@@ -195,8 +196,8 @@ h2:hover .colored { display: block; color: green;  }
 .displayAddress { max-width: 300px; min-width:280px; height: 80px;}
 .two input { font-family: Itim; font-size: 0.9em; width: 95%; padding-top: 5px; padding-bottom: 5px;  border-radius: 5px; border: transparent ; box-shadow: 0px 0px 1.2px 0.7px lightgray; }
 .three { display: flex; flex-direction: column; justify-content: space-around; align-items: left; }
-.three textarea {  padding-top: 10px; width: 95%; height: 80px; resize: none; margin-top: 10px ; border-radius: 5px; border: transparent ; box-shadow: 0px 0px 1.2px 0.7px lightgray; font-family: Itim; font-size: 0.7em;}
-#displayTiU { font-family: Itim; height: 90px; max-width: 300px;} อ้นอ่านไลน์หน่อย
+.three textarea { font-size: 0.9em; padding-top: 10px; width: 95%; height: 80px; resize: none; margin-top: 10px ; border-radius: 5px; border: transparent ; box-shadow: 0px 0px 1.2px 0.7px lightgray; font-family: Itim; }
+#displayTiU { font-family: Itim; height: 90px; max-width: 300px;}
 .displayAddressInput { font-family: Itim; height: 90px; width: 300px; padding-top: 5px; padding-bottom: 5px;}
 #displayInput { display: none; }
 .pictureFrame img{ width: 200px; height: 200px; border-radius: 20rem; box-shadow: 0px 0px 6px 3px lightgray; background: transparent; }
