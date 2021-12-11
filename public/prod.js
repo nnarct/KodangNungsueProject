@@ -11,6 +11,7 @@ auth.onAuthStateChanged((user) => {
 });
 
 // <----------------------------------- เรียกข้อมูลสินค้า --------------------------------------->
+let userDetail = JSON.parse(localStorage.getItem('userNow'));   
 let productDetail = JSON.parse(localStorage.getItem('productSelected'));
 if (localStorage.getItem('productSelected') === null) {
     location.href = 'index.html'
@@ -215,6 +216,73 @@ function showProduct() {
         noLogin.append(linkToLogin);
         basketButton.append(noLogin);
     }
+
+    basketButton.addEventListener('click', () => {
+        let alreadyChoose = false;
+        database.collection('product_selected').where('productId', '==', productDetail.id)
+            .where('userId', '==', userDetail.id).get().then((result) => {
+                result.forEach(() => {
+                    alreadyChoose = true;
+                });
+                if (alreadyChoose) {
+                    Swal.fire(
+                        'Please check the basket',
+                        "You have already selected this product",
+                        'info'
+                    )
+                }
+                else if(Number(amountDetail.value == 0)) {
+                    Swal.fire(
+                        'Error',
+                        "Please select at least one",
+                        'error'
+                    )
+                }
+                else {
+                    Swal.fire({
+                        title: 'Please wait',
+                        text: 'Processing to add to basket',
+                        icon: 'info',
+                        allowEscapeKey: false,
+                        allowOutsideClick: false,
+                        didOpen: () => {
+                            Swal.showLoading()
+                        }
+                    });
+                    let productBasket = {
+                        productName: productDetail.name,
+                        price: productDetail.price,
+                        productId: productDetail.id,
+                        sellerId: productDetail.userId,
+                        userId: userDetail.id,
+                        amount: Number(amountDetail.value)
+                    };
+
+                    database.collection('product_selected').add(productBasket).then((data) => {
+                        let dealing = false;
+                        database.collection('seller_selected').where('userId', '==', userDetail.id)
+                            .where('sellerId', '==', productDetail.userId).get().then((result) => {
+                                Swal.fire(
+                                    'Success',
+                                    "Add product complete",
+                                    'success'
+                                )
+                                loadProductCount();
+                                result.forEach(() => {
+                                    dealing = true;
+                                });
+                                if (!dealing) {
+                                    let relationShip = {
+                                        sellerId: productDetail.userId,
+                                        userId: userDetail.id
+                                    };
+                                    database.collection('seller_selected').add(relationShip)
+                                }
+                            });
+                    });
+                }
+            });
+    });
 
     // ประกอบส่วนรายละเอียด
     detailBorder.append(productName, price, rating, detail, condition, date);
@@ -571,6 +639,67 @@ function showProduct() {
                 // ปุ่มใส่ตะกร้า
                 let cart = document.createElement('span');
                 cart.classList.add('cart');
+
+                // ใส่ของเข้าตะกร้า
+                cart.addEventListener('click', () => {
+                    let alreadyChoose = false;
+                    database.collection('product_selected').where('productId', '==', product.id)
+                        .where('userId', '==', userDetail.id).get().then((result) => {
+                            result.forEach(() => {
+                                alreadyChoose = true;
+                            });
+                            if (alreadyChoose) {
+                                Swal.fire(
+                                    'Please check the basket',
+                                    "You have already selected this product",
+                                    'info'
+                                )
+                            }
+                            else {
+                                Swal.fire({
+                                    title: 'Please wait',
+                                    text: 'Processing to add to basket',
+                                    icon: 'info',
+                                    allowEscapeKey: false,
+                                    allowOutsideClick: false,
+                                    didOpen: () => {
+                                        Swal.showLoading()
+                                    }
+                                });
+                                let productBasket = {
+                                    productName: product.name,
+                                    price: product.price,
+                                    productId: product.id,
+                                    sellerId: product.userId,
+                                    userId: userDetail.id,
+                                    amount: 1
+                                };
+
+                                database.collection('product_selected').add(productBasket).then((data) => {
+                                    let dealing = false;
+                                    database.collection('seller_selected').where('userId', '==', userDetail.id)
+                                        .where('sellerId', '==', product.userId).get().then((result) => {
+                                            Swal.fire(
+                                                'Success',
+                                                "Add product complete",
+                                                'success'
+                                            )
+                                            loadProductCount();
+                                            result.forEach(() => {
+                                                dealing = true;
+                                            });
+                                            if (!dealing) {
+                                                let relationShip = {
+                                                    sellerId: product.userId,
+                                                    userId: userDetail.id
+                                                };
+                                                database.collection('seller_selected').add(relationShip)
+                                            }
+                                        });
+                                });
+                            }
+                        });
+                });
 
                 // ไอคอนตะกร้า
                 let cartImg = document.createElement('img');

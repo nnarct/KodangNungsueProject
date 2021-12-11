@@ -52,6 +52,8 @@
         document.getElementById("popup4").style.display = "none"; // popup สินค้าที่ต้องชำระ
         document.getElementById("popup5").style.display = "none"; // popup สถานะสินค้า
         document.getElementById("popup6").style.display = "block";// popup การขาย
+        document.getElementById("welcoming").style.display = "block";
+        document.getElementById("becomingSeller").style.display= "none";
     }
     document.getElementById("seller").onclick = function () {
         document.getElementById("popup1").style.display = "none"; // popup บัญชีของฉัน

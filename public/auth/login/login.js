@@ -79,7 +79,7 @@ function login() {
                     id: doc.id,
                     address: doc.data().address,
                     email: doc.data().email,
-                    Name: doc.data().name,
+                    name: doc.data().name,
                     surname: doc.data().surname,
                     phone: doc.data().phone,
                     type: doc.data().type,

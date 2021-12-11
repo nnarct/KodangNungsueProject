@@ -10,13 +10,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 
- <!-- Materials for firebase script-->
- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
- <!-- Sweet Alert script-->
- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- Materials for firebase script-->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+<!-- Sweet Alert script-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 <body>
@@ -27,208 +27,186 @@
                 <span>
                     <a href="../index.html"><img id="logo" src="src/logo/logona.png" /></a></span>
                 <ul class="menu">
-                    <li><a href="../index.html"style="width: 75px;">หน้าหลัก</a></li>
-                    <li><a href="../inform-customer/how-to-order.html" style="width: 145px;">วิธีการสั่งซื้อสินค้า</a></li>
+                    <li><a href="../index.html" style="width: 75px;">หน้าหลัก</a></li>
+                    <li><a href="../inform-customer/how-to-order.html" style="width: 145px;">วิธีการสั่งซื้อสินค้า</a>
+                    </li>
                     <li><a href="../inform-customer/contact-us.html" style="width: 90px;">ติดต่อเรา</a></li>
                     <li><a href="../inform-customer/payment-report.html" style="width: 105px;">แจ้งชำระเงิน</a></li>
                 </ul>
                 <div class="rmenu" align="right">
                     <a href="#"><img src="src/icon/cart.png" id="iconc">
-                       <span class="num">0</span></a>
-                    
+                        <span class="num">0</span></a>
+
                     <!-- popup to logout -->
-                    <img src="src/icon/peo.png" id="iconp" style="cursor: pointer;">            
+                    <img src="src/icon/peo.png" id="iconp" style="cursor: pointer;">
                 </div>
             </div>
-        </div>  
+        </div>
         <div id="logoutshow" class="logout">
             <div id="logoutpop" class="logoutpopcl">
-                <a href="profile.html" style="text-decoration: none; color: black;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;">ข้อมูลของฉัน</div></a>
+                <a href="profile.html" style="text-decoration: none; color: black;">
+                    <div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey;">ข้อมูลของฉัน</div>
+                </a>
                 <div class="textbox tbLogout">ออกจากระบบ</div>
             </div>
         </div>
-       
-    </div id="main">      
-        
-        <di v class="contents">
-            <!-- menu for user to choose content display-->
-            <div class="navLeft">
-                <div class="head">
-                    <div class="smallProfilePic"><img src="../src/testprod/p5.jpg"></div>
-                    <div class="name">นันต์ณพัชร อินทรสิงห์</div>
-                </div>
-                <h1>บัญชีของฉัน</h1>
-                <h2 id="myinfo" >ข้อมูลของฉัน <span class="colored">❯</span></h2> 
-                <h2 id="changePassword" >เปลี่ยนรหัสผ่าน <span class="colored">❯</span></h2><br>
-                <h1>การซื้อของฉัน</h1>
-                <h2 id="orderHistory" >ประวัติการซื้อ <span class="colored">❯</span></h2> 
-                <h2 id="unpaid" >ที่ต้องชำระ <span class="colored">❯</span></h2>
-                <h2 id="orderStatus" > สถานะสินค้า <span class="colored">❯</span></h2><br>
-                <h1 id="selling">เริ่มการขาย <span class="colored posab">❯</span></h1>  <!-- will show only non-seller user -->
-                <h1 id="seller">ร้านของฉัน <span class="colored posab">❯</span></h1>  <!-- will show only seller user-->
+
+    </div id="main">
+
+    <di v class="contents">
+        <!-- menu for user to choose content display-->
+        <div class="navLeft">
+            <div class="head">
+                <div class="smallProfilePic"><img src="../src/icon/peo.png"></div>
+                <div class="name"></div>
             </div>
-            <!----------------------------------->
+            <h1>บัญชีของฉัน</h1>
+            <h2 id="myinfo">ข้อมูลของฉัน <span class="colored">❯</span></h2>
+            <h2 id="changePassword">เปลี่ยนรหัสผ่าน <span class="colored">❯</span></h2><br>
+            <h1>การซื้อของฉัน</h1>
+            <h2 id="orderHistory">ประวัติการซื้อ <span class="colored">❯</span></h2>
+            <h2 id="unpaid">ที่ต้องชำระ <span class="colored">❯</span></h2>
+            <h2 id="orderStatus"> สถานะสินค้า <span class="colored">❯</span></h2><br>
+            <h1 id="selling">เริ่มการขาย <span class="colored posab">❯</span></h1>
+            <!-- will show only non-seller user -->
+            <h1 id="seller">ร้านของฉัน <span class="colored posab">❯</span></h1> <!-- will show only seller user-->
+        </div>
+        <!----------------------------------->
 
-            <div class="navRight">
+        <div class="navRight">
 
-                <!-- ข้อมูลของฉัน -->
-                <div id="popup1">
-                    <div class="topicName">ข้อมูลของฉัน</div> <div class="sepLine"></div>
-                    <div class="article ">
-                        <div class="infoZone">
-                            <div class="both">
-                                <div class="one">
-                                    <p>ชื่อ</p>
-                                    <p>นามสกุล</p>
-                                    <p>อีเมล</p>
-                                    <p>เบอร์โทรศัพท์</p>
-                                    <p id="displayTiU">ที่อยู่</p>
-                                </div>
-                                <div class="two" id="display"> <!-- ข้อมูลลูกค้าที่ต้องดึงจาก firebase มาแสดง-->
-                                    <p>สมหวัง</p>
-                                    <p>ถังสี</p>
-                                    <p>Somwang@gmail.com</p>
-                                    <p>099-999-9999</p>
-                                    <div class="displayAddressInput" >9999</div>
-                                </div>
-                                <div class="two three" id="displayInput"> <!-- input fields สำหรับ user ที่ต้องกการแก้ไขข้อมูล-->
-                                    <p><input type="text" placeholder="name"></p>
-                                    <p><input type="text" placeholder="suename"></p>
-                                    <p><input type="email" placeholder="eail@example.com"></p>
-                                    <p><input type="tel" placeholder="099-999-999"></p>
-                                    <div class="displayAddressInput" ><textarea type="text" placeholder="address"></textarea></div>
+            <!-- ข้อมูลของฉัน -->
+            <div id="popup1">
+                <div class="topicName">ข้อมูลของฉัน</div>
+                <div class="sepLine"></div>
+                <div class="article ">
+                    <div class="infoZone">
+                        <div class="both">
+                            <div class="one">
+                                <p>ชื่อ</p>
+                                <p>นามสกุล</p>
+                                <p>อีเมล</p>
+                                <p>เบอร์โทรศัพท์</p>
+                                <p id="displayTiU">ที่อยู่</p>
+                            </div>
+                            <div class="two" id="display">
+                                <!-- ข้อมูลลูกค้าที่ต้องดึงจาก firebase มาแสดง-->
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <p></p>
+                                <div class="displayAddressInput"></div>
+                            </div>
+                            <div class="two three" id="displayInput">
+                                <!-- input fields สำหรับ user ที่ต้องกการแก้ไขข้อมูล-->
+                                <p><input type="text" placeholder="name"></p>
+                                <p><input type="text" placeholder="suename"></p>
+                                <p id="emailProfileShow"></p>
+                                <p><input type="tel" placeholder="099-999-999"></p>
+                                <div class="displayAddressInput"><textarea type="text" placeholder="address"></textarea>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="pictureZone">
-                            <div class="pictureFrame" id="proPic">
-                                <img src="../src/testprod/p5.jpg"> <!-- รูปโปรไฟล์ปัจจุบันของ user-->
-                            </div>
-                            <div class="preview" id="preview"> 
-                                <div class="wrap">
-                                    <div class="imgPre">
-                                        <img id="imgna" alt="">
-                                    </div>
-                                    <div class="inside">
-                                        <div class="textin">No file chosen -_-</div>
-                                    </div>
-                                    <div id="cancelimg">&times;</div>
-                                    <div class="file-name"></div>
-                                </div>
-                                <input id="de-btn" type="file" accept="image/*" hidden>
-                                <button onclick="deBtnActive()" id="custom-btn" align="center">Choose a file ^_^</button>
-                            </div>
-                            
                         </div>
                     </div>
-                    <div class="buttonZone">
-                        <div class="toEdit-btn" id="toEdit-btn"> แก้ไขข้อมูล </div>
-                        <div class="editing" id="editing">
-                            <div class="goBack" id="goBack"> ย้อนกลับ </div>
-                            <div class="ConfirmEdit"> ยืนยัน </div>
-                        </div>
 
-                        <script>
-                            // user กดปุ่มแก้ไขข้อมูล
-                            document.getElementById("toEdit-btn").onclick = function () {
-                                document.getElementById("toEdit-btn").style.display = "none";
-                                document.getElementById("editing").style.display = "flex";
-                                document.getElementById("preview").style.display = "flex";
-                                document.getElementById("proPic").style.display = "none";
-                                document.getElementById("displayInput").style.display = "flex";
-                                document.getElementById("display").style.display = "none";
-                            }
-                            // user กดปุ่มย้อนกลับ
-                            document.getElementById("goBack").onclick = function () {
-                                document.getElementById("displayInput").style.display = "none";
-                                document.getElementById("display").style.display = "flex";
-                                document.getElementById("preview").style.display = "none";
-                                document.getElementById("proPic").style.display = "block";
-                                document.getElementById("toEdit-btn").style.display = "block";
-                                document.getElementById("editing").style.display = "none";
-                            }
-                        </script>
+                    <div class="pictureZone">
+                        <div class="pictureFrame" id="proPic">
+                            <img src="../src/icon/peo.png"> <!-- รูปโปรไฟล์ปัจจุบันของ user-->
+                        </div>
+                        <div class="preview" id="preview">
+                            <div class="wrap">
+                                <div class="imgPre">
+                                    <img id="imgna" alt="">
+                                </div>
+                                <div class="inside">
+                                    <div class="textin">No file chosen -_-</div>
+                                </div>
+                                <div id="cancelimg">&times;</div>
+                                <div class="file-name"></div>
+                            </div>
+                            <input id="de-btn" type="file" accept="image/*" hidden>
+                            <button onclick="deBtnActive()" id="custom-btn" align="center">Choose a file ^_^</button>
+                        </div>
 
                     </div>
                 </div>
+                <div class="buttonZone">
+                    <div class="toEdit-btn" id="toEdit-btn"> แก้ไขข้อมูล </div>
+                    <div class="editing" id="editing">
+                        <div class="goBack" id="goBack"> ย้อนกลับ </div>
+                        <div class="ConfirmEdit"> ยืนยัน </div>
+                    </div>
 
-                <!-- เปลี่ยนรหัสผ่าน -->
-                <div id="popup2">
-                    <div class="topicName">เปลี่ยนรหัสผ่าน</div> <div class="sepLine"></div>
-                    <div class="articleFP" style="justify-content: center">
-                        <p style="font-size: 1.5em; padding: 8% 0px 20px 0px;">โปรดป้อนอีเมลของคุณเพื่อรับลิงค์สำหรับการเปลี่ยนรหัสผ่าน</p>
-                    </div>
-                    <div class="articleFP" style="justify-content: center;">
-                        <input type="email" id="email" placeholder="example@mail.com" style=" width: 60%; padding: 5px; font-family: Itim; font-size: 1.2em; " required autofocus>
-                    </div>
-                    <div class="articleFP" style="justify-content: center; padding: 15px;">
-                        <button type="button" style="color: white; padding: 5px; " class="ConfirmButtonStyle"  id="btn-confirm">ยืนยัน</button>
-                    </div>
-                    <div class="articleFP" style="justify-content: center;">
-                     <!-- Link to external website -->
-                        <div id="show-hide" style="display: none">
-                            <div align="center" class="external" id="externalna">
-                                <a href="https://www.yahoo.com/" target="_blank">
-                                    <!-- link to yaHoo -->
-                                    <img class="extIMG" src="https://static.cdnlogo.com/logos/y/82/yahoo.svg">
-                                </a>
-                                <a href="https://www.gmail.com/" target="_blank">
-                                    <!-- link to gmail -->
-                                    <img class="extIMG"
-                                        src="https://www.jing.fm/clipimg/full/136-1361267_gmail-calendar-docs-sheets-slide-drawing-maps-gmail.png">
-                                </a>
-                                <a href="https://www.outlook.com/" target="_blank">
-                                    <!-- link to outlook -->
-                                    <img class="extIMG"
-                                        src="https://www.freepnglogos.com/uploads/logo-outlook-png/outlook-integrations-perforce-18.png">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <script src="../auth/forgot_password/forgetPassword.js"></script>       
+                    <script>
+                        // user กดปุ่มแก้ไขข้อมูล
+                        document.getElementById("toEdit-btn").onclick = function () {
+                            document.getElementById("toEdit-btn").style.display = "none";
+                            document.getElementById("editing").style.display = "flex";
+                            document.getElementById("preview").style.display = "flex";
+                            document.getElementById("proPic").style.display = "none";
+                            document.getElementById("displayInput").style.display = "flex";
+                            document.getElementById("display").style.display = "none";
+                        }
+                        // user กดปุ่มย้อนกลับ
+                        document.getElementById("goBack").onclick = function () {
+                            document.getElementById("displayInput").style.display = "none";
+                            document.getElementById("display").style.display = "flex";
+                            document.getElementById("preview").style.display = "none";
+                            document.getElementById("proPic").style.display = "block";
+                            document.getElementById("toEdit-btn").style.display = "block";
+                            document.getElementById("editing").style.display = "none";
+                        }
+                    </script>
+
                 </div>
+            </div>
 
-                <!-- ประวัติการซื้อ -->
-                <div id="popup3">
-                    <div class="topicName">ประวัติการซื้อของฉัน</div> <div class="sepLine"></div>
-                        <div class="modal-content">
-                            <a href="#.html" style="text-decoration: none;">
-                                <div class="rowna">
-                                    <div class="col-2" style="width: 30%;" align="right">
-                                        <div class="prodaga">
-                                            <img src="src/testprod/p1.jpg" class="proaga">
-                                        </div>
-                                    </div>
-                                    <div class="col-2" style="width: 60%; margin-right: 10%;">
-                                        <div class="nameaga" align="left">
-                                            ONE PIECE 500 QUIZ BOOK
-                                        </div>
-                                        <div class="namesaga" align="left">
-                                            มังกี้ ดี ท็อฟฟี่
-                                        </div>
-                                        <div class="rd" align="right">
-                                            <p>x1</p>
-                                            <h1>฿200</h1>
-                                            <h3>รวมการสั่งซื้อ: ฿230</h3>
-                                            <a href="#1.html">
-                                                <input type="button" id="agabtnna" class="buyagain"
-                                                    value="ซื้ออีกครั้ง">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <hr style="border:2px solid #f1f1f1; width: 100%;">
-                                </div>
+            <!-- เปลี่ยนรหัสผ่าน -->
+            <div id="popup2">
+                <div class="topicName">เปลี่ยนรหัสผ่าน</div>
+                <div class="sepLine"></div>
+                <div class="articleFP" style="justify-content: center">
+                    <p style="font-size: 1.5em; padding: 5% 0px 20px 0px;">
+                        โปรดป้อนอีเมลของคุณเพื่อรับลิงค์สำหรับการเปลี่ยนรหัสผ่าน</p>
+                </div>
+                <div class="articleFP" style="justify-content: center;">
+                    <input type="email" id="email" placeholder="example@mail.com"
+                        style=" width: 60%; padding: 5px; font-family: Itim; font-size: 1.2em; " required autofocus>
+                </div>
+                <div class="articleFP" style="justify-content: center; padding: 15px;">
+                    <button type="button" style="color: white; padding: 5px; " class="ConfirmButtonStyle"
+                        id="btn-confirm">ยืนยัน</button>
+                </div>
+                <div class="articleFP" style="justify-content: center;">
+                    <!-- Link to external website -->
+                    <div id="show-hide" style="display: none">
+                        <div align="center" class="external" id="externalna">
+                            <a href="https://www.yahoo.com/" target="_blank">
+                                <!-- link to yaHoo -->
+                                <img class="extIMG" src="https://static.cdnlogo.com/logos/y/82/yahoo.svg">
+                            </a>
+                            <a href="https://www.gmail.com/" target="_blank">
+                                <!-- link to gmail -->
+                                <img class="extIMG"
+                                    src="https://www.jing.fm/clipimg/full/136-1361267_gmail-calendar-docs-sheets-slide-drawing-maps-gmail.png">
+                            </a>
+                            <a href="https://www.outlook.com/" target="_blank">
+                                <!-- link to outlook -->
+                                <img class="extIMG"
+                                    src="https://www.freepnglogos.com/uploads/logo-outlook-png/outlook-integrations-perforce-18.png">
                             </a>
                         </div>
                     </div>
-                
+                </div>
+            </div>
 
-                <!-- ที่ต้องชำระ -->
-                <div id="popup4">
-                    <div class="topicName">ที่ต้องชำระ</div> <div class="sepLine"></div>
-                    <div class="allcb">
-                        <div class="rowcb" style="margin-top: 2%;">
+            <!-- ประวัติการซื้อ -->
+            <div id="popup3">
+                <div class="topicName">ประวัติการซื้อของฉัน</div>
+                <div class="sepLine2"></div>
+                <div class="allcb">
+                    <a href="#.html" style="text-decoration: none;">
+                        <div class="rowna">
                             <div class="col-2" style="width: 30%;" align="right">
                                 <div class="prodaga">
                                     <img src="src/testprod/p1.jpg" class="proaga">
@@ -246,169 +224,300 @@
                                     <h1>฿200</h1>
                                     <h3>รวมการสั่งซื้อ: ฿230</h3>
                                     <a href="#1.html">
-                                        <input type="button" id="agabtnna" class="paybtn" value="แจ้งชำระเงิน">
+                                        <input type="button" id="agabtnna" class="buyagain" value="ซื้ออีกครั้ง">
                                     </a>
                                 </div>
                             </div>
                             <hr style="border:2px solid #f1f1f1; width: 100%;">
                         </div>
-                        <div class="rowcb" style="margin-top: 2%;">
-                            <div class="col-2" style="width: 30%;" align="right">
-                                <div class="prodaga">
-                                    <img src="src/testprod/p1.jpg" class="proaga">
-                                </div>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- ที่ต้องชำระ -->
+            <div id="popup4">
+                <div class="topicName">ที่ต้องชำระ</div>
+                <div class="sepLine2"></div>
+                <div class="allcb">
+                    <!--สินค้าชิ้นที่ 1 -->
+                    <div class="rowcb" style="margin-top: 2%;">
+                        <div class="col-2" style="width: 30%;" align="right">
+                            <div class="prodaga">
+                                <img src="src/testprod/p1.jpg" class="proaga"> <!-- รูปสินค้า-->
                             </div>
-                            <div class="col-2" style="width: 60%; margin-right: 10%;">
-                                <div class="nameaga" align="left">
-                                    ONE PIECE 500 QUIZ BOOK
-                                </div>
-                                <div class="namesaga" align="left">
-                                    มังกี้ ดี ท็อฟฟี่
-                                </div>
-                                <div class="rd" align="right">
-                                    <p>x1</p>
-                                    <h1>฿200</h1>
-                                    <h3>รวมการสั่งซื้อ: ฿230</h3>
-                                    <a href="#1.html">
-                                        <input type="button" id="agabtnna" class="paybtn" value="แจ้งชำระเงิน">
-                                    </a>
-                                </div>
-                            </div>
-                            <hr style="border:2px solid #f1f1f1; width: 100%;">
                         </div>
-                        <div class="rowcb" style="margin-top: 2%;">
-                            <div class="col-2" style="width: 30%;" align="right">
-                                <div class="prodaga">
-                                    <img src="src/testprod/p1.jpg" class="proaga">
-                                </div>
+                        <div class="col-2" style="width: 60%; margin-right: 10%;">
+                            <div class="nameaga" align="left">
+                                ONE PIECE 500 QUIZ BOOK
                             </div>
-                            <div class="col-2" style="width: 60%; margin-right: 10%;">
-                                <div class="nameaga" align="left">
-                                    ONE PIECE 500 QUIZ BOOK
-                                </div>
-                                <div class="namesaga" align="left">
-                                    มังกี้ ดี ท็อฟฟี่
-                                </div>
-                                <div class="rd" align="right">
-                                    <p>x1</p>
-                                    <h1>฿200</h1>
-                                    <h3>รวมการสั่งซื้อ: ฿230</h3>
-                                    <a href="#1.html">
-                                        <input type="button" id="agabtnna" class="paybtn" value="แจ้งชำระเงิน">
-                                    </a>
-                                </div>
+                            <div class="namesaga" align="left">
+                                มังกี้ ดี ท็อฟฟี่
                             </div>
-                            <hr style="border:2px solid #f1f1f1; width: 100%;">
+                            <div class="rd" align="right">
+                                <p>x1</p>
+                                <h1>฿200</h1>
+                                <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                <a href="#1.html">
+                                    <input type="button" id="agabtnna" class="paybtn" value="แจ้งชำระเงิน">
+                                </a>
+                            </div>
                         </div>
+                        <hr style="border:2px solid #f1f1f1; width: 98%;">
+                        <br>
                     </div>
-                </div>
+                    <!--สินค้าชิ้นที่ 2 -->
+                    <div class="rowcb" style="margin-top: 2%;">
+                        <div class="col-2" style="width: 30%;" align="right">
+                            <div class="prodaga">
+                                <img src="src/testprod/p1.jpg" class="proaga"> <!-- รูปสินค้า-->
+                            </div>
+                        </div>
+                        <div class="col-2" style="width: 60%; margin-right: 10%;">
+                            <div class="nameaga" align="left">
+                                ONE PIECE 500 QUIZ BOOK
+                            </div>
+                            <div class="namesaga" align="left">
+                                มังกี้ ดี ท็อฟฟี่
+                            </div>
+                            <div class="rd" align="right">
+                                <p>x1</p>
+                                <h1>฿200</h1>
+                                <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                <a href="#1.html">
+                                    <input type="button" id="agabtnna" class="paybtn" value="แจ้งชำระเงิน">
+                                </a>
+                            </div>
+                        </div>
+                        <hr style="border:2px solid #f1f1f1; width: 98%;">
+                    </div>
+                    <!-- สินค้าชิ้นที่ 3 -->
+                    <div class="rowcb" style="margin-top: 2%;">
+                        <div class="col-2" style="width: 30%;" align="right">
+                            <div class="prodaga">
+                                <img src="src/testprod/p1.jpg" class="proaga">
+                            </div>
+                        </div>
+                        <div class="col-2" style="width: 60%; margin-right: 10%;">
+                            <div class="nameaga" align="left">
+                                ONE PIECE 500 QUIZ BOOK
+                            </div>
+                            <div class="namesaga" align="left">
+                                มังกี้ ดี ท็อฟฟี่
+                            </div>
+                            <div class="rd" align="right">
+                                <p>x1</p>
+                                <h1>฿200</h1>
+                                <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                <a href="#1.html">
+                                    <input type="button" id="agabtnna" class="paybtn" value="แจ้งชำระเงิน">
+                                </a>
+                            </div>
+                        </div>
+                        <hr style="border:2px solid #f1f1f1; width: 98%;">
+                    </div>
 
-                <!-- สถานะสินค้า -->
-                <div id="popup5">
-                    <div class="topicName">สถานะสินค้า</div> <div class="sepLine"></div>
                 </div>
+            </div>
+
+            <!-- สถานะสินค้า -->
+            <div id="popup5">
+                <div class="topicName">สถานะสินค้า</div>
+                <div class="sepLine2"></div>
+                <div class="allcb">
+                    will scroll when too much content
+                </div>
+            </div>
+
+            <!-- เริ่มการขาย สำหรับ user ที่ยังไม่ได้เป็น seller -->
+            <div id="popup6">
 
                 <!-- เริ่มการขาย สำหรับ user ที่ยังไม่ได้เป็น seller -->
-                <div id="popup6" >
-
-                     <!-- เริ่มการขาย สำหรับ user ที่ยังไม่ได้เป็น seller -->
-                    <div id="" style="display: none;">
-                        <div class="topicName">เริ่มการขาย</div> <div class="sepLine"></div>
+                <div class="s-container" id="">
+                    
+                    <!-- ก่อน user กดปุ่ม สร้างบัญชีผู้ขาย -->
+                    <div class="containerS" style=" height: 100%; width: 94%; padding: 2% 3%;" id="welcoming">
+                        <div class="topicName">ยินดีต้อนรับผู้ขายรายใหม่ ^_^</div>
+                        <div class="sepLine2" style="width: 100%;"></div>
+                        <div style="display: flex; flex-direction: column; width: 100%; justify-content: center; align-content: center; height: 70%;">
+                             <div style="text-align: center; font-size: 1.45rem;">
+                            เริ่มการขายหนังสือของคุณได้ เพียงแค่</div>
+                            <div style="text-align: center; padding-top: 2%; font-size: 1.75rem;">
+                                กดปุ่ม 'สร้างบัญชีผู้ขาย' ด้านล่าง</div> 
+                        </div>
+                        <div class="articleFP" style="justify-content: center; padding: 15px;">
+                            <button type="button" style="color: white; padding: 5px 30px; " class="ConfirmButtonStyle"
+                                id="start-selling">สร้างบัญชีผู้ขาย</button>
+                        </div>
                     </div>
 
-                    <!-- ร้านของฉัน สำหรับ usser ที่เป็น seller แล้ว-->
-                    <div class="s-container" id="" >
-                        <div class="seller-menu">
-                            <button class="branch" id="sellerInfo" style="border-radius: 20px 0px 0px 0px; background-color: rgb(155, 231, 97);">ข้อมูลร้าน</button>
-                            <button class="branch" id="sellerStorage">คลังสินค้า</button> 
-                            <button class="branch" id="ship">ที่ต้องจัดส่ง</button>
-                            <button class="branch" id="addProduct" style="border-radius: 0px 20px 0px 0px;">ลงขายสินค้า</button>
+                    <!-- หลัง ีuser กดปุ่ม สร้างบัญชีผู้ขาย -->
+                    <div class="containerS" style="height: 100%; width: 94%; padding: 2% 3%;  display: none;" id="becomingSeller">
+                        <div class="topicName">ยินดีต้อนรับผู้ขายรายใหม่ ^_^</div>
+                        <div class="sepLine2" style="width: 100%;"></div>
+
+                        <div class="alignCenter" style="flex-direction: column; width: 100%; justify-content: space-evenly; align-content: center; height: 70%; margin-top: 2%; ">
+                            <div class="addS-info">
+                                <li>ชื่อร้าน <input type="text" id="" /></li>
+                            </div>
+                            <div class="addS-info">
+                                <li>เลขที่บัญชี <input type="number" id=""  /></li>
+                            </div>
+                            <div class="addS-info">
+                                <li>ธนาคาร <input type="text" id=""/></li>
+                            </div>    
+                            <div class="addS-info">
+                                <li>ช่องทางการติดต่อ <input type="text" id="" /></li>
+                            </div>    
+                             
+                            
                         </div>
-                        <div class="dataDisplay" id="" >
-                            <div class="S-Info" id="S-Info">Hi</div>
-                            <div class="S-Storage" id="S-Storage"></div>
-                            <div class="S-Ship" id="S-Ship"></div>
-                            <div class="S-AddProduct" id="S-AddProduct">
-                                <div class="topicName"> เพิ่มสินค้า</div> <div class="sepLine"></div>
-                                <div class="addProd-Content" style="marker: none;">
+
+                    </div>
+                </div>
+
+                <!-- ร้านของฉัน สำหรับ user ที่เป็น seller แล้ว-->
+                <div class="s-container" id="" style="display: none;">
+                    <div class="seller-menu">
+                        <button class="branch" id="sellerInfo"
+                            style="border-radius: 20px 0px 0px 0px; background-color: rgb(155, 231, 97);">ข้อมูลร้าน</button>
+                        <button class="branch" id="sellerStorage">คลังสินค้า</button>
+                        <button class="branch" id="ship">ที่ต้องจัดส่ง</button>
+                        <button class="branch" id="addProduct"
+                            style="border-radius: 0px 20px 0px 0px;">ลงขายสินค้า</button>
+                    </div>
+                    <div class="dataDisplay" id="">
+
+                        <!-- ข้อมูลผู้ขาย -->
+                        <div class="S-Info" id="S-Info">
+                            <div class="S-info-content">
+                                <div class="left-cont">
+                                    <p>ชื่อร้าน</p>
+                                    <p>บัญชีธนาคาร</p>
+                                    <p>เลขที่บัญชี</p>
+                                </div>
+                                <div class="right-cont">
+                                    <p>ชื่อร้าน</p>
+                                    <p>บัญชีธนาคาร</p>
+                                    <p>เลขที่บัญชี</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- คลังสินค้า -->
+                        <div class="S-Storage" id="S-Storage"></div>
+
+                        <!-- ต้องจัดส่ง -->
+                        <div class="S-Ship" id="S-Ship"></div>
+
+                        <!-- add product -->
+                        <div class="S-AddProduct" id="S-AddProduct">
+                            <div class="topicName" style="text-align: center; padding-left: 0px;"> เพิ่มสินค้า</div>
+                            <div class="alignCenter">
+                                <div class="addProd-Content">
                                     <li>ชื่อสินค้า <input type="text" id="product-name" placeholder="ชื่อสินค้า" /></li>
                                     <li>ราคา <input type="number" id="price" placeholder="ราคา" /></li>
                                     <li>จังหวัด <input type="text" id="province" placeholder="จังหวัด" /></li>
                                     <li>สภาพสินค้า <input type="text" id="condition" placeholder="สภาพสินค้า" /></li>
                                     <li>
-                                        
+
                                         <label for="type">ประเภทสินค้า</label>
                                         <select name="type" id="type">
-                                            <option value="หนังสือเรียน: ประถมศึกษา" selected>หนังสือเรียน: ประถมศึกษา</option>
-                                            <option value="หนังสือเรียน: มัธยมศึกษาตอนต้น">หนังสือเรียน: มัธยมศึกษาตอนต้น</option>
-                                            <option value="หนังสือเรียน: มัธยมศึกษาตอนปลาย">หนังสือเรียน: มัธยมศึกษาตอนปลาย</option>
-                                            <option value="หนังสือเตรียมสอบ: สอบเข้า ม.ต้น">หนังสือเตรียมสอบ: สอบเข้า ม.ต้น</option>
-                                            <option value="หนังสือเตรียมสอบ: สอบเข้า ม.ปลาย">หนังสือเตรียมสอบ: สอบเข้า ม.ปลาย</option>
-                                            <option value="หนังสือเตรียมสอบ: สอบเข้า มหาวิทายาลัย">หนังสือเตรียมสอบ: สอบเข้า มหาวิทายาลัย</option>
+                                            <option value="หนังสือเรียน: ประถมศึกษา" selected>หนังสือเรียน: ประถมศึกษา
+                                            </option>
+                                            <option value="หนังสือเรียน: มัธยมศึกษาตอนต้น">หนังสือเรียน: มัธยมศึกษาตอนต้น
+                                            </option>
+                                            <option value="หนังสือเรียน: มัธยมศึกษาตอนปลาย">หนังสือเรียน: มัธยมศึกษาตอนปลาย
+                                            </option>
+                                            <option value="หนังสือเตรียมสอบ: สอบเข้า ม.ต้น">หนังสือเตรียมสอบ: สอบเข้า ม.ต้น
+                                            </option>
+                                            <option value="หนังสือเตรียมสอบ: สอบเข้า ม.ปลาย">หนังสือเตรียมสอบ: สอบเข้า
+                                                ม.ปลาย</option>
+                                            <option value="หนังสือเตรียมสอบ: สอบเข้า มหาวิทายาลัย">หนังสือเตรียมสอบ: สอบเข้า
+                                                มหาวิทายาลัย</option>
                                             <option value="หนังสือการ์ตูน">หนังสือการ์ตูน</option>
                                         </select>
                                     </li>
-                                    <li>จำนวนสินค้า <input type="number" id="amount" placeholder="จำนวนสินค้า" min="1" /></li>
+                                    <li>จำนวนสินค้า <input type="number" id="amount" placeholder="จำนวนสินค้า" min="1" />
+                                    </li>
                                     <li>รายละเอียดสินค้า <input type="text" id="detail" placeholder="สภาพสินค้า" /></li>
                                 </div>
-                                <div align="center" width="100%"><input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
-                                <div class="product-preview-frame">
-                        
-                                    <img class="imagepreview">
-                        
-                                </div>
-                        
-                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
-                                <br>
-                                <div class="product-preview-frame">
-                        
-                                    <img class="imagepreview">
-                        
-                                </div>
-                        
-                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
-                                <br>
-                                <div class="product-preview-frame">
-                        
-                                    <img class="imagepreview">
-                        
-                                </div>
-                        
-                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
-                                <br>
-                                <div class="product-preview-frame">
-                        
-                                    <img class="imagepreview">
-                        
-                                </div>
-                        
-                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
-                                <br>
-                                <div class="product-preview-frame">
-                        
-                                    <img class="imagepreview">
-                        
-                                </div>
-                        
-                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
-                                <br>
-                                <div class="product-preview-frame">
-                        
-                                    <img class="imagepreview">
-                        
-                                </div>
+                                
+                            </div>
+                            <div style="display: flex; flex-direction: column; width: 100%;">
+                                <div class="topicName" style="text-align: center; padding-left: 0px; padding-bottom: 1%; font-size: 1.2em;">---------- เพิ่มรูป (สูงสุด 6) ----------</div>    
+                                <div class="three-image">
+                                    <div class="one-photo">
+                                        <div class="product-preview-frame">
+                                            <img class="imagepreview">
+                                        </div>
+                                        <p style="text-align: center;">รูปที่ 1 (จำเป็น)</p>
+                                        <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                    </div>
+
+                                    <div class="one-photo">
+                                        <div class="product-preview-frame">
+                                            <img class="imagepreview">
+                                        </div>
+                                        <p style="text-align: center;">รูปที่ 2</p>
+                                        <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                    </div>
+
+                                    <div class="one-photo">
+                                        <div class="product-preview-frame">
+                                            <img class="imagepreview">
+                                        </div>
+                                        <p style="text-align: center;">รูปที่ 3</p>
+                                        <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                    </div>
+
                                 </div>
 
+                                <div class="three-image">
+                                    <div class="one-photo">
+                                        <div class="product-preview-frame">
+                                            <img class="imagepreview">
+                                        </div>
+                                        <p style="text-align: center;">รูปที่ 4</p>
+                                        <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                    </div>
+
+                                    <div class="one-photo">
+                                        <div class="product-preview-frame">
+                                            <img class="imagepreview">
+                                        </div>
+                                        <p style="text-align: center;">รูปที่ 5</p>
+                                        <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                    </div>
+
+                                    <div class="one-photo">
+                                        <div class="product-preview-frame">
+                                            <img class="imagepreview">
+                                        </div>
+                                        <p style="text-align: center;">รูปที่ 6</p>
+                                        <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                    </div>
+
+                                </div>
+
+                                <div class="image-insert">
+                                    <button type="button" class="ConfirmButtonStyle" style="padding: 0.5%; margin: 1%;"
+                                        id="button-regis">ยืนยัน</button>
+                                </div>
                             </div>
-                            
+                            <p>
+
+                            </p>
                         </div>
-                        
-                     </div>
+
+                    </div>
 
                 </div>
-                <script src="seller.js"></script>
+
             </div>
-            </div>
+            <script src="seller.js"></script>
+        </div>
+        </div>
         </div>
         <!--------------------------logout  ------------------------------------------------------------->
         <script>
@@ -418,7 +527,7 @@
             // document.getElementById("backprofile").onclick = function () {
             //     document.getElementById("logoutshow").style.display = "none";
             // }
-            document.addEventListener('mouseup', function(e) {
+            document.addEventListener('mouseup', function (e) {
                 let container = document.getElementById('logoutshow');
                 if (!container.contains(e.target)) {
                     container.style.display = 'none';
@@ -427,78 +536,46 @@
         </script>
         <!------------------------------------------------------------------------------------------->
 
-             
-        
-            
-            <!------------------------information------------------------------------------------------------------>
-            <script src="popup-toggle.js">
-                
-            </script>
-            
-            <!------------------------Preview------------------------------------------------------------------>
-            <script>
-                const defaultBtn = document.querySelector("#de-btn");
-                const cancelBtn = document.querySelector("#cancelimg");
-                const wrapper = document.querySelector(".wrap");
-                const filename = document.querySelector(".file-name");
-                const customBtn = document.querySelector("#custom-btn");
-                let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
-                function deBtnActive() {
-                    defaultBtn.click();
-                }
-                defaultBtn.addEventListener("change", function () {
-                    if (defaultBtn.files && defaultBtn.files[0]) {
-                        const reader = new FileReader();
-                        reader.onload = function (e) {
-                            document.getElementById('imgna').style.visibility = "visible";
-                            document.getElementById('imgna').src = e.target.result;
-                            wrapper.classList.add("active");
-                        }
-                        cancelBtn.addEventListener("click", function () {
-                            document.getElementById('imgna').style.visibility = "hidden";
-                            wrapper.classList.remove("active");
-                        });
-                        reader.readAsDataURL(defaultBtn.files[0]);
-                    }
-                    if (this.value) {
-                        let valueStore = this.value.match(regExp);
-                        filename.textContent = valueStore;
-                    }
-                });
-            </script>
 
-            <script>
-                const defaultBtn = document.querySelector("#de-btn");
-                const cancelBtn = document.querySelector("#cancelimg");
-                const wrapper = document.querySelector(".wrap");
-                const filename = document.querySelector(".file-name");
-                const customBtn = document.querySelector("#custom-btn");
-                let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
-                function deBtnActive() {
-                    defaultBtn.click();
+
+
+        <!------------------------information------------------------------------------------------------------>
+        <script src="basicOnlyLogin.js"></script>
+        <script src="popup-toggle.js"></script>
+        <script src="profile.js"></script>
+
+        <!------------------------Preview------------------------------------------------------------------>
+        <script>
+            const defaultBtn = document.querySelector("#de-btn");
+            const cancelBtn = document.querySelector("#cancelimg");
+            const wrapper = document.querySelector(".wrap");
+            const filename = document.querySelector(".file-name");
+            const customBtn = document.querySelector("#custom-btn");
+            let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+            function deBtnActive() {
+                defaultBtn.click();
+            }
+            defaultBtn.addEventListener("change", function () {
+                if (defaultBtn.files && defaultBtn.files[0]) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        document.getElementById('imgna').style.visibility = "visible";
+                        document.getElementById('imgna').src = e.target.result;
+                        wrapper.classList.add("active");
+                    }
+                    cancelBtn.addEventListener("click", function () {
+                        document.getElementById('imgna').style.visibility = "hidden";
+                        wrapper.classList.remove("active");
+                    });
+                    reader.readAsDataURL(defaultBtn.files[0]);
                 }
-                defaultBtn.addEventListener("change", function () {
-                    if (defaultBtn.files && defaultBtn.files[0]) {
-                        const reader = new FileReader();
-                        reader.onload = function (e) {
-                            document.getElementById('imgna').style.visibility = "visible";
-                            document.getElementById('imgna').src = e.target.result;
-                            wrapper.classList.add("active");
-                        }
-                        cancelBtn.addEventListener("click", function () {
-                            document.getElementById('imgna').style.visibility = "hidden";
-                            wrapper.classList.remove("active");
-                        });
-                        reader.readAsDataURL(defaultBtn.files[0]);
-                    }
-                    if (this.value) {
-                        let valueStore = this.value.match(regExp);
-                        filename.textContent = valueStore;
-                    }
-                });
-            </script>
-            
-            
+                if (this.value) {
+                    let valueStore = this.value.match(regExp);
+                    filename.textContent = valueStore;
+                }
+            });
+        </script>
+
 </body>
 
 </html>

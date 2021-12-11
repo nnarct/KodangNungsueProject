@@ -37,7 +37,9 @@ buttonLogout.addEventListener('click', () => {
 // <-------------------------- ส่วนตรวจสอบแถบด้านบน --------------------------->
 let headerButton = document.querySelector('.button');
 let headerBasket = document.querySelector('.rmenu');
+let productCount = document.querySelector('.num');
 headerBasket.style.display = 'none';
+loadProductCount();
 
 auth.onAuthStateChanged((user) => {
     if (user) {
@@ -49,7 +51,6 @@ auth.onAuthStateChanged((user) => {
         headerButton.style.removeProperty('display');
     }
 });
-
 // <------------------------ ส่วนตรวจสอบแถบด้านข้าง ------------------------------>
 let inputText = document.querySelector('.input > input');
 inputText.addEventListener('keyup', (event) => {
@@ -94,3 +95,16 @@ subCates.forEach((subCate, index) => {
         location.href = 'index.html'
     });
 });
+
+// <------------------------------ ฟังก์ชันโหลดจำนวนสินค้าในตะกร้า ---------------------------------------->
+function loadProductCount() {
+    let thisCount = 0;
+    let userDetail = JSON.parse(localStorage.getItem('userNow'));
+    database.collection('product_selected').where('userId', '==', userDetail.id)
+    .get().then((result) => {
+        result.forEach(() => {
+            thisCount += 1;
+        });
+        productCount.innerHTML = thisCount;
+    });
+}

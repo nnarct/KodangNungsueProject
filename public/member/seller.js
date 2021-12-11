@@ -41,3 +41,7 @@ document.getElementById("addProduct").onclick = function () {
     document.getElementById("S-Ship").style.display = "none";
     document.getElementById("S-AddProduct").style.display = "block";
 }
+document.getElementById("start-selling").onclick = function () { 
+    document.getElementById("welcoming").style.display = "none";
+    document.getElementById("becomingSeller").style.display= "block";
+ }

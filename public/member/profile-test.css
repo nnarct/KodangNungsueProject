@@ -174,17 +174,18 @@ h2:hover .colored { display: block; color: green;  }
 
 #popup1, #popup2, #popup3, #popup4, #popup5, #popup6 { display: none; width: 90%; min-height: 400px; min-width: fit-content; 
     padding: 2% 3%; margin:3% 2% 0px 2%; border-radius: 20px; box-shadow: 0px 3px 4px 0.5px rgb(163, 163, 163); background-color: white;
-   min-height: 420px;   height: 100%; overflow: auto; 
+   min-height: 420px;   height: 95%;  
 }
 #popup6 { display: block; }
 .sepLine { height: 2px; background-color: lightgray; margin: 1% 0px; width: 100%; }
-.topicName { font-size: 2em; padding-left: 5%; padding-top: 7px; }
+.sepLine2 {  z-index: 2; height: 2px; border-bottom: 2px solid lightgray; margin-top: 1%; }
+.topicName { font-size: 2em; padding-left: 5%; padding-top: 7px; z-index: 2; }
 
 .article { display: flex; flex-direction: row; justify-content: space-between; height: 70%;}
-.articleFP { display: flex; justify-content: center; align-items: center; height: fit-content; margin-bottom: 5%;}
+.articleFP { display: flex; justify-content: center; align-items: center; height: fit-content; margin-bottom: 2%;}
 .arti { display: flex; flex-direction: row; justify-content: space-between; height: 70%;}
 
-.allcb{margin-top: 9%; z-index: 9;}
+.allcb{ height: 85%; overflow: auto; overflow-x: hidden;}
 /* pop up 1 CSS ข้อมูลของฉัน */
 .infoZone { width: 62%; min-width: fit-content; height: 100%; border: 2px solid green;}
 .infoZone { display: flex; flex-direction: column; font-size: 1.5em; }
@@ -200,7 +201,7 @@ h2:hover .colored { display: block; color: green;  }
 #displayTiU { font-family: Itim; height: 90px; max-width: 300px;}
 .displayAddressInput { font-family: Itim; height: 90px; width: 300px; padding-top: 5px; padding-bottom: 5px;}
 #displayInput { display: none; }
-.pictureFrame img{ width: 200px; height: 200px; border-radius: 20rem; box-shadow: 0px 0px 6px 3px lightgray; background: transparent; }
+.pictureFrame img{ width: 200px; height: 200px; border-radius: 20rem; box-shadow: 0px 0px 6px 3px lightgray; background: transparent; object-fit: cover;}
 #selling,#seller { cursor: pointer; }
 .buttonZone{
     font-family: Itim;
@@ -253,7 +254,7 @@ h2:hover .colored { display: block; color: green;  }
 
 .head { display: flex; flex-direction: row; width: fit-content; padding-bottom: 10px; margin-bottom: 10px; border-bottom: 2px solid #1d3d14; justify-content: space-evenly; align-items: center; }
 .smallProfilePic { width: 80px; height: 80px; padding: 3px ; }
-.smallProfilePic img { width: 80px; height: 80px; border-radius: 50%; }
+.smallProfilePic img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover;}
 .name { width: 80%; min-width: 120px; text-align: center; font-size: 1.2em; padding: 3px;}
 .peopro img{ width: 50px; height: 50px; min-width: 50px; align-items: center; margin: 0px; padding: 0px; }
 .container{
@@ -340,7 +341,7 @@ h2:hover .colored { display: block; color: green;  }
 .rowna{
     cursor: pointer;
     margin-top: 2%;
-    padding-top: 2%;
+    padding-top: 1%;
     }
     
     .rowna:hover{
