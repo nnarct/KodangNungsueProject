@@ -1,6 +1,16 @@
-#popup6 { padding: 0px; height: 74%;}
-.seller-menu { display: flex; flex-direction: row; width: 100%; height: fit-content;  }
+#popup6 { padding: 0px; padding-bottom: 4%; }
+.s-container { display: flex; flex-direction: column; border-radius: 20%; height: 100%; width: 1050px; }
+.seller-menu { display: flex; flex-direction: row; width: 71%; height: fit-content; z-index: 10; position: fixed; }
 .branch { border: none;text-align: center; width: 25%; padding: 2% 1.75%;font-size: 1.7em; font-family: Itim; background-color: white; }
 .branch { border-bottom: 7px solid transparent; cursor: pointer;}
 .branch:hover { border-bottom: 7px solid green; }
-.branch:active { background-color: rgb(124, 186, 75); border-bottom: 7px solid rgb(124, 186, 75); }
+.branch:active { background-color: rgb(155, 231, 97); border-bottom: 7px solid rgb(124, 186, 75); }
+
+.dataDisplay { height: 100%; margin-top: 2%; }
+.S-Info, .S-Storage, .S-Ship, .S-AddProduct { display: none; height: 100%; }
+.S-Info {  display: block; border: 3px solid blue; }
+.S-Storage { border: 3px solid lightpink; }
+.S-Ship { border: 3px solid lightseagreen; }
+.S-AddProduct { border: 3px solid purple; }
+
+.addProd-Content { border: 2px solid springgreen; }

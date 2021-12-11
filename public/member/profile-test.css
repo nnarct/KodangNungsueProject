@@ -158,49 +158,53 @@ nav {
     
 
 .navLeft h1 { font-weight: lighter; font-size: 1.5em; cursor: default; padding-left: 10%; }   
-.contents { position: absolute;width:96%; height: fit-content; margin: 2%; min-width: 900px;}
+.contents { position: absolute;width:96%; height: 80%; border: 2px solid olive; margin: 2%; min-width: 900px;}
 .contents { display: flex; flex-direction: row; justify-content: space-between; }
-.navLeft { height: fit-content; width: 18%; min-width: fit-content; padding: 17px; max-width: 230px; }
-.navRight { height: fit-content; width: 82%; min-width: fit-content; }
+.navLeft { height: 80%; width: 18%; min-width: fit-content; padding: 17px; max-width: 230px; }
+.navRight { height: 86%; width: 82%; min-width: fit-content; }
 
 h2 { text-align: left; width:fit-content; font-size: 1.2em; font-weight: lighter; padding-top: 10px; display: flex; align-items: center;}
 .colored { padding: 0px 3px; color: transparent; }
+.posab {position: absolute;}
 h2:hover .colored { display: block; color: green;  }
 .navLeft h1:hover .colored { font-size: 1em; color: orange; min-width: fit-content;}
 
 .navLeft h2 { margin-left: 26px; padding-left: 10%; width: fit-content; transition: .5s ease; min-width: fit-content;}
 .navLeft h2:hover{ cursor: pointer; transform: translateX(7%); }
 
-#popup1, #popup2, #popup3, #popup4, #popup5, #popup6 { display: none; width: 90%; min-height: 400px; height: fit-content; min-width: fit-content; 
+#popup1, #popup2, #popup3, #popup4, #popup5, #popup6 { display: none; width: 90%; min-height: 400px; min-width: fit-content; 
     padding: 2% 3%; margin:3% 2% 0px 2%; border-radius: 20px; box-shadow: 0px 3px 4px 0.5px rgb(163, 163, 163); background-color: white;
-    height: 70%; 
+   min-height: 420px;   height: 100%; overflow: auto; 
 }
-#popup6 { display: block; }
+#popup1 { display: block; }
 .sepLine { height: 2px; background-color: lightgray; margin: 1% 0px; width: 100%; }
 .topicName { font-size: 2em; padding-left: 5%; padding-top: 7px; }
 
-.article { display: flex; flex-direction: row; justify-content: space-between;}
-
+.article { display: flex; flex-direction: row; justify-content: space-between; height: 70%;}
+.arti { display: flex; flex-direction: row; justify-content: space-between; height: 70%;}
+.allaga{margin-top: 7%; z-index: 9;}
+.allcb{margin-top: 9%; z-index: 9;}
 /* pop up 1 CSS ข้อมูลของฉัน */
-.infoZone { width: 62%; min-width: fit-content; min-width: fit-content; }
+.infoZone { width: 62%; min-width: fit-content; height: 100%; border: 2px solid green;}
 .infoZone { display: flex; flex-direction: column; font-size: 1.5em; }
-.both { display: flex; width: 100%; flex-direction: row; }
-.one { display: flex; flex-direction: column; justify-content: top; min-width: 160px; width: 26%;  text-align: right; padding-right: 8px; margin: 5px 0px; color: darkgreen; }
-.one p , .two p{ padding-top: 5px; background: transparent; margin: 5px 0px;} 
-.two {  display: flex; flex-direction: column; justify-content: top;  width: 74%; text-align: left; padding-left: 8px; margin: 5px 0px; }
+.both { display: flex; width: 100%; flex-direction: row; height: 100%; }
+.one { display: flex; flex-direction: column;  justify-content: space-evenly; min-width: 160px; width: 26%;  text-align: right; padding-right: 8px; margin: 5px 0px; color: darkgreen; }
+.one p , .two p{ padding-top: 5px; background: transparent; margin: 5px 0px;height: 5%; } 
+.two { display: flex; flex-direction: column;  justify-content: space-evenly; width: 74%; text-align: left; padding-left: 8px; margin: 5px 0px;  }
 .pictureZone {  width: 38%; min-width: fit-content; min-width: fit-content; display: flex; align-items: center; justify-content: space-evenly; flex-direction: column; }
-.displayAddress { max-width: 300px; min-width:280px;}
-.two input { font-family: Itim; font-size: 0.7em; width: 95%; padding-top: px; margin: 5px 0px; height: calc(12.5% - 1px); border-radius: 5px; border: transparent ; box-shadow: 0px 0px 1.2px 0.7px lightgray; }
+.displayAddress { max-width: 300px; min-width:280px; height: 80px;}
+.two input { font-family: Itim; font-size: 0.9em; width: 95%; padding-top: 5px; padding-bottom: 5px;  border-radius: 5px; border: transparent ; box-shadow: 0px 0px 1.2px 0.7px lightgray; }
 .three { display: flex; flex-direction: column; justify-content: space-around; align-items: left; }
-.three textarea {  width: 95%; height: 80px; resize: none; margin-top: 5px ; border-radius: 5px; border: transparent ; box-shadow: 0px 0px 1.2px 0.7px lightgray;}
-#displayAddress { font-family: Itim; height: 80px; }
+.three textarea {  padding-top: 10px; width: 95%; height: 80px; resize: none; margin-top: 10px ; border-radius: 5px; border: transparent ; box-shadow: 0px 0px 1.2px 0.7px lightgray; font-family: Itim; font-size: 0.7em;}
+#displayTiU { font-family: Itim; height: 90px; max-width: 300px;} อ้นอ่านไลน์หน่อย
+.displayAddressInput { font-family: Itim; height: 90px; width: 300px; padding-top: 5px; padding-bottom: 5px;}
 #displayInput { display: none; }
 .pictureFrame img{ width: 200px; height: 200px; border-radius: 20rem; box-shadow: 0px 0px 6px 3px lightgray; background: transparent; }
 #selling,#seller { cursor: pointer; }
 .buttonZone{
     font-family: Itim;
     padding: 10px 0px; 
-    height: 50px;
+    height: 10%;
     display: flex; 
     flex-direction: row;
     align-items: center;
@@ -227,6 +231,24 @@ h2:hover .colored { display: block; color: green;  }
     border-radius: 100px; font-display: #fff; font-size: 1.2rem;
 }
 .ConfirmButtonStyle:hover { background-color: #97e65b; border-color: #97e65b}
+
+/* history */
+.buyagain{
+    cursor: pointer;
+    font-family: Itim; min-width: fit-content;
+    width:150px; padding: 2% 6%; background-color: #7CBA4B; border-color: #7CBA4B;
+    border-radius: 100px; font-size: 1.2rem; color: #ffffff;
+}
+.buyagain:hover{ background-color: #97e65b; border-color: #97e65b}
+
+/* pay */
+.paybtn{
+    cursor: pointer;
+    font-family: Itim; min-width: fit-content;
+    width:150px; padding: 2% 6%; background-color: #7CBA4B; border-color: #7CBA4B;
+    border-radius: 100px; font-size: 1.2rem; color: #ffffff;
+}
+.paybtn:hover{ background-color: #97e65b; border-color: #97e65b}
 
 .head { display: flex; flex-direction: row; width: fit-content; padding-bottom: 10px; margin-bottom: 10px; border-bottom: 2px solid #1d3d14; justify-content: space-evenly; align-items: center; }
 .smallProfilePic { width: 80px; height: 80px; padding: 3px ; }

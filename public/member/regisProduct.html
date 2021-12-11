@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Product Regis</title>
+</head>
+
+<style>
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<body>
+    <div style="margin: 20px; padding: 20px; text-align: center;">
+        <h1>Register Product</h1>
+        <div>
+            <li><input type="text" id="product-name" placeholder="ชื่อสินค้า" /></li>
+            <li><input type="number" id="price" placeholder="ราคา" /></li>
+            <li><input type="text" id="province" placeholder="จังหวัด" /></li>
+            <li><input type="text" id="condition" placeholder="สภาพสินค้า" /></li>
+            <li>
+                <label for="type">ประเภทสินค้า</label>
+                <select name="type" id="type">
+                    <option value="หนังสือเรียน: ประถมศึกษา" selected>หนังสือเรียน: ประถมศึกษา</option>
+                    <option value="หนังสือเรียน: มัธยมศึกษาตอนต้น">หนังสือเรียน: มัธยมศึกษาตอนต้น</option>
+                    <option value="หนังสือเรียน: มัธยมศึกษาตอนปลาย">หนังสือเรียน: มัธยมศึกษาตอนปลาย</option>
+                    <option value="หนังสือเตรียมสอบ: สอบเข้า ม.ต้น">หนังสือเตรียมสอบ: สอบเข้า ม.ต้น</option>
+                    <option value="หนังสือเตรียมสอบ: สอบเข้า ม.ปลาย">หนังสือเตรียมสอบ: สอบเข้า ม.ปลาย</option>
+                    <option value="หนังสือเตรียมสอบ: สอบเข้า มหาวิทายาลัย">หนังสือเตรียมสอบ: สอบเข้า มหาวิทายาลัย</option>
+                    <option value="หนังสือการ์ตูน">หนังสือการ์ตูน</option>
+                </select>
+            </li>
+            <li><input type="number" id="amount" placeholder="จำนวนสินค้า" min="1" /></li>
+            <li><input type="text" id="detail" placeholder="รายละเอียดสินค้า" /></li>
+        </div>
+        <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+        <br>
+        <div style="width: 300px; border: 1px solid black;">
+
+            <img width="300" height="200">
+
+        </div>
+
+        <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+        <br>
+        <div style="width: 300px; border: 1px solid black;">
+
+            <img width="300" height="200">
+
+        </div>
+
+        <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+        <br>
+        <div style="width: 300px; border: 1px solid black;">
+
+            <img width="300" height="200">
+
+        </div>
+
+        <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+        <br>
+        <div style="width: 300px; border: 1px solid black;">
+
+            <img width="300" height="200">
+
+        </div>
+
+        <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+        <br>
+        <div style="width: 300px; border: 1px solid black;">
+
+            <img width="300" height="200">
+
+        </div>
+
+        <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+        <br>
+        <div style="width: 300px; border: 1px solid black;">
+
+            <img width="300" height="200">
+
+        </div>
+
+    </div>
+    <p>
+        <button type="button" id="button-regis">Confirm</button>
+    </p>
+
+
+    </div>
+
+    <script src="regisProduct.js"></script>
+
+</body>
+
+</html>

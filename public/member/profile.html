@@ -49,7 +49,7 @@
         </div>
        
     </div id="main">      
-        <br>
+        
         <div class="contents">
             <!-- menu for user to choose content display-->
             <div class="navLeft">
@@ -64,8 +64,8 @@
                 <h2 id="orderHistory" >ประวัติการซื้อ <span class="colored">❯</span></h2> 
                 <h2 id="unpaid" >ที่ต้องชำระ <span class="colored">❯</span></h2>
                 <h2 id="orderStatus" > สถานะสินค้า <span class="colored">❯</span></h2><br>
-                <h1 id="selling">เริ่มการขาย <span class="colored">❯</span></h1>  <!-- will show only non-seller user -->
-                <h1 id="seller">ร้านของฉัน <span class="colored">❯</span></h1>  <!-- will show only seller user-->
+                <h1 id="selling">เริ่มการขาย <span class="colored posab">❯</span></h1>  <!-- will show only non-seller user -->
+                <h1 id="seller">ร้านของฉัน <span class="colored posab">❯</span></h1>  <!-- will show only seller user-->
             </div>
             <!----------------------------------->
 
@@ -74,7 +74,7 @@
                 <!-- ข้อมูลของฉัน -->
                 <div id="popup1">
                     <div class="topicName">ข้อมูลของฉัน</div> <div class="sepLine"></div>
-                    <div class="article">
+                    <div class="article ">
                         <div class="infoZone">
                             <div class="both">
                                 <div class="one">
@@ -82,20 +82,20 @@
                                     <p>นามสกุล</p>
                                     <p>อีเมล</p>
                                     <p>เบอร์โทรศัพท์</p>
-                                    <p id="displayAddress">ที่อยู่</p>
+                                    <p id="displayTiU">ที่อยู่</p>
                                 </div>
                                 <div class="two" id="display"> <!-- ข้อมูลลูกค้าที่ต้องดึงจาก firebase มาแสดง-->
                                     <p>สมหวัง</p>
                                     <p>ถังสี</p>
                                     <p>Somwang@gmail.com</p>
                                     <p>099-999-9999</p>
-                                    <p >99/9 ม.9 ต.แปรงทาสี จ.บ้านสมหวัง</p>
+                                    <div class="displayAddressInput" >9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999</div>
                                 </div>
                                 <div class="two three" id="displayInput"> <!-- input fields สำหรับ user ที่ต้องกการแก้ไขข้อมูล-->
-                                    <input type="text" >
-                                    <input type="text" >
-                                    <input type="email" >
-                                    <input type="tel" >
+                                    <p><input type="text" ></p>
+                                    <p><input type="text" ></p>
+                                    <p><input type="email" ></p>
+                                    <p><input type="tel" ></p>
                                     <textarea type="text" ></textarea>
                                 </div>
                             </div>
@@ -213,7 +213,7 @@
                                             <h1>฿200</h1>
                                             <h3>รวมการสั่งซื้อ: ฿230</h3>
                                             <a href="#1.html">
-                                                <input type="button" id="agabtnna" class="pos gbtn"
+                                                <input type="button" id="agabtnna" class="buyagain"
                                                     value="ซื้ออีกครั้ง">
                                             </a>
                                         </div>
@@ -228,6 +228,80 @@
                 <!-- ที่ต้องชำระ -->
                 <div id="popup4">
                     <div class="topicName">ที่ต้องชำระ</div> <div class="sepLine"></div>
+                    <div class="allcb">
+                        <div class="rowcb" style="margin-top: 2%;">
+                            <div class="col-2" style="width: 30%;" align="right">
+                                <div class="prodaga">
+                                    <img src="src/testprod/p1.jpg" class="proaga">
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 60%; margin-right: 10%;">
+                                <div class="nameaga" align="left">
+                                    ONE PIECE 500 QUIZ BOOK
+                                </div>
+                                <div class="namesaga" align="left">
+                                    มังกี้ ดี ท็อฟฟี่
+                                </div>
+                                <div class="rd" align="right">
+                                    <p>x1</p>
+                                    <h1>฿200</h1>
+                                    <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                    <a href="#1.html">
+                                        <input type="button" id="agabtnna" class="paybtn" value="แจ้งชำระเงิน">
+                                    </a>
+                                </div>
+                            </div>
+                            <hr style="border:2px solid #f1f1f1; width: 100%;">
+                        </div>
+                        <div class="rowcb" style="margin-top: 2%;">
+                            <div class="col-2" style="width: 30%;" align="right">
+                                <div class="prodaga">
+                                    <img src="src/testprod/p1.jpg" class="proaga">
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 60%; margin-right: 10%;">
+                                <div class="nameaga" align="left">
+                                    ONE PIECE 500 QUIZ BOOK
+                                </div>
+                                <div class="namesaga" align="left">
+                                    มังกี้ ดี ท็อฟฟี่
+                                </div>
+                                <div class="rd" align="right">
+                                    <p>x1</p>
+                                    <h1>฿200</h1>
+                                    <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                    <a href="#1.html">
+                                        <input type="button" id="agabtnna" class="paybtn" value="แจ้งชำระเงิน">
+                                    </a>
+                                </div>
+                            </div>
+                            <hr style="border:2px solid #f1f1f1; width: 100%;">
+                        </div>
+                        <div class="rowcb" style="margin-top: 2%;">
+                            <div class="col-2" style="width: 30%;" align="right">
+                                <div class="prodaga">
+                                    <img src="src/testprod/p1.jpg" class="proaga">
+                                </div>
+                            </div>
+                            <div class="col-2" style="width: 60%; margin-right: 10%;">
+                                <div class="nameaga" align="left">
+                                    ONE PIECE 500 QUIZ BOOK
+                                </div>
+                                <div class="namesaga" align="left">
+                                    มังกี้ ดี ท็อฟฟี่
+                                </div>
+                                <div class="rd" align="right">
+                                    <p>x1</p>
+                                    <h1>฿200</h1>
+                                    <h3>รวมการสั่งซื้อ: ฿230</h3>
+                                    <a href="#1.html">
+                                        <input type="button" id="agabtnna" class="paybtn" value="แจ้งชำระเงิน">
+                                    </a>
+                                </div>
+                            </div>
+                            <hr style="border:2px solid #f1f1f1; width: 100%;">
+                        </div>
+                    </div>
                 </div>
 
                 <!-- สถานะสินค้า -->
@@ -244,22 +318,97 @@
                     </div>
 
                     <!-- ร้านของฉัน สำหรับ usser ที่เป็น seller แล้ว-->
-                    <div id="" >
+                    <div class="s-container" id="" >
                         <div class="seller-menu">
-                            <button class="branch" id="sellerInfo" style="border-radius: 20px 0px 0px 0px;">ข้อมูลร้าน</button>
+                            <button class="branch" id="sellerInfo" style="border-radius: 20px 0px 0px 0px; background-color: rgb(155, 231, 97);">ข้อมูลร้าน</button>
                             <button class="branch" id="sellerStorage">คลังสินค้า</button> 
                             <button class="branch" id="ship">ที่ต้องจัดส่ง</button>
                             <button class="branch" id="addProduct" style="border-radius: 0px 20px 0px 0px;">ลงขายสินค้า</button>
                         </div>
-                        <div class="dataDisplay">
+                        <div class="dataDisplay" id="" >
+                            <div class="S-Info" id="S-Info">Hi</div>
+                            <div class="S-Storage" id="S-Storage"></div>
+                            <div class="S-Ship" id="S-Ship"></div>
+                            <div class="S-AddProduct" id="S-AddProduct"   >
+                                <div class="topicName"> เพิ่มสินค้า</div> <div class="sepLine"></div>
+                                <div class="addProd-Content" >
+                                    <li><input type="text" id="product-name" placeholder="ชื่อสินค้า" /></li>
+                                    <li><input type="number" id="price" placeholder="ราคา" /></li>
+                                    <li><input type="text" id="province" placeholder="จังหวัด" /></li>
+                                    <li><input type="text" id="condition" placeholder="สภาพสินค้า" /></li>
+                                    <li>
+                                        
+                                        <label for="type">ประเภทสินค้า</label>
+                                        <select name="type" id="type">
+                                            <option value="หนังสือเรียน: ประถมศึกษา" selected>หนังสือเรียน: ประถมศึกษา</option>
+                                            <option value="หนังสือเรียน: มัธยมศึกษาตอนต้น">หนังสือเรียน: มัธยมศึกษาตอนต้น</option>
+                                            <option value="หนังสือเรียน: มัธยมศึกษาตอนปลาย">หนังสือเรียน: มัธยมศึกษาตอนปลาย</option>
+                                            <option value="หนังสือเตรียมสอบ: สอบเข้า ม.ต้น">หนังสือเตรียมสอบ: สอบเข้า ม.ต้น</option>
+                                            <option value="หนังสือเตรียมสอบ: สอบเข้า ม.ปลาย">หนังสือเตรียมสอบ: สอบเข้า ม.ปลาย</option>
+                                            <option value="หนังสือเตรียมสอบ: สอบเข้า มหาวิทายาลัย">หนังสือเตรียมสอบ: สอบเข้า มหาวิทายาลัย</option>
+                                            <option value="หนังสือการ์ตูน">หนังสือการ์ตูน</option>
+                                        </select>
+                                    </li>
+                                    <li><input type="number" id="amount" placeholder="จำนวนสินค้า" min="1" /></li>
+                                    <li><input type="text" id="detail" placeholder="รายละเอียดสินค้า" /></li>
+                                </div>
+                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                <br>
+                                <div style="width: 300px; border: 1px solid black;">
+                        
+                                    <img width="300" height="200">
+                        
+                                </div>
+                        
+                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                <br>
+                                <div style="width: 300px; border: 1px solid black;">
+                        
+                                    <img width="300" height="200">
+                        
+                                </div>
+                        
+                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                <br>
+                                <div style="width: 300px; border: 1px solid black;">
+                        
+                                    <img width="300" height="200">
+                        
+                                </div>
+                        
+                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                <br>
+                                <div style="width: 300px; border: 1px solid black;">
+                        
+                                    <img width="300" height="200">
+                        
+                                </div>
+                        
+                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                <br>
+                                <div style="width: 300px; border: 1px solid black;">
+                        
+                                    <img width="300" height="200">
+                        
+                                </div>
+                        
+                                <input type="file" class="imageUpload" name="imageUpload" accept="image/*" />
+                                <br>
+                                <div style="width: 300px; border: 1px solid black;">
+                        
+                                    <img width="300" height="200">
+                        
+                                </div>
 
+
+                            </div>
                             
                         </div>
                         
                      </div>
 
                 </div>
-                
+                <script src="seller.js"></script>
 
             </div>
         </div>
