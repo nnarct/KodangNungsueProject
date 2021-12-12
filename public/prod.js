@@ -564,11 +564,7 @@ function showProduct() {
                     .then((url) => {
                         image.src = url;
                     }).catch((error) => {
-                        Swal.fire(
-                            'Error',
-                            error.message + '\n Please refresh webpage',
-                            'error'
-                        )
+                        console.log(error.message);
                     })
 
                 // ดูเพิ่มเติม
