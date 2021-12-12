@@ -20,7 +20,10 @@ let userDetail = JSON.parse(localStorage.getItem('userNow'));
 let userLogin = false;
 let headerButton = document.querySelector('.button');
 let headerBasket = document.querySelector('.rmenu');
+let productCount = document.querySelector('.num');
 headerBasket.style.display = 'none';
+loadProductCount();
+
 const searchFormOtherPage = JSON.parse(sessionStorage.getItem('searchFromOtherPage'));
 sessionStorage.removeItem('searchFromOtherPage');
 
@@ -112,6 +115,17 @@ buttonLogout.addEventListener('click', () => {
 });
 
 // <------------------------------ส่วนฟังก์ชันต่างๆ--------------------------------------->
+function loadProductCount() {
+    let thisCount = 0;
+    let userDetail = JSON.parse(localStorage.getItem('userNow'));
+    database.collection('product_selected').where('userId', '==', userDetail.id)
+    .get().then((result) => {
+        result.forEach(() => {
+            thisCount += 1;
+        });
+        productCount.innerHTML = thisCount;
+    });
+}
 
 function reset() {
     let allProduct = document.querySelector('.product');
@@ -239,6 +253,66 @@ function showProductSearch(searchText) {
                 let cart = document.createElement('span');
                 cart.classList.add('cart');
                 
+                // ใส่ของเข้าตะกร้า
+                cart.addEventListener('click', () => {
+                    let alreadyChoose = false;
+                    database.collection('product_selected').where('productId', '==', product.id)
+                        .where('userId', '==', userDetail.id).get().then((result) => {
+                            result.forEach(() => {
+                                alreadyChoose = true;
+                            });
+                            if (alreadyChoose) {
+                                Swal.fire(
+                                    'Please check the basket',
+                                    "You have already selected this product",
+                                    'info'
+                                )
+                            }
+                            else {
+                                Swal.fire({
+                                    title: 'Please wait',
+                                    text: 'Processing to add to basket',
+                                    icon: 'info',
+                                    allowEscapeKey: false,
+                                    allowOutsideClick: false,
+                                    didOpen: () => {
+                                        Swal.showLoading()
+                                    }
+                                });
+                                let productBasket = {
+                                    productName: product.name,
+                                    price: product.price,
+                                    productId: product.id,
+                                    sellerId: product.userId,
+                                    userId: userDetail.id,
+                                    amount: 1
+                                };
+
+                                database.collection('product_selected').add(productBasket).then((data) => {
+                                    let dealing = false;
+                                    database.collection('seller_selected').where('userId', '==', userDetail.id)
+                                    .where('sellerId', '==', product.userId).get().then((result) => {
+                                        Swal.fire(
+                                            'Success',
+                                            "Add product complete",
+                                            'success'
+                                        )
+                                        loadProductCount();
+                                        result.forEach(() => {
+                                            dealing = true;
+                                        });
+                                        if(!dealing) {
+                                            let relationShip = {
+                                                sellerId: product.userId,
+                                                userId: userDetail.id
+                                            };
+                                            database.collection('seller_selected').add(relationShip)
+                                        }
+                                    });
+                                });
+                            }
+                        });
+                });
 
                 // ไอคอนตะกร้า
                 let cartImg = document.createElement('img');
@@ -394,6 +468,67 @@ function showProductType(type) {
                 // ปุ่มใส่ตะกร้า
                 let cart = document.createElement('span');
                 cart.classList.add('cart');
+
+                // ใส่ของเข้าตะกร้า
+                cart.addEventListener('click', () => {
+                    let alreadyChoose = false;
+                    database.collection('product_selected').where('productId', '==', product.id)
+                        .where('userId', '==', userDetail.id).get().then((result) => {
+                            result.forEach(() => {
+                                alreadyChoose = true;
+                            });
+                            if (alreadyChoose) {
+                                Swal.fire(
+                                    'Please check the basket',
+                                    "You have already selected this product",
+                                    'info'
+                                )
+                            }
+                            else {
+                                Swal.fire({
+                                    title: 'Please wait',
+                                    text: 'Processing to add to basket',
+                                    icon: 'info',
+                                    allowEscapeKey: false,
+                                    allowOutsideClick: false,
+                                    didOpen: () => {
+                                        Swal.showLoading()
+                                    }
+                                });
+                                let productBasket = {
+                                    productName: product.name,
+                                    price: product.price,
+                                    productId: product.id,
+                                    sellerId: product.userId,
+                                    userId: userDetail.id,
+                                    amount: 1
+                                };
+
+                                database.collection('product_selected').add(productBasket).then((data) => {
+                                    let dealing = false;
+                                    database.collection('seller_selected').where('userId', '==', userDetail.id)
+                                    .where('sellerId', '==', product.userId).get().then((result) => {
+                                        Swal.fire(
+                                            'Success',
+                                            "Add product complete",
+                                            'success'
+                                        )
+                                        loadProductCount();
+                                        result.forEach(() => {
+                                            dealing = true;
+                                        });
+                                        if(!dealing) {
+                                            let relationShip = {
+                                                sellerId: product.userId,
+                                                userId: userDetail.id
+                                            };
+                                            database.collection('seller_selected').add(relationShip)
+                                        }
+                                    });
+                                });
+                            }
+                        });
+                });
 
                 // ไอคอนตะกร้า
                 let cartImg = document.createElement('img');

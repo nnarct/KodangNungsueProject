@@ -250,6 +250,8 @@ function sendEmail() {
     }
 }
 
+// <-------------------------------- ประวัติการสั่งซื้อ ------------------------------------->
+
 // <------------------------ ส่วนตรวจสอบ user ว่าเป็นผู้ขายหรือผู้ซื้อ ---------------------------->
 let sellingBar = document.querySelector('#selling');
 let sellerBar = document.querySelector('#seller');
@@ -262,7 +264,3 @@ else if(userDetail.type === 'seller') {
     sellingBar.style.display = 'none';
     sellerBar.style.display = 'block';
 }
-sellingBar.addEventListener('click',() => {
-    location.reload();
-    console.log('hello');
-});
