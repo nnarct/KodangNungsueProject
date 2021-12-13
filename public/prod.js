@@ -273,6 +273,7 @@ function showProduct() {
                                 });
                                 if (!dealing) {
                                     let relationShip = {
+                                        seller: productDetail.seller,
                                         sellerId: productDetail.userId,
                                         userId: userDetail.id
                                     };
@@ -686,6 +687,7 @@ function showProduct() {
                                             });
                                             if (!dealing) {
                                                 let relationShip = {
+                                                    seller: product.seller,
                                                     sellerId: product.userId,
                                                     userId: userDetail.id
                                                 };

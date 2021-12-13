@@ -51,7 +51,8 @@ transition:all ease 0.3s;
 	position:relative;
 	width:100%;
 	Background:#1D3D14;
-	max-height: 86px;
+	height: 90px;
+  min-width: 560px;
 }
 
 
@@ -78,7 +79,8 @@ transition:all ease 0.3s;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0px 30px;
-	
+	height: 90px;
+  min-width: 560px;
 }
 
 ul.menu{
@@ -100,10 +102,12 @@ ul.menu{
 }
 
 .menu a{
+  text-align: center;
     padding-left: 0%;
 	color:#FFF;
 	text-decoration:none;
 } 
+.menu a:hover{ color: #e7b975; }
 
 #iconc{
     width: 20%;
@@ -187,16 +191,23 @@ ul.menu{
 
 
 
-
 .bg{
+  width: 50%;
+  min-width:fit-content ;
+  border-radius: 2rem 2rem 3rem 3rem;
 	background-color: #ffffff;
-	margin:3% 5%;
-    padding-bottom: 5%;
+	margin:2% 3%;
+   padding-bottom: 4%;
+  box-shadow: 0px 0px 5px 3px rgb(172, 172, 172, 0.5);
 }
+.bg h1, .bg li, .bg p {text-align: left;}
 
 .debuy{
+   border-radius:  2rem 2rem 0px 0px;
     width: 100%;
-    background-color: #9bb986;
+   padding-top: 1%;
+   border-bottom: 2px solid  lightgray;
+
 }
 
 .topna{
@@ -220,7 +231,12 @@ ul.menu{
 
 .detailbuy h2{
     font-size: 1.3em;
-    font-weight: lighter;
+    color: darkgreen;
+}
+.detailbuy h2 span{
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: black;
 }
 
 .detailbuy li{
@@ -228,6 +244,12 @@ ul.menu{
     font-size: 1.2em;
     padding-bottom: 5px;
     font-weight: lighter;
+}
+.detailbuy p{
+  margin-left: 4%;
+  margin-top: 0px;
+  margin-bottom: 1%;
+  font-weight: lighter;
 }
 
 .infoforbuy{
@@ -243,11 +265,12 @@ ul.menu{
 }
 
 .gBtn{
-    background-color: #7CBA4B;
+    background-color: #50b800;
+    box-shadow: 2px 2px 2px 1px lightgray;
 }
   
 .pad1{
-    padding: 10px;
+    padding: 10px 2%;
     border-radius: 15px;
     font-family: itim;
     color: white;
@@ -256,4 +279,11 @@ ul.menu{
 
 .conbuy{
     margin-right: 5%;
+}
+.conbuy a { text-decoration: none; }
+.conbuy a:hover { background-color: #9df15d; color: black; }
+.conbuy a:active {  background-color: #50b800; color: black; }
+
+@media screen and (orientation:portrait) {
+  .navi img{display: none;}
 }

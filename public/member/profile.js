@@ -1,6 +1,5 @@
 // <----------------------------- ส่วนดำเนินการหน้าแสดงข้อมูลโปรไฟล์ -------------------------------------->
 let userDetail = JSON.parse(localStorage.getItem('userNow'));
-console.log(userDetail)
 // ชื่อผู้ใช้
 let profileName = document.querySelector('.name');
 
@@ -119,15 +118,34 @@ function confirmEditData() {
                     storageRef.child(imgname).put(file, metadata)
                         .then((snapshot) => {
                             database.collection('users').doc(userDetail.id).get().then((doc) => {
-                                let newUserDetail = {
-                                    id: doc.id,
-                                    address: doc.data().address,
-                                    email: doc.data().email,
-                                    name: doc.data().name,
-                                    surname: doc.data().surname,
-                                    phone: doc.data().phone,
-                                    type: doc.data().type,
-                                    last_login: doc.data().last_login
+                                let newUserDetail;
+                                if (doc.data().type === 'buyer') {
+                                    newUserDetail = {
+                                        id: doc.id,
+                                        address: doc.data().address,
+                                        email: doc.data().email,
+                                        name: doc.data().name,
+                                        surname: doc.data().surname,
+                                        phone: doc.data().phone,
+                                        type: doc.data().type,
+                                        last_login: doc.data().last_login
+                                    }
+                                }
+                                else if (doc.data().type === 'seller') {
+                                    newUserDetail = {
+                                        id: doc.id,
+                                        address: doc.data().address,
+                                        email: doc.data().email,
+                                        name: doc.data().name,
+                                        surname: doc.data().surname,
+                                        phone: doc.data().phone,
+                                        type: doc.data().type,
+                                        last_login: doc.data().last_login,
+                                        bankName: doc.data().bankName,
+                                        bankNumber: doc.data().bankNumber,
+                                        bankType: doc.data().bankType,
+                                        storeName: doc.data().storeName
+                                    }
                                 }
                                 localStorage.setItem('userNow', JSON.stringify(newUserDetail));
                                 Swal.fire(
@@ -150,15 +168,34 @@ function confirmEditData() {
                 }
                 else {
                     database.collection('users').doc(userDetail.id).get().then((doc) => {
-                        let newUserDetail = {
-                            id: doc.id,
-                            address: doc.data().address,
-                            email: doc.data().email,
-                            name: doc.data().name,
-                            surname: doc.data().surname,
-                            phone: doc.data().phone,
-                            type: doc.data().type,
-                            last_login: doc.data().last_login
+                        let newUserDetail;
+                        if (doc.data().type === 'buyer') {
+                            newUserDetail = {
+                                id: doc.id,
+                                address: doc.data().address,
+                                email: doc.data().email,
+                                name: doc.data().name,
+                                surname: doc.data().surname,
+                                phone: doc.data().phone,
+                                type: doc.data().type,
+                                last_login: doc.data().last_login
+                            }
+                        }
+                        else if (doc.data().type === 'seller') {
+                            newUserDetail = {
+                                id: doc.id,
+                                address: doc.data().address,
+                                email: doc.data().email,
+                                name: doc.data().name,
+                                surname: doc.data().surname,
+                                phone: doc.data().phone,
+                                type: doc.data().type,
+                                last_login: doc.data().last_login,
+                                bankName: doc.data().bankName,
+                                bankNumber: doc.data().bankNumber,
+                                bankType: doc.data().bankType,
+                                storeName: doc.data().storeName
+                            }
                         }
                         localStorage.setItem('userNow', JSON.stringify(newUserDetail));
                         Swal.fire(
@@ -343,6 +380,7 @@ function confirmRegisToSeller() {
                     )
                     userDetail = updateUserDetail();
                     updateSellBar();
+                    setStoreData();
                     document.querySelector('#beforeRegisSeller').style.display = 'none';
                     document.querySelector('#becomingSeller').style.display = 'none';
                     document.querySelector("#welcoming").style.display = "none";

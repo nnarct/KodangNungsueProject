@@ -17,7 +17,6 @@ const storageRef = firebase.storage().ref()
 // <----------------------------------- ส่วนดำเนินการ --------------------------------------->
 
 let userDetail = JSON.parse(localStorage.getItem('userNow'));
-console.log(userDetail);
 let userLogin = false;
 let headerButton = document.querySelector('.button');
 let headerBasket = document.querySelector('.rmenu');
@@ -69,8 +68,8 @@ inputText.addEventListener('keyup', (event) => {
     }
 })
 
-let cates = document.querySelectorAll('#cat > ul > h5');
-let subCates = document.querySelectorAll('#cat > ul > li');
+let cates = document.querySelectorAll('.cat > ul > h5');
+let subCates = document.querySelectorAll('.cat > ul > li');
 
 cates.forEach((cate) => {
     cate.addEventListener('click', () => {
@@ -304,6 +303,7 @@ function showProductSearch(searchText) {
                                         });
                                         if(!dealing) {
                                             let relationShip = {
+                                                seller: product.seller,
                                                 sellerId: product.userId,
                                                 userId: userDetail.id
                                             };
@@ -520,6 +520,7 @@ function showProductType(type) {
                                         });
                                         if(!dealing) {
                                             let relationShip = {
+                                                seller: product.seller,
                                                 sellerId: product.userId,
                                                 userId: userDetail.id
                                             };

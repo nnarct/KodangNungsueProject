@@ -218,7 +218,7 @@ ul.menu{
 .basketp{
   margin-left: 2%;
   margin-right: 2%;
-  margin-top: 4%;
+  margin-top: 2%;
 }
 
 .topna{
@@ -327,7 +327,16 @@ td span input{
 }
 
 .total{
+  width: 100%;
+  border: 2px solid purple;
+  justify-content: flex-end;
+  font-size: 1.2em;
+} 
+
+#t-b{
   display: none;
+  width: 100%;
+  border: 2px solid purple;
   justify-content: flex-end;
   font-size: 1.2em;
 }

@@ -75,17 +75,20 @@ function login() {
             document.getElementById('floatingPassword').value = '';
 
             database_ref.get().then((doc) => {
-                let userDetail = {
-                    id: doc.id,
-                    address: doc.data().address,
-                    email: doc.data().email,
-                    name: doc.data().name,
-                    surname: doc.data().surname,
-                    phone: doc.data().phone,
-                    type: doc.data().type,
-                    last_login: doc.data().last_login
+                let userDetail;
+                if (doc.data().type === 'buyer') {
+                    userDetail = {
+                        id: doc.id,
+                        address: doc.data().address,
+                        email: doc.data().email,
+                        name: doc.data().name,
+                        surname: doc.data().surname,
+                        phone: doc.data().phone,
+                        type: doc.data().type,
+                        last_login: doc.data().last_login
+                    }
                 }
-                if(userDetail.type === 'seller') {
+                else if (doc.data().type === 'seller') {
                     userDetail = {
                         id: doc.id,
                         address: doc.data().address,
@@ -101,11 +104,12 @@ function login() {
                         storeName: doc.data().storeName
                     }
                 }
+                
                 Swal.fire(
                     'Login Success',
                     'Welcome to homepage',
                     'success'
-                )               
+                )
                 localStorage.setItem('userNow', JSON.stringify(userDetail));
                 sessionStorage.setItem('userDetail', JSON.stringify(userDetail));
                 setTimeout(() => {
