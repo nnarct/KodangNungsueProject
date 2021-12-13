@@ -1,0 +1,47 @@
+#popup5 { padding: 0px; padding-bottom: 3%;  }
+.Os-container { display: flex; flex-direction: column; border-radius: 20%; height: 100%; width: 99% }
+.Os-menu { display: flex; flex-direction: row; width: 100%; height: fit-content; justify-content: stretch; box-shadow: 0 4px 2px -2px rgb(226, 226, 226); z-index: 2;}
+.branchs { border: none;text-align: center; width: 33%; padding: 1% 1.75%;font-size: 1.7em; font-family: Itim; background-color: white; }
+.branchs { border-bottom: 7px solid transparent; cursor: pointer; }
+.branchs:hover { border-bottom: 7px solid green; }
+.branchs:active { background-color: rgb(155, 231, 97); border-bottom: 7px solid rgb(124, 186, 75); }
+
+.OS-check, .OS-deli, .OS-get { display: none; height: 98%; max-width: 100%; overflow-x: hidden; }
+.OS-check { display: block; }
+.OS-deli { display: none; }
+.OS-get { display: none;} 
+
+.one-store-dis { width: 100%; z-index: -1; }
+.ost-header {  font-size: 1.5em; color:rgba(3, 17, 0,); background-color: rgb(247, 247, 247); padding: 0.5% 2% ; border-bottom: 2px solid rgb(202, 202, 202); border-top:2px solid rgb(202, 202, 202); } 
+.ost-header span { font-weight: lighter; color: green; }
+.product-part { display: flex; align-content: center; width: 100%; flex-wrap: wrap; justify-content: center; padding-bottom: 2%; }
+.one-product-dis {  
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-content: center;
+    width: fit-content;
+    padding: 1%;
+    margin: 1%; box-shadow: 0px 0px 4px 3px rgb(228, 227, 227);
+    border-radius: 10px;
+}
+.one-product-dis:hover { cursor: pointer; background-color: #00460d40; }
+    
+.one-product-no-hov { 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-content: center;
+    width: fit-content;
+    padding: 1%;
+    margin: 1%; box-shadow: 0px 0px 4px 3px rgb(228, 227, 227);
+    border-radius: 10px;
+}
+.photo-display { min-width: fit-content; }
+
+.prod-info-display {  cursor: default;  text-align: center; font-size: 1.2em;  }
+.prod-info-display button { border-radius: 6px; padding: 3px 5px; margin: 3px; margin-top: 2%; background-color: lightgreen; font-size: .7em;}
+.prod-info-display button:hover { cursor: pointer; background-color: rgb(129, 255, 129); }
+
+.paymentbtn { border-radius: 8px; font-size: 0.8em; margin-left: 2%; padding: 5px 2%; background-color: #68c224; color: white; font-family: Itim;}
+.paymentbtn:hover {  cursor: pointer; color: black; background-color: #a0f162; }

@@ -37,12 +37,14 @@ buttonLogout.addEventListener('click', () => {
 // <-------------------------- ส่วนตรวจสอบแถบด้านบน --------------------------->
 let headerButton = document.querySelector('.button');
 let headerBasket = document.querySelector('.rmenu');
+let productCount = document.querySelector('.num');
 headerBasket.style.display = 'none';
 
 auth.onAuthStateChanged((user) => {
     if (user) {
         headerButton.style.display = 'none';
         headerBasket.style.removeProperty('display');
+        loadProductCount();
     }
     else {
         headerBasket.style.display = 'none';

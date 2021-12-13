@@ -17,12 +17,12 @@ const storageRef = firebase.storage().ref()
 // <----------------------------------- ส่วนดำเนินการ --------------------------------------->
 
 let userDetail = JSON.parse(localStorage.getItem('userNow'));
+console.log(userDetail);
 let userLogin = false;
 let headerButton = document.querySelector('.button');
 let headerBasket = document.querySelector('.rmenu');
 let productCount = document.querySelector('.num');
 headerBasket.style.display = 'none';
-loadProductCount();
 
 const searchFormOtherPage = JSON.parse(sessionStorage.getItem('searchFromOtherPage'));
 sessionStorage.removeItem('searchFromOtherPage');
@@ -32,6 +32,7 @@ auth.onAuthStateChanged((user) => {
         userLogin = true;
         headerButton.style.display = 'none';
         headerBasket.style.removeProperty('display');
+        loadProductCount();
     }
     else {
         userLogin = false;

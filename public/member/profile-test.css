@@ -5,7 +5,7 @@ body { font-family: Itim; background-color: #EBE5D7; }
     justify-content: space-between;
     align-items: center;
     padding: 0px 30px;
-    height: 90px;
+    height: 80px;
     }
     
 nav {
@@ -49,7 +49,7 @@ nav {
     position:relative;
     width:100%;
     Background:#1D3D14;
-    height: 90px;
+    height: 80px;
     min-width: fit-content;
 }
 
@@ -156,27 +156,29 @@ nav {
       font-size: 1.2em;
     }
     
-
+.navLeft { margin-top: 2%; } 
 .navLeft h1 { font-weight: lighter; font-size: 1.5em; cursor: default; padding-left: 10%; }   
-.contents { position: absolute;width:96%; height: 80%; border: 2px solid olive; margin: 2%; min-width: 900px;}
-.contents { display: flex; flex-direction: row;}
+.contents { position: absolute;width:96%; height: 87%; margin: 2%; min-width: 900px;}
+.contents { margin-top: 0px; display: flex; flex-direction: row;}
 .navLeft { height: 80%; width: 18%; min-width: fit-content; padding: 17px; max-width: 230px; }
-.navRight { height: 86%; width: 82%; min-width: fit-content; }
+.navRight { height: 86%; width: 82%;  }
 
-h2 { text-align: left; width:fit-content; font-size: 1.2em; font-weight: lighter; padding-top: 10px; display: flex; align-items: center;}
+.navLeft h2 { text-align: left; width:fit-content; font-size: 1.2em; font-weight: lighter; padding-top: 10px; display: flex; align-items: center;}
 .colored { padding: 0px 3px; color: transparent; }
-.posab {position: absolute;}
-h2:hover .colored { display: block; color: green;  }
-.navLeft h1:hover .colored { font-size: 1em; color: orange; min-width: fit-content;}
+.posab { position: absolute; }
+h2:hover .colored { display: block; color: green; }
+.navLeft h1:hover .colored { font-size: 1em; color: orange; min-width: fit-content; }
 
 .navLeft h2 { margin-left: 26px; padding-left: 10%; width: fit-content; transition: .5s ease; min-width: fit-content;}
 .navLeft h2:hover{ cursor: pointer; transform: translateX(7%); }
 
-#popup1, #popup2, #popup3, #popup4, #popup5, #popup6 { display: none; width: 90%; min-height: 400px; min-width: fit-content; 
+#popup1, #popup2, #popup3, #popup4, #popup5, #popup6 { display: none; width: 90%; min-height: 400px;
     padding: 2% 3%; margin:3% 2% 0px 2%; border-radius: 20px; box-shadow: 0px 3px 4px 0.5px rgb(163, 163, 163); background-color: white;
-   min-height: 420px;   height: 95%;  
+   min-height: 420px;   height: 100%;  
 }
-#popup6 { display: block; }
+#popup1 { display: block; }
+#popup5, #popup6 { width: 96%; }
+
 .sepLine { height: 2px; background-color: lightgray; margin: 1% 0px; width: 100%; }
 .sepLine2 {  z-index: 2; height: 2px; border-bottom: 2px solid lightgray; margin-top: 1%; }
 .topicName { font-size: 2em; padding-left: 5%; padding-top: 7px; z-index: 2; }

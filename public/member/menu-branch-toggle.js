@@ -1,3 +1,43 @@
+// <!------------------------- order status menu  ------------------------->
+
+// ปุ่มรอการตรวจสอบ
+document.getElementById("wait4check").onclick = function () {
+    document.getElementById("wait4check").style.background = "rgb(155, 231, 97)" ;
+    document.getElementById("wait4deli").style.background = "white";
+    document.getElementById("gift").style.background = "white";
+    
+    document.getElementById("OS-check").style.display = "block";
+    document.getElementById("OS-deli").style.display = "none";
+    document.getElementById("OS-get").style.display = "none";
+}
+// ปุ่มรอการจัดส่ง
+document.getElementById("wait4deli").onclick = function () {
+    document.getElementById("wait4check").style.background = "white" ;
+    document.getElementById("wait4deli").style.background = "rgb(155, 231, 97)";
+    document.getElementById("gift").style.background = "white";
+
+    document.getElementById("OS-check").style.display = "none";
+    document.getElementById("OS-deli").style.display = "block";
+    document.getElementById("OS-get").style.display = "none";
+}
+// ปุ่มที่ต้อได้รับ
+document.getElementById("gift").onclick = function () {
+    document.getElementById("wait4check").style.background = "white";
+    document.getElementById("wait4deli").style.background = "white";
+    document.getElementById("gift").style.background = "rgb(155, 231, 97)";
+
+
+    document.getElementById("OS-check").style.display = "none";
+    document.getElementById("OS-deli").style.display = "none";
+    document.getElementById("OS-get").style.display = "block";
+
+}
+
+
+
+
+
+// <!------------------------- seller menu ------------------------->
 document.getElementById("sellerInfo").onclick = function () {
     document.getElementById("sellerInfo").style.background = "rgb(155, 231, 97)" ;
     document.getElementById("sellerStorage").style.background = "white";

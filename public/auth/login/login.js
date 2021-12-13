@@ -85,6 +85,22 @@ function login() {
                     type: doc.data().type,
                     last_login: doc.data().last_login
                 }
+                if(userDetail.type === 'seller') {
+                    userDetail = {
+                        id: doc.id,
+                        address: doc.data().address,
+                        email: doc.data().email,
+                        name: doc.data().name,
+                        surname: doc.data().surname,
+                        phone: doc.data().phone,
+                        type: doc.data().type,
+                        last_login: doc.data().last_login,
+                        bankName: doc.data().bankName,
+                        bankNumber: doc.data().bankNumber,
+                        bankType: doc.data().bankType,
+                        storeName: doc.data().storeName
+                    }
+                }
                 Swal.fire(
                     'Login Success',
                     'Welcome to homepage',

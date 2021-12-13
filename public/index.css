@@ -403,6 +403,7 @@ img {vertical-align: middle; }
   margin-top: 6%;
   margin-bottom: 6%;
 	animation: fade 0.3s;
+  cursor: pointer;
 }
 
 

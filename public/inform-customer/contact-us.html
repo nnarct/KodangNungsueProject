@@ -8,6 +8,7 @@
 <!------------------------------------------------พวกสัญลักษณ์----------------------------->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
 <!--script-->
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
@@ -18,7 +19,7 @@
     .currentPage { cursor: pointer; text-align: center;color: white; }
     .currentPage:hover { color: #e7b975; }
 </style>
-<body>
+<body style="background-image: url(../src/decimg.jpg); background-repeat: no-repeat; background-size: cover;" >
     <div id="main">
         <!----------------------------------------เมนูบน------------------------------------------->
         <div class="top">
@@ -43,7 +44,7 @@
                 </div>
 
                 <div class="rmenu" align="right">
-                    <a href="#"><img src="../src/icon/cart.png" id="iconc">
+                    <a href="../member/d/basket.html"><img src="../src/icon/cart.png" id="iconc">
                         <span class="num">0</span></a>
                     <!-- popup to logout -->
                     <img src="../src/icon/peo.png" id="iconp" style="cursor: pointer;">            
@@ -102,8 +103,18 @@
                 </ul>
             </div>
         </div>
+
+       <div class="contents">
+           <div class="contact-us-header">Contact Us</div>
+           <br>
+           <div class="contact-email"><textarea type="email" rows="1" placeholder="your email"></textarea></div>
+           <br>
+           <div class="contact-us-text"><textarea type="text" placeholder="ติดต่อเรื่อง"></textarea></div>
+           <br>
+           <div class="commit" align="center"><button >ส่ง</button></div>
+       </div>
        
-        
+    </div>   
 
 
         <!--------------------------slideshow--------------------------------------------------------------->

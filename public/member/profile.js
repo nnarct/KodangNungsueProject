@@ -1,5 +1,6 @@
 // <----------------------------- ส่วนดำเนินการหน้าแสดงข้อมูลโปรไฟล์ -------------------------------------->
 let userDetail = JSON.parse(localStorage.getItem('userNow'));
+console.log(userDetail)
 // ชื่อผู้ใช้
 let profileName = document.querySelector('.name');
 
@@ -255,12 +256,103 @@ function sendEmail() {
 // <------------------------ ส่วนตรวจสอบ user ว่าเป็นผู้ขายหรือผู้ซื้อ ---------------------------->
 let sellingBar = document.querySelector('#selling');
 let sellerBar = document.querySelector('#seller');
+updateSellBar();
 
-if(userDetail.type === 'buyer') {
-    sellingBar.style.display = 'block';
-    sellerBar.style.display = 'none';
+// <------------------------------- สำหรับสมัครเป็นผู้ขาย ----------------------------------->
+let allInputRegis = document.querySelectorAll('#inputRegisSeller > div > li > input');
+let confirmRegisSellerBtn = document.querySelector('#inputRegisSeller > div > button');
+confirmRegisSellerBtn.addEventListener('click', confirmRegisToSeller);
+
+function updateSellBar() {
+    userDetail = updateUserDetail();
+    if (userDetail.type === 'buyer') {
+        sellingBar.style.display = 'block';
+        sellerBar.style.display = 'none';
+    }
+    else if (userDetail.type === 'seller') {
+        sellingBar.style.display = 'none';
+        sellerBar.style.display = 'block';
+    }
 }
-else if(userDetail.type === 'seller') {
-    sellingBar.style.display = 'none';
-    sellerBar.style.display = 'block';
+
+function confirmRegisToSeller() {
+    userDetail = updateUserDetail();
+    let storeName = allInputRegis[0].value;
+    let bankName = allInputRegis[1].value;
+    let bankNumber = allInputRegis[2].value;
+    let bankType = allInputRegis[3].value;
+
+    if (validate_field(storeName) == false || validate_field(bankName) == false
+        || validate_field(bankNumber) == false || validate_field(bankType) == false) {
+        Swal.fire(
+            'Error',
+            'Please fill out all text fields',
+            'error'
+        )
+        return;
+    }
+
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "Please check the correctness of the information",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sure'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: 'Please wait',
+                text: 'System is processing',
+                icon: 'info',
+                allowEscapeKey: false,
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading()
+                }
+            });
+
+            database.collection('users').doc(userDetail.id).update({
+                type: 'seller',
+                bankName: bankName,
+                bankNumber: bankNumber,
+                bankType: bankType,
+                storeName: storeName
+            }).then(() => {
+                database.collection('users').doc(userDetail.id).get().then((doc) => {
+                    let sellerDetail = {
+                        id: doc.id,
+                        address: doc.data().address,
+                        email: doc.data().email,
+                        name: doc.data().name,
+                        surname: doc.data().surname,
+                        phone: doc.data().phone,
+                        type: doc.data().type,
+                        last_login: doc.data().last_login,
+                        bankName: doc.data().bankName,
+                        bankNumber: doc.data().bankNumber,
+                        bankType: doc.data().bankType,
+                        storeName: doc.data().storeName
+                    }
+                    localStorage.setItem('userNow', JSON.stringify(sellerDetail));
+                    Swal.fire(
+                        'Register Success!',
+                        'Your account is now a seller',
+                        'success'
+                    )
+                    userDetail = updateUserDetail();
+                    updateSellBar();
+                    document.querySelector('#beforeRegisSeller').style.display = 'none';
+                    document.querySelector('#becomingSeller').style.display = 'none';
+                    document.querySelector("#welcoming").style.display = "none";
+                    document.querySelector('#afterRegisSeller').style.display = 'block';
+
+                });
+            }).catch((error) => {
+                console.log(error.message);
+            });
+        }
+    });
 }
+

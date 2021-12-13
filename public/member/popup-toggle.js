@@ -1,5 +1,7 @@
 
-    document.getElementById("myinfo").onclick = function () {
+// การ click menu หลัก ๆ   (บัญชีของฉัน เปลี่ยรหัสผ่าน ที่ต้องชำระ สถานะสินค้า เริ่มการขายเ ร้านของฉัน)
+
+document.getElementById("myinfo").onclick = function () {
         document.getElementById("toEdit-btn").style.display = "block"; // popup ปุ่ม แก้ไขข้อมูล
         document.getElementById("editing").style.display = "none"; // ปุ่ม ย้อนกลับ
         document.getElementById("displayInput").style.display = "none"; // input field สำหรับการเปลี่ยนข้อมูลส่วนตัวของ user
@@ -45,6 +47,8 @@
         document.getElementById("popup5").style.display = "block";// popup สถานะสินค้า
         document.getElementById("popup6").style.display = "none"; // popup การขาย
     }
+
+    // click เริ่มการขาย
     document.getElementById("selling").onclick = function () {
         document.getElementById("popup1").style.display = "none"; // popup บัญชีของฉัน
         document.getElementById("popup2").style.display = "none"; // popup เปลี่ยนพาสเวิด
@@ -52,9 +56,12 @@
         document.getElementById("popup4").style.display = "none"; // popup สินค้าที่ต้องชำระ
         document.getElementById("popup5").style.display = "none"; // popup สถานะสินค้า
         document.getElementById("popup6").style.display = "block";// popup การขาย
+        document.getElementById("beforeRegisSeller").style.display = "block";
+        document.getElementById("afterRegisSeller").style.display = "none";
         document.getElementById("welcoming").style.display = "block";
         document.getElementById("becomingSeller").style.display= "none";
     }
+    // click ร้านของฉัน
     document.getElementById("seller").onclick = function () {
         document.getElementById("popup1").style.display = "none"; // popup บัญชีของฉัน
         document.getElementById("popup2").style.display = "none"; // popup เปลี่ยนพาสเวิด
@@ -62,5 +69,7 @@
         document.getElementById("popup4").style.display = "none"; // popup สินค้าที่ต้องชำระ
         document.getElementById("popup5").style.display = "none"; // popup สถานะสินค้า
         document.getElementById("popup6").style.display = "block";// popup การขาย
+        document.getElementById("beforeRegisSeller").style.display = "none";
+        document.getElementById("afterRegisSeller").style.display = "block";
     }
-        
+
