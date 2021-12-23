@@ -24,8 +24,9 @@
             <span>
                 <a href="../../index.html"><img id="logo" src="../src/logo/logona.png" /></a></span>
             <ul class="menu">
-                <li><a href="../../index.html"style="width: 75px;">หน้าหลัก</a></li>
-                <li><a href="../../inform-customer/how-to-order.html" style="width: 145px;">วิธีการสั่งซื้อสินค้า</a></li>
+                <li><a href="../../index.html" style="width: 75px;">หน้าหลัก</a></li>
+                <li><a href="../../inform-customer/how-to-order.html" style="width: 145px;">วิธีการสั่งซื้อสินค้า</a>
+                </li>
                 <li><a href="../../inform-customer/contact-us.html" style="width: 90px;">ติดต่อเรา</a></li>
                 <li><a href="../../inform-customer/payment-report.html" style="width: 105px;">แจ้งชำระเงิน</a></li>
             </ul>
@@ -37,7 +38,7 @@
                 <img src="../src/icon/peo.png" id="iconp" style="cursor: pointer;">
             </div>
         </div>
-        
+
         <div id="logoutshow" class="logout">
             <div id="logoutpop" class="logoutpopcl">
                 <a href="../profile.html" style="text-decoration: none; color: black;">
@@ -48,26 +49,26 @@
         </div>
     </div>
 
-           
-            <!--------------------------logout  ------------------------------------------------------------->
-            <script>
-                document.getElementById("iconp").onclick = function () {
-                    document.getElementById("logoutshow").style.display = "block";
-                }
-                // document.getElementById("backprofile").onclick = function () {
-                //     document.getElementById("logoutshow").style.display = "none";
-                // }
-                document.addEventListener('mouseup', function(e) {
-                    let container = document.getElementById('logoutshow');
-                    if (!container.contains(e.target)) {
-                        container.style.display = 'none';
-                    }
-                });
-            </script>
-            <!------------------------------------------------------------------------------------------->
+
+    <!--------------------------logout  ------------------------------------------------------------->
+    <script>
+        document.getElementById("iconp").onclick = function () {
+            document.getElementById("logoutshow").style.display = "block";
+        }
+        // document.getElementById("backprofile").onclick = function () {
+        //     document.getElementById("logoutshow").style.display = "none";
+        // }
+        document.addEventListener('mouseup', function (e) {
+            let container = document.getElementById('logoutshow');
+            if (!container.contains(e.target)) {
+                container.style.display = 'none';
+            }
+        });
+    </script>
+    <!------------------------------------------------------------------------------------------->
     <div class="bg">
         <div class="basketp">
-            
+
             <!--header-->
             <h1 class="topna">ตะกร้าของฉัน</h1>
             <table id="customers">
@@ -78,92 +79,18 @@
                     <th style="width: 15%;">ราคารวม</th>
                 </tr>
             </table>
-                
-            <!-- 1 ร้าน -->
-            <div id="">
-                <table id="customers">     
-                    
-                    <!-- หัวข้อชื่อร้าน -->
-                    <tr style="background-color: #ddd; border: 0.5px solid rgb(139, 139, 139);">
-                        <td colspan="4">มังกี้ ดี ท๊อฟฟี่</td>
-                        <td><span class="addq1" id="aq1">
-                                <input type="button" id="editqBtn" class="pad1 gBtn" value="เลือกร้านนี้">
-                            </span></span>
-                            <span class="chos1" id="chs1">
-                                <input type="button" id="backqBtn" class="pad1 oBtn" value="ยกเลิก">
-                            </span>
-                        </td>
 
-                    </tr>
+            <!-- พื้นที่ของร้านค้าทั้งหมด -->
+            <div id="area-shop">
 
-                    <!-- สินค้า 1 ชิ้น-->
-                    <tr align="center">
-                        <td style="width:20%">
-                            <div class="imgbas">
-                                <input type="checkbox" class="check" id="check">
-                                <img src="testprod/p1.jpg">
-                            </div>
-                        </td>
-                        <td align="left">
-                            <div>
-                                <p>PIECE 500 QUIZ BOOK</p>
-                                <a href="">ลบออกจากตะกร้า</a>
-                            </div>
-                        </td>
-                        <td>200 บาท</td>
-                        <td><input type="number" min="0" value="1" class="quanprod"></td>
-                        <td>200 บาท</td>
-                    </tr>
-                </table> 
 
-                    <!-- หลังกดปุ่ม เลือกร้านนี้ แล้ก็เลือกสินค้าเเล้ว -->
-                        <div class="total" id="t-b" style="padding-bottom: 3%;">
-                            <table>
-                                <tr>
-                                    <td>ค่าหนังสือ</td>
-                                    <td>400 บาท</td>
-                                </tr>
-                                <tr>
-                                    <td>ค่าส่ง</td>
-                                    <td>50 บาท</td>
-                                </tr>
-                                <tr>
-                                    <td>ราคารวม</td>
-                                    <td>450 บาท</td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><input type="button" id="editqBtn" class="pad1 gBtn" value="ชำระเงิน"></td>
-                                </tr>
-                            </table>
-                        </div>
-                    
             </div>
-            <!-- จบ 1 ร้าน -->
 
-            
-            
         </div>
     </div>
+    <script src="../basicOnlyLogin.js"></script>
+    <script src="basket.js"></script>
 
-    
-  
-    <!------------------------choose----------------------------------------------------------------->
-    <script>
-
-        // กดปุ่ม เลือกร้านนี้
-        document.getElementById("editqBtn").onclick = function () {
-            document.getElementById("aq1").style.display = "none" ;
-            document.getElementById("chs1").style.display="block" ;
-            document.getElementById("t-b").style.display ="flex";
-        }
-        // กดปุ่ม ยกเลิก
-        document.getElementById("backqBtn").onclick = function () {
-            document.getElementById("aq1").style.display = "block" ;
-            document.getElementById("chs1").style.display="none";
-            document.getElementById("t-b").style.display ="none";
-        }
-
-    </script>
 </body>
 
 </html>

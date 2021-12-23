@@ -255,6 +255,14 @@ function showProductSearch(searchText) {
                 
                 // ใส่ของเข้าตะกร้า
                 cart.addEventListener('click', () => {
+                    if(product.amount === 0) {
+                        Swal.fire(
+                            'Sorry',
+                            "This product is temporarily out of stock",
+                            'info'
+                        )
+                        return;
+                    }
                     let alreadyChoose = false;
                     database.collection('product_selected').where('productId', '==', product.id)
                         .where('userId', '==', userDetail.id).get().then((result) => {
@@ -472,6 +480,14 @@ function showProductType(type) {
 
                 // ใส่ของเข้าตะกร้า
                 cart.addEventListener('click', () => {
+                    if(product.amount === 0) {
+                        Swal.fire(
+                            'Sorry',
+                            "This product is temporarily out of stock",
+                            'info'
+                        )
+                        return;
+                    }
                     let alreadyChoose = false;
                     database.collection('product_selected').where('productId', '==', product.id)
                         .where('userId', '==', userDetail.id).get().then((result) => {

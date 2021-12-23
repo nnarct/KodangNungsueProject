@@ -312,6 +312,7 @@ td span input{
 .gBtn{
   background-color: #7CBA4B;
 }
+.gBtn:hover { background-color: #8de24b; color: black }
 
 .pad1{
   padding: 5px 10px 5px 10px;
@@ -322,13 +323,15 @@ td span input{
   cursor: pointer;
 }
 
+
 .oBtn{
   background-color: #FA8334;
 }
+.oBtn:hover { background-color: #ff6d0b; }
 
 .total{
+  display: none;
   width: 100%;
-  border: 2px solid purple;
   justify-content: flex-end;
   font-size: 1.2em;
 } 
@@ -336,7 +339,7 @@ td span input{
 #t-b{
   display: none;
   width: 100%;
-  border: 2px solid purple;
+  
   justify-content: flex-end;
   font-size: 1.2em;
 }

@@ -195,6 +195,9 @@ function showProduct() {
     let balancedDetail = document.createElement('span');
     balancedDetail.classList.add('light', 'proleft');
     balancedDetail.innerHTML = 'เหลือสินค้า ' + productDetail.amount + ' เล่ม';
+    if(productDetail.amount === 0) {
+        balancedDetail.innerHTML = 'สินค้าหมด';
+    }
     balanced.append(balancedDetail);
 
     // หยิบใส่ตะกร้า
@@ -542,7 +545,7 @@ function showProduct() {
                 userId: doc.data().userId
             };
 
-            if (product.id !== productDetail.id) {
+            if (product.id !== productDetail.id && product.userId === productDetail.userId) {
                 // กรอบสินค้า
                 let pbox = document.createElement('div');
                 pbox.classList.add('pbox');
@@ -639,6 +642,14 @@ function showProduct() {
 
                 // ใส่ของเข้าตะกร้า
                 cart.addEventListener('click', () => {
+                    if(product.amount === 0) {
+                        Swal.fire(
+                            'Sorry',
+                            "This product is temporarily out of stock",
+                            'info'
+                        )
+                        return;
+                    }
                     let alreadyChoose = false;
                     database.collection('product_selected').where('productId', '==', product.id)
                         .where('userId', '==', userDetail.id).get().then((result) => {

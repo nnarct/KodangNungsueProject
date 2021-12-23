@@ -9,8 +9,8 @@
 .dataDisplay { height: 90%; overflow: auto; overflow-x: hidden;}
 .S-Info, .S-Storage, .S-Ship, .S-AddProduct { display: none; height: 100%; }
 .S-Info { display: block; height: 50%;}
-.S-Storage { border: 3px solid lightpink;  } 
-.S-Ship { border: 3px solid lightseagreen; }
+/* .S-Storage { border: 3px solid lightpink;  } 
+.S-Ship { border: 3px solid lightseagreen; } */
 .S-AddProduct { width: 97%; height: fit-content;}
 
 /* popup ข้อมูลร้าน */

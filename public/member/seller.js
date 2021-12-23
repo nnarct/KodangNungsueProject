@@ -135,6 +135,12 @@ function productRegis() {
                                     'Your product has been registered',
                                     'success'
                                 )
+                                document.getElementById('product-name').value = '';
+                                document.getElementById('price').value = '';
+                                document.getElementById('province').value = '';
+                                document.getElementById('condition').value = '';
+                                document.getElementById('amount').value = '';
+                                document.getElementById('detail').value = '';
                             }
                         }).catch((error) => {
                             console.log(error.message)

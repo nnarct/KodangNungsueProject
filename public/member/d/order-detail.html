@@ -24,8 +24,9 @@
             <span>
                 <a href="../../index.html"><img id="logo" src="../src/logo/logona.png" /></a></span>
             <ul class="menu">
-                <li><a href="../../index.html"style="width: 75px;">หน้าหลัก</a></li>
-                <li><a href="../../inform-customer/how-to-order.html" style="width: 145px;">วิธีการสั่งซื้อสินค้า</a></li>
+                <li><a href="../../index.html" style="width: 75px;">หน้าหลัก</a></li>
+                <li><a href="../../inform-customer/how-to-order.html" style="width: 145px;">วิธีการสั่งซื้อสินค้า</a>
+                </li>
                 <li><a href="../../inform-customer/contact-us.html" style="width: 90px;">ติดต่อเรา</a></li>
                 <li><a href="../../inform-customer/payment-reporthtml" style="width: 105px;">แจ้งชำระเงิน</a></li>
             </ul>
@@ -33,18 +34,22 @@
                 <a href="basket.html"><img src="../src/icon/cart.png" id="iconc">
                     <span class="num">0</span></a>
                 <!-- popup to logout -->
-                <img src="../src/icon/peo.png" id="iconp" style="cursor: pointer;">            
+                <img src="../src/icon/peo.png" id="iconp" style="cursor: pointer;">
+            </div>
         </div>
     </div>
-</div>
 
     <div id="logoutshow" class="logout">
         <div id="logoutpop" class="logoutpopcl">
-            <a href="../profile.html" style="text-decoration: none; color: black; box-shadow: none;"><div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey; box-shadow: none;">ดูโปรไฟล์</div></a>
-            <div class="textbox tbLogout" style="text-decoration: none; color: black; box-shadow: none;">ออกจากระบบ</div>
+            <a href="../profile.html" style="text-decoration: none; color: black; box-shadow: none;">
+                <div class="textbox tbProfile" style="border-bottom: 1px solid lightgrey; box-shadow: none;">ดูโปรไฟล์
+                </div>
+            </a>
+            <div class="textbox tbLogout" style="text-decoration: none; color: black; box-shadow: none;">ออกจากระบบ
+            </div>
         </div>
     </div>
-<br>
+    <br>
     <!--------------------------logout  ------------------------------------------------------------->
     <script>
         document.getElementById("iconp").onclick = function () {
@@ -53,54 +58,46 @@
         // document.getElementById("backprofile").onclick = function () {
         //     document.getElementById("logoutshow").style.display = "none";
         // }
-        document.addEventListener('mouseup', function(e) {
+        document.addEventListener('mouseup', function (e) {
             let container = document.getElementById('logoutshow');
             if (!container.contains(e.target)) {
                 container.style.display = 'none';
             }
         });
     </script>
-<div align="center">
-    <div class="bg">
-        <div class="debuy">
-            <h1 class="topna">เลขที่ใบคำสั่งซื้อ
-                <span id=""> 99999999</span>
-            </h1>
+    <div align="center">
+        <div class="bg">
+            <div class="debuy">
+                <h1 class="topna">เลขที่ใบคำสั่งซื้อ
+                    <span id=""> 99999999</span>
+                </h1>
 
-        </div>
-        <div class="detailbuy">
-            <h1>สินค้าทั้งหมดที่ต้องชำระ</h1>
-
-            <!-- สินค้าชิ้นที่ 1 -->
-            <div id="" >
-                <li>PIECE 500 QUIZ BOOK</li> 
-                <p>จำนวน <span id=""> 2</span> เล่ม </p>
-                <p>รวมราคา <span id=""> 200 </span> บาท </p>
             </div>
-            <!-- สินค้าชิ้นที่ 2 -->
-            <div id="">
-                <li>มานะ มานี ป.6</li> 
-                <p>จำนวน <span id=""> 2</span> เล่ม </p> 
-                <p>รวมราคา <span id=""> 200 </span> บาท </p>
-            </div> 
+            <div class="detailbuy">
+                <h1>สินค้าทั้งหมดที่ต้องชำระ</h1>
+                <div id="allPriceZone">
 
-            <h1>ยอดเงินทั้งหมดที่ต้องชำระ
-                <span style="margin-left: 1%; font-size: 1.5em;">450</span> 
-                บาท
-            </h1>
+                </div>
 
-            <h1>
-                <span style="color: #FA8334; margin-right: 2%;">หมายเหตุ*</span>
-                ที่ใบคำสั่งซื้อใช้อ้างอิงในการชำระเงินในขั้นตอนต่อไป
-            </h1>
+                <h1>ยอดเงินทั้งหมดที่ต้องชำระ
+                    <span id="totalPrice" style="margin-left: 1%; font-size: 1.5em;">450</span>
+                    บาท
+                </h1>
 
-        </div>
+                <h1>
+                    <span style="color: #FA8334; margin-right: 2%;">หมายเหตุ*</span>
+                    เลขที่ใบคำสั่งซื้อใช้อ้างอิงในการชำระเงินในขั้นตอนต่อไป
+                </h1>
 
-        <div class="conbuy" align="right">
-            <a href="../../inform-customer/payment-report.html" class="pad1 gBtn">แจ้งชำระเงิน</a>
+            </div>
+
+            <div class="conbuy" align="right">
+                <a href="../../inform-customer/payment-report.html" class="pad1 gBtn">แจ้งชำระเงิน</a>
+            </div>
         </div>
     </div>
-</div>
+    <script src="../basicOnlyLogin.js"></script>
+    <script src="order-detail.js"></script>
     <!--------------------------logout  ------------------------------------------------------------->
     <script>
         document.getElementById("iconp").onclick = function () {

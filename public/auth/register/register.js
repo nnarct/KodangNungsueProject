@@ -113,6 +113,9 @@ function register() {
                                 'Your information has been registered',
                                 'success'
                             )
+                            setTimeout(() => {
+                                location.href = '../login/login.html';
+                            }, 1000);
                         });
                     document.getElementById('inputAddress').value = '';
                     document.getElementById('inputEmail').value = '';

@@ -68,7 +68,8 @@
             <h2 id="orderHistory">ประวัติการซื้อ <span class="colored">❯</span></h2>
             <h2 id="unpaid">ที่ต้องชำระ <span class="colored">❯</span></h2>
             <h2 id="orderStatus"> สถานะสินค้า <span class="colored">❯</span></h2><br>
-            <h1 id="selling">เริ่มการขาย <span class="colored posab">❯</span></h1><!-- will show only non-seller user -->
+            <h1 id="selling">เริ่มการขาย <span class="colored posab">❯</span></h1>
+            <!-- will show only non-seller user -->
             <h1 id="seller">ร้านของฉัน <span class="colored posab">❯</span></h1> <!-- will show only seller user-->
         </div>
         <!----------------------------------->
@@ -290,146 +291,19 @@
             <div id="popup4">
                 <div class="topicName">ที่ต้องชำระ</div>
                 <div class="sepLine2"></div>
-                <div class="allcb">
+                <div class="allcb" id="pending-payment">
 
-                    <!-- 1 คำสั่งซื้อ -->
-                    <div class="">
-                        
-                        <!-- แสดงสินค้า 1 ร้าน -->
-                        <div class="one-store-dis">
-                                
-                            <div class="ost-header">
-                                ร้าน <span id="">สวัสดีตอนนอน</span>
-                                เลขที่ใบคำสั่งซื้อ 
-                                    <span id="">5444</span>
-                                <span style=" font-style: oblique; color: black;">
-                                ราคารวม
-                                <span style=" color: red;" id="">95498</span> 
-                                บาท </span>
-                                <a href="../inform-customer/payment-report.html">
-                                    <input type="button" id="" class="paymentbtn" value="แจ้งชำระเงิน">
-                                </a>
-                            </div>
-                        
-                        <!-- ส่วนแสดงสินค้า  -->
-                            <div class="product-part">
-                                <!-- แสดงสินค้า 1 อัน -->
-                                <div class="one-product-dis">
-                                    <div class="photo-display"  align="center">
-                                        <div class="prodaga" >
-                                            <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                        </div>
-                                    </div>
-                                    <div class="prod-info-display">
-                                        <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                        จำนวน <span id="">8</span> เล่ม<br>
-                                        ราคา <span id="">8</span> บาท
-                                    </div>
-                                </div>
-
-                                <!-- แสดงสินค้า 1 อัน -->
-                                <div class="one-product-dis">
-                                    <div class="photo-display"  align="center">
-                                        <div class="prodaga" >
-                                            <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                        </div>
-                                    </div>
-                                    <div class="prod-info-display">
-                                        <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                        จำนวน <span id="">8</span> เล่ม<br>
-                                        ราคา <span id="">8</span> บาท
-                                    </div>
-                                </div>
-
-                                <!-- แสดงสินค้า 1 อัน -->
-                                <div class="one-product-dis">
-                                    <div class="photo-display"  align="center">
-                                        <div class="prodaga" >
-                                            <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                        </div>
-                                    </div>
-                                    <div class="prod-info-display">
-                                        <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                        จำนวน <span id="">8</span> เล่ม<br>
-                                        ราคา <span id="">8</span> บาท
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        
-                        <!-- แสดงสินค้า 1 ร้าน -->
-                        <div class="one-store-dis">
-                                
-                            <div class="ost-header">
-                                ร้าน <span id="">สวัสดีตอนนอน</span>
-                                เลขที่ใบคำสั่งซื้อ 
-                                    <span id="">5444</span>
-                                <span style=" font-style: oblique; color: black;">
-                                ราคารวม
-                                <span style=" color: red;" id="">95498</span> 
-                                บาท </span>
-                                <a href="../inform-customer/payment-report.html">
-                                    <input type="button" id="" class="paymentbtn" value="แจ้งชำระเงิน">
-                                </a>
-                            </div>
-                        
-                        <!-- ส่วนแสดงสินค้า  -->
-                            <div class="product-part">
-                                <!-- แสดงสินค้า 1 อัน -->
-                                <div class="one-product-dis">
-                                    <div class="photo-display"  align="center">
-                                        <div class="prodaga" >
-                                            <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                        </div>
-                                    </div>
-                                    <div class="prod-info-display">
-                                        <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                        จำนวน <span id="">8</span> เล่ม<br>
-                                        ราคา <span id="">8</span> บาท
-                                    </div>
-                                </div>
-
-                                <!-- แสดงสินค้า 1 อัน -->
-                                <div class="one-product-dis">
-                                    <div class="photo-display"  align="center">
-                                        <div class="prodaga" >
-                                            <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                        </div>
-                                    </div>
-                                    <div class="prod-info-display">
-                                        <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                        จำนวน <span id="">8</span> เล่ม<br>
-                                        ราคา <span id="">8</span> บาท
-                                    </div>
-                                </div>
-
-                                <!-- แสดงสินค้า 1 อัน -->
-                                <div class="one-product-dis">
-                                    <div class="photo-display"  align="center">
-                                        <div class="prodaga" >
-                                            <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                        </div>
-                                    </div>
-                                    <div class="prod-info-display">
-                                        <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                        จำนวน <span id="">8</span> เล่ม<br>
-                                        ราคา <span id="">8</span> บาท
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div> 
                 </div>
             </div>
 
             <!-- สถานะสินค้า -->
             <div id="popup5">
                 <div class="Os-menu">
-                    <button class="branchs" id="wait4check" style="border-radius: 20px 0px 0px 0px; background-color: rgb(155, 231, 97);">รอการตรวจสอบ</button>
+                    <button class="branchs" id="wait4check"
+                        style="border-radius: 20px 0px 0px 0px; background-color: rgb(155, 231, 97);">รอการตรวจสอบ</button>
                     <button class="branchs" id="wait4deli">รอการจัดส่ง</button>
-                    <button class="branchs" id="gift" style="border-radius: 0px 20px 0px 0px; width: 34%;">ที่ต้องได้รับ</button>
+                    <button class="branchs" id="gift"
+                        style="border-radius: 0px 20px 0px 0px; width: 34%;">ที่ต้องได้รับ</button>
                 </div>
                 <div class="dataDisplay" id="">
 
@@ -437,337 +311,57 @@
                     <div class="OS-check" id="OS-check">
                         <div class="wait4check-cont">
 
-                            <h2 align="center" style="color: rgb(243, 0, 0); font-weight: normal; padding: 1%;">*ทางโกดังกำลังตรวจสอบการชำระเงินของคุณ*</h2>
+                            <h2 align="center" style="color: rgb(243, 0, 0); font-weight: normal; padding: 1%;">
+                                *ทางโกดังกำลังตรวจสอบการชำระเงินของคุณ*</h2>
                             <!-- แสดงสินค้า 1 ร้าน -->
-                            <div class="one-store-dis">
-                                
-                                <div class="ost-header">
-                                    ร้าน <span id="">สวัสดีตอนนอน</span>
-                                    เลขที่ใบคำสั่งซื้อ 
-                                        <span id="">5444</span>
-                                    <span style=" font-style: oblique; color: black;">
-                                    ราคารวม
-                                    <span style=" color: red;" id="">95498</span> 
-                                    บาท </span>
-                                </div>
-                            
-                            <!-- ส่วนแสดงสินค้า  -->
-                                <div class="product-part">
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <div class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </div>
 
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <div class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </div>
-
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <div class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- ร้านที่ 2 -->
-
-                            <!-- แสดง-ข้อมูลร้าน 2 -->
-                            <div class="one-store-dis">
-
-                                <!-- ส่วนหัวข้อร้าน -->
-                                <div class="ost-header">
-                                    ร้าน <span id="">สวัสดีตอนนอน</span>
-                                    เลขที่ใบคำสั่งซื้อ 
-                                        <span id="">5444</span>
-                                    <span style=" font-style: oblique; color: black;">
-                                    ราคารวม
-                                    <span style=" color: red;" id="">123456</span> 
-                                    บาท </span>
-                                </div>
-                            
-                                <!-- ส่วนแสดงสินค้า  -->
-                                <div class="product-part">
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <div class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </div>
-
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <div class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE OOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                       </div>
+                        </div>
                     </div>
 
                     <!-- รอการจัดส่ง -->
-                    <div class="OS-deli" id="OS-deli"> 
-                        
-                        <div class="" >
-                            <h2 align="center" style="color: rgb(243, 0, 0); font-weight: normal; padding: 1%;">*เมื่อผู้ขายทำการส่งสินค้าแล้ว เราจะแจ้งเลข Tracking ให้ทราบ*</h2>
-                            <!-- แสดงสินค้า 1 ร้าน -->
-                            <div class="one-store-dis">
-                                <div class="ost-header">
-                                    ร้าน <span id="">สวัสดีตอนนอน</span>
-                                    เลขที่ใบคำสั่งซื้อ 
-                                        <span id="">5444</span>
-                                    <span style=" font-style: oblique; color: black;">
-                                    ราคารวม
-                                    <span style=" color: red;" id="">95498</span> 
-                                    บาท </span>
-                                    <span style="color: gray;">ผู้ขายกำลังจัดส่งสินค้า</span>
-                                </div>
-                            
-                            <!-- ส่วนแสดงสินค้า  -->
-                                <div class="product-part">
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <div class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </div>
+                    <div class="OS-deli" id="OS-deli">
 
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <div class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </div>
-
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <div class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- ร้านที่ 2 -->
-
-                            <!-- แสดงสินค้า 1 ร้าน -->
-                            <div class="one-store-dis">
-                                <div class="ost-header">
-                                    ร้าน <span id="">สวัสดีตอนนอน</span>
-                                    เลขที่ใบคำสั่งซื้อ 
-                                        <span id="">5444</span>
-                                    <span style=" font-style: oblique; color: black;">
-                                    ราคารวม
-                                    <span style=" color: red;" id="">123456</span> 
-                                    บาท </span>
-                                    <span style="color: gray;">ผู้ขายกำลังจัดส่งสินค้า</span>
-                                </div>
-                            
-                            <!-- ส่วนแสดงสินค้า  -->
-                                <div class="product-part">
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <div class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </div>
-
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <div class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE OOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </div>
-
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <div class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </div>
-
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <span class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </span >
-
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <div class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </div>
-
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <div class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </div>
-
-                                    <!-- แสดงสินค้า 1 อัน -->
-                                    <div class="one-product-dis">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
-                                            </div>
-                                        </div>
-                                        <div class="prod-info-display">
-                                            <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
-                                            จำนวน <span id="">8</span> เล่ม<br>
-                                            ราคา <span id="">8</span> บาท
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="">
+                            <h2 align="center" style="color: rgb(243, 0, 0); font-weight: normal; padding: 1%;">
+                                *เมื่อผู้ขายทำการส่งสินค้าแล้ว เราจะแจ้งเลข Tracking ให้ทราบ*</h2>
 
 
-                       </div>
+                        </div>
 
                     </div>
 
                     <!-- ที่ต้องได้รับ -->
                     <div class="OS-get" id="OS-get">
-                        
+
                         <div class="">
                             <!-- แสดงสินค้า 1 ร้าน -->
                             <div class="one-store-dis">
                                 <div class="ost-header">
                                     ร้าน <span id="">สวัสดีตอนนอน</span>
-                                    เลขที่ใบคำสั่งซื้อ 
-                                        <span id="">5444</span>
+                                    เลขที่ใบคำสั่งซื้อ
+                                    <span id="">5444</span>
                                     <span style=" font-style: oblique; color: black;">
                                         <br>
-                                    Tracking no.
-                                    <span style=" color: red;" id="">95498</span> 
+                                        Tracking no.
+                                        <span style=" color: red;" id="">95498</span>
                                     </span>
                                     <span style="color: gray;" id="">kerry</span>
                                 </div>
-                            
-                            <!-- ส่วนแสดงสินค้า  -->
+
+                                <!-- ส่วนแสดงสินค้า  -->
                                 <div class="product-part">
                                     <!-- แสดงสินค้า 1 อัน -->
                                     <div class="one-product-no-hov">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
+                                        <div class="photo-display" align="center">
+                                            <div class="prodaga">
+                                                <img src="src/testprod/p1.jpg" class="proaga"
+                                                    style="box-shadow: 3px 4px 4px 3px lightgray;">
                                             </div>
                                         </div>
                                         <div class="prod-info-display">
                                             <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
                                             จำนวน <span id="">8</span> เล่ม<br>
-                                            <button >
+                                            <button>
                                                 ได้รับสินค้าเเล้ว
                                             </button>
                                         </div>
@@ -775,15 +369,16 @@
 
                                     <!-- แสดงสินค้า 1 อัน -->
                                     <div class="one-product-no-hov">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
+                                        <div class="photo-display" align="center">
+                                            <div class="prodaga">
+                                                <img src="src/testprod/p1.jpg" class="proaga"
+                                                    style="box-shadow: 3px 4px 4px 3px lightgray;">
                                             </div>
                                         </div>
                                         <div class="prod-info-display">
                                             <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
                                             จำนวน <span id="">8</span> เล่ม<br>
-                                            <button >
+                                            <button>
                                                 ได้รับสินค้าเเล้ว
                                             </button>
                                         </div>
@@ -791,15 +386,16 @@
 
                                     <!-- แสดงสินค้า 1 อัน -->
                                     <div class="one-product-no-hov">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
+                                        <div class="photo-display" align="center">
+                                            <div class="prodaga">
+                                                <img src="src/testprod/p1.jpg" class="proaga"
+                                                    style="box-shadow: 3px 4px 4px 3px lightgray;">
                                             </div>
                                         </div>
                                         <div class="prod-info-display">
                                             <span style="font-weight: bolder;" id="">ONE PIECE 500 QUIZ BOOK</span><br>
                                             จำนวน <span id="">8</span> เล่ม<br>
-                                            <button >
+                                            <button>
                                                 ได้รับสินค้าเเล้ว
                                             </button>
                                         </div>
@@ -807,10 +403,10 @@
 
                                 </div>
                             </div>
-                        </div>        
+                        </div>
                     </div>
-                </div>  
-                
+                </div>
+
             </div>
 
             <!-- เริ่มการขาย สำหรับ user ที่ยังไม่ได้เป็น seller -->
@@ -818,16 +414,17 @@
 
                 <!-- เริ่มการขาย สำหรับ user ที่ยังไม่ได้เป็น seller -->
                 <div class="s-container" id="beforeRegisSeller">
-                    
+
                     <!-- ก่อน user กดปุ่ม สร้างบัญชีผู้ขาย -->
                     <div class="containerS" style=" height: 100%; width: 94%; padding: 2% 3%;" id="welcoming">
                         <div class="topicName">ยินดีต้อนรับผู้ขายรายใหม่ ^_^</div>
                         <div class="sepLine2" style="width: 100%;"></div>
-                        <div style="display: flex; flex-direction: column; width: 100%; justify-content: center; align-content: center; height: 70%;">
-                             <div style="text-align: center; font-size: 1.45rem;">
-                            เริ่มการขายหนังสือของคุณได้ เพียงแค่</div>
+                        <div
+                            style="display: flex; flex-direction: column; width: 100%; justify-content: center; align-content: center; height: 70%;">
+                            <div style="text-align: center; font-size: 1.45rem;">
+                                เริ่มการขายหนังสือของคุณได้ เพียงแค่</div>
                             <div style="text-align: center; padding-top: 2%; font-size: 1.75rem;">
-                                กดปุ่ม 'สร้างบัญชีผู้ขาย' ด้านล่าง</div> 
+                                กดปุ่ม 'สร้างบัญชีผู้ขาย' ด้านล่าง</div>
                         </div>
                         <div class="articleFP" style="justify-content: center; padding: 15px;">
                             <button type="button" style="color: white; padding: 5px 30px; " class="ConfirmButtonStyle"
@@ -836,11 +433,13 @@
                     </div>
 
                     <!-- หลัง user กดปุ่ม สร้างบัญชีผู้ขาย -->
-                    <div class="containerS" style="height: 100%; width: 94%; padding: 2% 3%;  display: none;" id="becomingSeller">
+                    <div class="containerS" style="height: 100%; width: 94%; padding: 2% 3%;  display: none;"
+                        id="becomingSeller">
                         <div class="topicName">ยินดีต้อนรับผู้ขายรายใหม่ ^_^</div>
                         <div class="sepLine2" style="width: 100%;"></div>
 
-                        <div class="alignCenter" id="inputRegisSeller" style="flex-direction: column; width: 100%; justify-content: space-evenly; align-content: center; height: 70%; margin-top: 2%; ">
+                        <div class="alignCenter" id="inputRegisSeller"
+                            style="flex-direction: column; width: 100%; justify-content: space-evenly; align-content: center; height: 70%; margin-top: 2%; ">
                             <div class="addS-info">
                                 <li>ชื่อร้าน <input type="text" id="" /></li>
                             </div>
@@ -848,15 +447,15 @@
                                 <li>ชื่อบัญชีธนาคาร <input type="text" id="" /></li>
                             </div>
                             <div class="addS-info">
-                                <li>เลขที่บัญชี <input type="text" id=""  /></li>
+                                <li>เลขที่บัญชี <input type="text" id="" /></li>
                             </div>
                             <div class="addS-info">
-                                <li>ธนาคาร <input type="text" id=""/></li>
+                                <li>ธนาคาร <input type="text" id="" /></li>
                             </div>
                             <div class="articleFP" style="justify-content: center; padding: 15px;">
-                                <button type="button" style="color: white; padding: 5px 30px; " class="ConfirmButtonStyle"
-                                    id="">ยืนยัน</button>
-                            </div>    
+                                <button type="button" style="color: white; padding: 5px 30px; "
+                                    class="ConfirmButtonStyle" id="">ยืนยัน</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -882,7 +481,8 @@
                                     <p>เลขที่บัญชี</p>
                                     <p>ธนาคาร</p>
                                 </div>
-                                <div class="right-cont"> <!-- ต้องการข้อมูลจกดาต้าเบส ***********-->
+                                <div class="right-cont">
+                                    <!-- ต้องการข้อมูลจกดาต้าเบส ***********-->
                                     <p>ชื่อร้าน</p>
                                     <p>ขื่อบัญชีธนาคาร</p>
                                     <p>เลขที่บัญชี</p>
@@ -900,7 +500,7 @@
                                 <div class="col-2" style="width: 50%; padding-right: 10%;" align="right">
                                     <p>จำนวนสินค้า</p>
                                 </div>
-                                
+
                             </div>
                             <div class="in1" style="margin-top: 5%;">
                                 <div class="allaga">
@@ -928,10 +528,8 @@
                                             </div>
                                         </a>
                                     </div>
-                                
-                                    
                                 </div>
-    
+
                             </div>
                         </div>
 
@@ -940,23 +538,24 @@
                             <div class="one-store-dis">
                                 <div class="ost-header">
                                     ชื่อลูกค้า <span id="">สุดสวย ยามสาย</span>
-                                    เลขที่ใบคำสั่งซื้อ 
-                                        <span id="">5444</span>
+                                    เลขที่ใบคำสั่งซื้อ
+                                    <span id="">5444</span>
                                     <span style=" font-style: oblique; color: black;">
                                     </span>
                                     <a href="d/to-ship-detail.html">
                                         <button>จัดส่งแล้ว</button>
- 
+
                                     </a>
                                 </div>
-                            
-                            <!-- ส่วนแสดงสินค้า  -->
+
+                                <!-- ส่วนแสดงสินค้า  -->
                                 <div class="product-part">
                                     <!-- แสดงสินค้า 1 อัน -->
                                     <div class="one-product-no-hov">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
+                                        <div class="photo-display" align="center">
+                                            <div class="prodaga">
+                                                <img src="src/testprod/p1.jpg" class="proaga"
+                                                    style="box-shadow: 3px 4px 4px 3px lightgray;">
                                             </div>
                                         </div>
                                         <div class="prod-info-display">
@@ -967,9 +566,10 @@
 
                                     <!-- แสดงสินค้า 1 อัน -->
                                     <div class="one-product-no-hov">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
+                                        <div class="photo-display" align="center">
+                                            <div class="prodaga">
+                                                <img src="src/testprod/p1.jpg" class="proaga"
+                                                    style="box-shadow: 3px 4px 4px 3px lightgray;">
                                             </div>
                                         </div>
                                         <div class="prod-info-display">
@@ -980,9 +580,10 @@
 
                                     <!-- แสดงสินค้า 1 อัน -->
                                     <div class="one-product-no-hov">
-                                        <div class="photo-display"  align="center">
-                                            <div class="prodaga" >
-                                                <img src="src/testprod/p1.jpg" class="proaga" style="box-shadow: 3px 4px 4px 3px lightgray;" >
+                                        <div class="photo-display" align="center">
+                                            <div class="prodaga">
+                                                <img src="src/testprod/p1.jpg" class="proaga"
+                                                    style="box-shadow: 3px 4px 4px 3px lightgray;">
                                             </div>
                                         </div>
                                         <div class="prod-info-display">
@@ -993,7 +594,7 @@
 
                                 </div>
                             </div>
-                        </div>  
+                        </div>
 
                         <!-- add product -->
                         <div class="S-AddProduct" id="S-AddProduct">
@@ -1010,27 +611,35 @@
                                         <select name="type" id="type">
                                             <option value="หนังสือเรียน: ประถมศึกษา" selected>หนังสือเรียน: ประถมศึกษา
                                             </option>
-                                            <option value="หนังสือเรียน: มัธยมศึกษาตอนต้น">หนังสือเรียน: มัธยมศึกษาตอนต้น
+                                            <option value="หนังสือเรียน: มัธยมศึกษาตอนต้น">หนังสือเรียน:
+                                                มัธยมศึกษาตอนต้น
                                             </option>
-                                            <option value="หนังสือเรียน: มัธยมศึกษาตอนปลาย">หนังสือเรียน: มัธยมศึกษาตอนปลาย
+                                            <option value="หนังสือเรียน: มัธยมศึกษาตอนปลาย">หนังสือเรียน:
+                                                มัธยมศึกษาตอนปลาย
                                             </option>
-                                            <option value="หนังสือเตรียมสอบ: สอบเข้า ม.ต้น">หนังสือเตรียมสอบ: สอบเข้า ม.ต้น
+                                            <option value="หนังสือเตรียมสอบ: สอบเข้า ม.ต้น">หนังสือเตรียมสอบ: สอบเข้า
+                                                ม.ต้น
                                             </option>
                                             <option value="หนังสือเตรียมสอบ: สอบเข้า ม.ปลาย">หนังสือเตรียมสอบ: สอบเข้า
                                                 ม.ปลาย</option>
-                                            <option value="หนังสือเตรียมสอบ: สอบเข้า มหาวิทายาลัย">หนังสือเตรียมสอบ: สอบเข้า
+                                            <option value="หนังสือเตรียมสอบ: สอบเข้า มหาวิทายาลัย">หนังสือเตรียมสอบ:
+                                                สอบเข้า
                                                 มหาวิทายาลัย</option>
                                             <option value="หนังสือการ์ตูน">หนังสือการ์ตูน</option>
                                         </select>
                                     </li>
-                                    <li>จำนวนสินค้า <input type="number" id="amount" placeholder="จำนวนสินค้า" min="1" />
+                                    <li>จำนวนสินค้า <input type="number" id="amount" placeholder="จำนวนสินค้า"
+                                            min="1" />
                                     </li>
-                                    <li>รายละเอียดสินค้า <input type="text" id="detail" placeholder="สภาพสินค้า" /></li>
+                                    <li>รายละเอียดสินค้า <input type="text" id="detail"
+                                            placeholder="รายละเอียดสินค้า" /></li>
                                 </div>
-                                
+
                             </div>
                             <div style="display: flex; flex-direction: column; width: 100%;">
-                                <div class="topicName" style="text-align: center; padding-left: 0px; padding-bottom: 1%; font-size: 1.2em;">---------- เพิ่มรูป (สูงสุด 6) ----------</div>    
+                                <div class="topicName"
+                                    style="text-align: center; padding-left: 0px; padding-bottom: 1%; font-size: 1.2em;">
+                                    ---------- เพิ่มรูป (สูงสุด 6) ----------</div>
                                 <div class="three-image">
                                     <div class="one-photo">
                                         <div class="product-preview-frame">
@@ -1102,65 +711,66 @@
             </div>
             <script src="menu-branch-toggle.js"></script>
         </div>
-        </div>
-        </div>
-        <!--------------------------logout  ------------------------------------------------------------->
-        <script>
-            document.getElementById("iconp").onclick = function () {
-                document.getElementById("logoutshow").style.display = "block";
+    </div>
+    </div>
+    <!--------------------------logout  ------------------------------------------------------------->
+    <script>
+        document.getElementById("iconp").onclick = function () {
+            document.getElementById("logoutshow").style.display = "block";
+        }
+        // document.getElementById("backprofile").onclick = function () {
+        //     document.getElementById("logoutshow").style.display = "none";
+        // }
+        document.addEventListener('mouseup', function (e) {
+            let container = document.getElementById('logoutshow');
+            if (!container.contains(e.target)) {
+                container.style.display = 'none';
             }
-            // document.getElementById("backprofile").onclick = function () {
-            //     document.getElementById("logoutshow").style.display = "none";
-            // }
-            document.addEventListener('mouseup', function (e) {
-                let container = document.getElementById('logoutshow');
-                if (!container.contains(e.target)) {
-                    container.style.display = 'none';
+        });
+    </script>
+    <!------------------------------------------------------------------------------------------->
+
+
+
+
+    <!------------------------information------------------------------------------------------------------>
+    <script src="basicOnlyLogin.js"></script>
+    <script src="popup-toggle.js"></script>
+    <script src="profile.js"></script>
+    <script src="seller.js"></script>
+    <script src="productStatus.js"></script>
+
+    <!------------------------Preview------------------------------------------------------------------>
+    <script>
+        const defaultBtn = document.querySelector("#de-btn");
+        const cancelBtn = document.querySelector("#cancelimg");
+        const wrapper = document.querySelector(".wrap");
+        const filename = document.querySelector(".file-name");
+        const customBtn = document.querySelector("#custom-btn");
+        let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+        function deBtnActive() {
+            defaultBtn.click();
+        }
+        defaultBtn.addEventListener("change", function () {
+            if (defaultBtn.files && defaultBtn.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById('imgna').style.visibility = "visible";
+                    document.getElementById('imgna').src = e.target.result;
+                    wrapper.classList.add("active");
                 }
-            });
-        </script>
-        <!------------------------------------------------------------------------------------------->
-
-
-
-
-        <!------------------------information------------------------------------------------------------------>
-        <script src="basicOnlyLogin.js"></script>
-        <script src="popup-toggle.js"></script>
-        <script src="profile.js"></script>
-        <script src="seller.js"></script>
-
-        <!------------------------Preview------------------------------------------------------------------>
-        <script>
-            const defaultBtn = document.querySelector("#de-btn");
-            const cancelBtn = document.querySelector("#cancelimg");
-            const wrapper = document.querySelector(".wrap");
-            const filename = document.querySelector(".file-name");
-            const customBtn = document.querySelector("#custom-btn");
-            let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
-            function deBtnActive() {
-                defaultBtn.click();
+                cancelBtn.addEventListener("click", function () {
+                    document.getElementById('imgna').style.visibility = "hidden";
+                    wrapper.classList.remove("active");
+                });
+                reader.readAsDataURL(defaultBtn.files[0]);
             }
-            defaultBtn.addEventListener("change", function () {
-                if (defaultBtn.files && defaultBtn.files[0]) {
-                    const reader = new FileReader();
-                    reader.onload = function (e) {
-                        document.getElementById('imgna').style.visibility = "visible";
-                        document.getElementById('imgna').src = e.target.result;
-                        wrapper.classList.add("active");
-                    }
-                    cancelBtn.addEventListener("click", function () {
-                        document.getElementById('imgna').style.visibility = "hidden";
-                        wrapper.classList.remove("active");
-                    });
-                    reader.readAsDataURL(defaultBtn.files[0]);
-                }
-                if (this.value) {
-                    let valueStore = this.value.match(regExp);
-                    filename.textContent = valueStore;
-                }
-            });
-        </script>
+            if (this.value) {
+                let valueStore = this.value.match(regExp);
+                filename.textContent = valueStore;
+            }
+        });
+    </script>
 
 </body>
 
